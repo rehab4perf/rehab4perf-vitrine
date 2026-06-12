@@ -7,7 +7,7 @@
   <meta name="description" content="Rehab4Perf réunit bilan clinique structuré, comptes-rendus automatiques et programmes d'exercices personnalisés dans un seul outil pensé pour les kinésithérapeutes.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,10 +15,7 @@
 <!-- ============ NAV ============ -->
 <nav class="nav">
   <div class="container nav-inner">
-    <a href="#" class="logo">
-      <span class="logo-mark">R4</span>
-      Rehab4Perf
-    </a>
+    <a href="#" class="brand"><span class="b1">Rehab</span><span class="b2">4</span><span class="b3">Perf</span></a>
     <div class="nav-links">
       <a href="#fonctionnalites">Fonctionnalités</a>
       <a href="#etapes">Comment ça marche</a>
@@ -34,6 +31,11 @@
 
 <!-- ============ HERO ============ -->
 <header class="hero">
+  <div class="hero-bg">
+    <div class="orb orb-1" data-depth="0.4"></div>
+    <div class="orb orb-2" data-depth="0.7"></div>
+    <div class="orb orb-3" data-depth="0.5"></div>
+  </div>
   <div class="container">
     <div class="hero-badge">
       <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
@@ -50,62 +52,100 @@
     </div>
     <div class="hero-note">Sans engagement · Données hébergées en Europe</div>
 
-    <!-- Mockup applicatif -->
-    <div class="mockup-wrap">
-      <div class="mockup" role="img" aria-label="Aperçu de l'interface Rehab4Perf : bilan d'épaule avec scores de tests cliniques">
-        <div class="mockup-bar">
-          <span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
-          <span class="mockup-url">rehab4perf.com — Bilan clinique</span>
+    <!-- Scène 3D : fenêtre applicative fidèle -->
+    <div class="scene" id="scene">
+
+      <div class="chip chip-1" data-depth="1.4">
+        <span class="chip-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        <span>CR médecin généré<small>en 1 clic depuis le bilan</small></span>
+      </div>
+      <div class="chip chip-2" data-depth="1.8">
+        <span class="chip-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
+        </span>
+        <span>Évolution +28 %<small>score fonctionnel sur 6 semaines</small></span>
+      </div>
+      <div class="chip chip-3" data-depth="1.2">
+        <span class="chip-icon">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.4 7.4 16.6 16.6"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
+        </span>
+        <span>Programme envoyé<small>200+ exercices disponibles</small></span>
+      </div>
+
+      <div class="app-window" id="appWindow" role="img" aria-label="Interface réelle de Rehab4Perf : bilan d'épaule avec quick scan traumatique et fonctionnel">
+        <div class="app-topnav">
+          <span class="brand"><span class="b1">Rehab</span><span class="b2">4</span><span class="b3">Perf</span></span>
+          <span class="app-tab active">Bilan clinique</span>
+          <span class="app-tab">Outils</span>
+          <span class="app-tab">Programme</span>
+          <span class="app-topnav-right">Mon compte</span>
         </div>
-        <div class="mockup-body">
-          <div class="mockup-side">
-            <div class="mockup-side-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
-              Patient
+        <div class="app-body">
+          <div class="app-side">
+            <div class="patient-card">
+              <div class="p-name">M. Dupont — Épaule D</div>
+              <div class="p-meta">34 ans · Vu le 12 juin</div>
+              <div class="p-progress"><div></div></div>
             </div>
-            <div class="mockup-side-item active">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
-              Bilan épaule
-            </div>
-            <div class="mockup-side-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
-              Tests fonctionnels
-            </div>
-            <div class="mockup-side-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
-              CR médecin
-            </div>
-            <div class="mockup-side-item">
-              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 6.5 17.5 17.5"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
-              Programme
-            </div>
+            <div class="side-section">Dossier</div>
+            <div class="side-item"><span class="ico">📋</span> Infos Patient</div>
+            <div class="side-section">Bilan orthopédique</div>
+            <div class="side-item active"><span class="ico">💪</span> Épaule</div>
+            <div class="side-item"><span class="ico">🦴</span> Rachis</div>
+            <div class="side-item"><span class="ico">🦴</span> AGP + Hanche</div>
+            <div class="side-item"><span class="ico">🦵</span> Genou</div>
+            <div class="side-item"><span class="ico">🦶</span> Pied / Cheville</div>
+            <div class="side-section">Tests objectifs</div>
+            <div class="side-item"><span class="ico">💪</span> Tests Fonctionnels MS</div>
+            <div class="side-item"><span class="ico">⚡</span> Tests Musculaires</div>
+            <div class="side-section">Synthèse</div>
+            <div class="side-item"><span class="ico">📊</span> CR Tests</div>
+            <div class="side-item"><span class="ico">📄</span> CR Complet</div>
+            <div class="side-item"><span class="ico">📈</span> Évolution</div>
           </div>
-          <div class="mockup-main">
-            <div class="mockup-title">Bilan épaule — M. Dupont</div>
-            <div class="mockup-sub">Séance du 12 juin · Évaluation initiale</div>
-            <div class="mockup-row">
-              <span class="mockup-row-label">Force rotation externe</span>
-              <div class="mockup-track"><div class="mockup-fill" style="width:72%"></div></div>
-              <span class="mockup-val">72 %</span>
-              <span class="tag tag-blue">Déficit</span>
+          <div class="app-main">
+            <div class="block">
+              <div class="block-header red">Quick Scan Traumatique — Positif = ❌ (signe clinique)</div>
+              <table class="t-table">
+                <thead><tr><th style="width:42%">Test</th><th style="width:120px">Résultat</th><th>Observations</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>Relocation Test</td>
+                    <td><span class="res res-neg">Négatif</span></td>
+                    <td class="t-obs">RAS</td>
+                  </tr>
+                  <tr>
+                    <td>Palm-Up Test</td>
+                    <td><span class="res res-pos">Positif</span></td>
+                    <td class="t-obs">Douleur antérieure</td>
+                  </tr>
+                  <tr>
+                    <td>Drop Arm Test</td>
+                    <td><span class="res res-neg">Négatif</span></td>
+                    <td class="t-obs">—</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
-            <div class="mockup-row">
-              <span class="mockup-row-label">Amplitude flexion</span>
-              <div class="mockup-track"><div class="mockup-fill" style="width:88%; background:var(--green)"></div></div>
-              <span class="mockup-val">165°</span>
-              <span class="tag tag-green">Normal</span>
-            </div>
-            <div class="mockup-row">
-              <span class="mockup-row-label">Score ASES</span>
-              <div class="mockup-track"><div class="mockup-fill" style="width:64%"></div></div>
-              <span class="mockup-val">64/100</span>
-              <span class="tag tag-blue">À suivre</span>
-            </div>
-            <div class="mockup-row" style="border-bottom:none">
-              <span class="mockup-row-label">Hop test latéral</span>
-              <div class="mockup-track"><div class="mockup-fill" style="width:91%; background:var(--green)"></div></div>
-              <span class="mockup-val">91 %</span>
-              <span class="tag tag-green">Validé</span>
+            <div class="block">
+              <div class="block-header green">Quick Scan Fonctionnel — Positif = ✅ (signe favorable)</div>
+              <table class="t-table">
+                <thead><tr><th style="width:42%">Test</th><th style="width:120px">Résultat</th><th>Observations</th></tr></thead>
+                <tbody>
+                  <tr>
+                    <td>Élévation complète</td>
+                    <td><span class="res res-neg">Positif</span></td>
+                    <td class="t-obs">170° sans douleur</td>
+                  </tr>
+                  <tr>
+                    <td>Main dans le dos</td>
+                    <td><span class="res res-pos">Négatif</span></td>
+                    <td class="t-obs">Limité à L5</td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>
@@ -117,19 +157,19 @@
 <!-- ============ STATS ============ -->
 <section class="stats" aria-label="Chiffres clés">
   <div class="container stats-grid">
-    <div class="stat">
+    <div class="stat reveal">
       <div class="stat-num">6</div>
       <div class="stat-label">Régions anatomiques couvertes</div>
     </div>
-    <div class="stat">
+    <div class="stat reveal">
       <div class="stat-num">200+</div>
       <div class="stat-label">Exercices en bibliothèque</div>
     </div>
-    <div class="stat">
+    <div class="stat reveal">
       <div class="stat-num">1 clic</div>
       <div class="stat-label">Pour générer le CR médecin</div>
     </div>
-    <div class="stat">
+    <div class="stat reveal">
       <div class="stat-num">100 %</div>
       <div class="stat-label">Données sécurisées et chiffrées</div>
     </div>
@@ -139,48 +179,48 @@
 <!-- ============ FEATURES ============ -->
 <section class="section features" id="fonctionnalites">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="section-tag">Fonctionnalités</span>
       <h2>Tout votre suivi patient, au même endroit</h2>
       <p>De l'évaluation initiale à la prescription d'exercices, chaque étape de votre prise en charge est couverte.</p>
     </div>
     <div class="features-grid">
-      <div class="feature">
+      <div class="feature reveal" data-tilt>
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg>
         </div>
         <h3>Bilan clinique structuré</h3>
-        <p>Épaule, rachis, hanche, genou, pied, membre supérieur : des bilans complets organisés par région anatomique, avec tests orthopédiques et fonctionnels intégrés.</p>
+        <p>Épaule, rachis, hanche, genou, pied, LMA : des bilans complets organisés par région anatomique, avec quick scans traumatiques et fonctionnels intégrés.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" data-tilt>
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
         </div>
         <h3>Comptes-rendus automatiques</h3>
         <p>Le CR médecin se génère en un clic à partir des données saisies. Pathologies, amplitudes et signes cliniques sont mis en forme automatiquement.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" data-tilt>
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.4 7.4 16.6 16.6"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
         </div>
         <h3>Programmes d'exercices</h3>
         <p>Une bibliothèque de plus de 200 exercices, des cycles organisés par semaine et un partage direct du programme avec vos patients, au format PDF ou lien web.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" data-tilt>
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
         </div>
         <h3>Scores et suivi d'évolution</h3>
         <p>Questionnaires PRO, scores fonctionnels et historique complet : visualisez la progression de vos patients séance après séance.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" data-tilt>
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M1 21v-1a8 8 0 0 1 16 0v1"/><path d="M17 4a4 4 0 0 1 0 8"/><path d="M23 21v-1a8 8 0 0 0-6-7.7"/></svg>
         </div>
         <h3>Gestion multi-patients</h3>
         <p>Passez d'un patient à l'autre sans perdre vos données. Chaque dossier reste accessible, organisé et synchronisé en permanence.</p>
       </div>
-      <div class="feature">
+      <div class="feature reveal" data-tilt>
         <div class="feature-icon">
           <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
         </div>
@@ -194,23 +234,23 @@
 <!-- ============ ÉTAPES ============ -->
 <section class="section" id="etapes">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="section-tag">Comment ça marche</span>
       <h2>Opérationnel en trois étapes</h2>
       <p>Pas de formation nécessaire : l'outil suit votre raisonnement clinique naturel.</p>
     </div>
     <div class="steps-grid">
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">1</div>
         <h3>Créez votre patient</h3>
         <p>Ajoutez un dossier en quelques secondes et sélectionnez la région anatomique à évaluer.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">2</div>
         <h3>Réalisez le bilan</h3>
         <p>Renseignez vos tests au fil de la séance. Les scores et déficits se calculent automatiquement.</p>
       </div>
-      <div class="step">
+      <div class="step reveal">
         <div class="step-num">3</div>
         <h3>Prescrivez et partagez</h3>
         <p>Générez le CR pour le médecin et envoyez le programme d'exercices à votre patient.</p>
@@ -222,7 +262,7 @@
 <!-- ============ FINANCES ============ -->
 <section class="section finances" id="finances">
   <div class="container finances-inner">
-    <div class="finances-text">
+    <div class="finances-text reveal">
       <div class="finances-badge">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.2 8.4c.5.4.8 1 .8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0z"/></svg>
         Également développé par Rehab4Perf
@@ -234,7 +274,7 @@
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
       </a>
     </div>
-    <div class="finances-cards">
+    <div class="finances-cards reveal">
       <div class="fin-card">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
         <h4>Tableau de bord</h4>
@@ -262,13 +302,13 @@
 <!-- ============ TARIFS ============ -->
 <section class="section" id="tarifs">
   <div class="container">
-    <div class="section-head">
+    <div class="section-head reveal">
       <span class="section-tag">Tarifs</span>
       <h2>Simple et transparent</h2>
       <p>Commencez gratuitement, passez au plan Pro quand vous êtes prêt.</p>
     </div>
     <div class="pricing-grid">
-      <div class="price-card">
+      <div class="price-card reveal">
         <div class="price-name">Découverte</div>
         <div class="price-amount">0 € <span>/ mois</span></div>
         <div class="price-desc">Pour tester l'outil en conditions réelles</div>
@@ -279,7 +319,7 @@
         </ul>
         <a href="https://rehab4perf.netlify.app/auth.html" class="btn btn-outline">Commencer</a>
       </div>
-      <div class="price-card featured">
+      <div class="price-card featured reveal">
         <div class="price-badge">Recommandé</div>
         <div class="price-name">Pro</div>
         <div class="price-amount">— <span>€ / mois</span></div>
@@ -298,7 +338,7 @@
 
 <!-- ============ CTA FINAL ============ -->
 <section class="cta-final">
-  <div class="container">
+  <div class="container reveal">
     <h2>Prêt à simplifier vos bilans ?</h2>
     <p>Créez votre compte gratuitement et réalisez votre premier bilan dès aujourd'hui.</p>
     <a href="https://rehab4perf.netlify.app/auth.html" class="btn btn-primary btn-lg">
@@ -313,10 +353,7 @@
   <div class="container">
     <div class="footer-grid">
       <div>
-        <div class="logo">
-          <span class="logo-mark">R4</span>
-          Rehab4Perf
-        </div>
+        <span class="brand"><span class="b1">Rehab</span><span class="b2">4</span><span class="b3">Perf</span></span>
         <p class="footer-tagline">L'outil de bilan clinique et de prescription d'exercices pensé pour les kinésithérapeutes.</p>
       </div>
       <div class="footer-cols">
@@ -344,6 +381,77 @@
     </div>
   </div>
 </footer>
+
+<script>
+(function () {
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var isMobile = window.matchMedia('(max-width: 860px)').matches;
+
+  /* — Fenêtre app : inclinaison 3D qui se redresse au scroll — */
+  var scene = document.getElementById('scene');
+  var appWindow = document.getElementById('appWindow');
+  if (scene && appWindow && !reduceMotion && !isMobile) {
+    var ticking = false;
+    function updateTilt() {
+      var rect = scene.getBoundingClientRect();
+      var vh = window.innerHeight;
+      var progress = Math.min(Math.max((vh - rect.top) / (vh * 0.75), 0), 1);
+      var angle = 22 * (1 - progress);
+      var scale = 0.94 + 0.06 * progress;
+      appWindow.style.transform = 'rotateX(' + angle.toFixed(2) + 'deg) scale(' + scale.toFixed(3) + ')';
+      ticking = false;
+    }
+    window.addEventListener('scroll', function () {
+      if (!ticking) { requestAnimationFrame(updateTilt); ticking = true; }
+    }, { passive: true });
+    updateTilt();
+
+    /* — Parallaxe souris sur les chips et orbes — */
+    var depthEls = document.querySelectorAll('[data-depth]');
+    document.addEventListener('mousemove', function (e) {
+      var cx = (e.clientX / window.innerWidth - 0.5);
+      var cy = (e.clientY / window.innerHeight - 0.5);
+      requestAnimationFrame(function () {
+        depthEls.forEach(function (el) {
+          var d = parseFloat(el.getAttribute('data-depth'));
+          el.style.translate = (cx * d * -18) + 'px ' + (cy * d * -12) + 'px';
+        });
+      });
+    }, { passive: true });
+  }
+
+  /* — Tilt 3D au survol des cartes fonctionnalités — */
+  if (!reduceMotion && !isMobile) {
+    document.querySelectorAll('[data-tilt]').forEach(function (card) {
+      card.addEventListener('mousemove', function (e) {
+        var r = card.getBoundingClientRect();
+        var rx = ((e.clientY - r.top) / r.height - 0.5) * -10;
+        var ry = ((e.clientX - r.left) / r.width - 0.5) * 10;
+        card.style.transform = 'rotateX(' + rx.toFixed(2) + 'deg) rotateY(' + ry.toFixed(2) + 'deg) translateZ(6px)';
+      });
+      card.addEventListener('mouseleave', function () {
+        card.style.transform = 'rotateX(0deg) rotateY(0deg) translateZ(0)';
+      });
+    });
+  }
+
+  /* — Révélation au scroll — */
+  var revealEls = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window && !reduceMotion) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+    revealEls.forEach(function (el) { io.observe(el); });
+  } else {
+    revealEls.forEach(function (el) { el.classList.add('visible'); });
+  }
+})();
+</script>
 
 </body>
 </html>
