@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rehab4Perf — Bilan clinique et programmes d'exercices pour kinésithérapeutes</title>
+  <meta name="description" content="Rehab4Perf réunit bilan clinique structuré, comptes-rendus automatiques et programmes d'exercices personnalisés dans un seul outil pensé pour les kinésithérapeutes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="#" class="logo">
+      <span class="logo-mark">R4</span>
+      Rehab4Perf
+    </a>
+    <div class="nav-links">
+      <a href="#fonctionnalites">Fonctionnalités</a>
+      <a href="#etapes">Comment ça marche</a>
+      <a href="#finances">Finances</a>
+      <a href="#tarifs">Tarifs</a>
+    </div>
+    <div class="nav-cta">
+      <a href="https://rehab4perf.netlify.app/auth.html" class="btn btn-outline">Connexion</a>
+      <a href="https://rehab4perf.netlify.app/auth.html" class="btn btn-primary">Essai gratuit</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ============ HERO ============ -->
+<header class="hero">
+  <div class="container">
+    <div class="hero-badge">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
+      Conçu par un kinésithérapeute, pour les kinésithérapeutes
+    </div>
+    <h1>Le bilan clinique et la prescription d'exercices, <em>enfin réunis</em></h1>
+    <p>Réalisez vos bilans structurés par région anatomique, générez vos comptes-rendus en un clic et prescrivez des programmes personnalisés — le tout depuis un seul outil.</p>
+    <div class="hero-actions">
+      <a href="https://rehab4perf.netlify.app/auth.html" class="btn btn-primary btn-lg">
+        Commencer gratuitement
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+      <a href="#fonctionnalites" class="btn btn-outline btn-lg">Découvrir l'outil</a>
+    </div>
+    <div class="hero-note">Sans engagement · Données hébergées en Europe</div>
+
+    <!-- Mockup applicatif -->
+    <div class="mockup-wrap">
+      <div class="mockup" role="img" aria-label="Aperçu de l'interface Rehab4Perf : bilan d'épaule avec scores de tests cliniques">
+        <div class="mockup-bar">
+          <span class="mockup-dot"></span><span class="mockup-dot"></span><span class="mockup-dot"></span>
+          <span class="mockup-url">rehab4perf.com — Bilan clinique</span>
+        </div>
+        <div class="mockup-body">
+          <div class="mockup-side">
+            <div class="mockup-side-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21v-1a7 7 0 0 1 14 0v1"/></svg>
+              Patient
+            </div>
+            <div class="mockup-side-item active">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/></svg>
+              Bilan épaule
+            </div>
+            <div class="mockup-side-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
+              Tests fonctionnels
+            </div>
+            <div class="mockup-side-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/></svg>
+              CR médecin
+            </div>
+            <div class="mockup-side-item">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6.5 6.5 17.5 17.5"/><path d="m21 21-1-1"/><path d="m3 3 1 1"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
+              Programme
+            </div>
+          </div>
+          <div class="mockup-main">
+            <div class="mockup-title">Bilan épaule — M. Dupont</div>
+            <div class="mockup-sub">Séance du 12 juin · Évaluation initiale</div>
+            <div class="mockup-row">
+              <span class="mockup-row-label">Force rotation externe</span>
+              <div class="mockup-track"><div class="mockup-fill" style="width:72%"></div></div>
+              <span class="mockup-val">72 %</span>
+              <span class="tag tag-blue">Déficit</span>
+            </div>
+            <div class="mockup-row">
+              <span class="mockup-row-label">Amplitude flexion</span>
+              <div class="mockup-track"><div class="mockup-fill" style="width:88%; background:var(--green)"></div></div>
+              <span class="mockup-val">165°</span>
+              <span class="tag tag-green">Normal</span>
+            </div>
+            <div class="mockup-row">
+              <span class="mockup-row-label">Score ASES</span>
+              <div class="mockup-track"><div class="mockup-fill" style="width:64%"></div></div>
+              <span class="mockup-val">64/100</span>
+              <span class="tag tag-blue">À suivre</span>
+            </div>
+            <div class="mockup-row" style="border-bottom:none">
+              <span class="mockup-row-label">Hop test latéral</span>
+              <div class="mockup-track"><div class="mockup-fill" style="width:91%; background:var(--green)"></div></div>
+              <span class="mockup-val">91 %</span>
+              <span class="tag tag-green">Validé</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ STATS ============ -->
+<section class="stats" aria-label="Chiffres clés">
+  <div class="container stats-grid">
+    <div class="stat">
+      <div class="stat-num">6</div>
+      <div class="stat-label">Régions anatomiques couvertes</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">200+</div>
+      <div class="stat-label">Exercices en bibliothèque</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">1 clic</div>
+      <div class="stat-label">Pour générer le CR médecin</div>
+    </div>
+    <div class="stat">
+      <div class="stat-num">100 %</div>
+      <div class="stat-label">Données sécurisées et chiffrées</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section features" id="fonctionnalites">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Fonctionnalités</span>
+      <h2>Tout votre suivi patient, au même endroit</h2>
+      <p>De l'évaluation initiale à la prescription d'exercices, chaque étape de votre prise en charge est couverte.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg>
+        </div>
+        <h3>Bilan clinique structuré</h3>
+        <p>Épaule, rachis, hanche, genou, pied, membre supérieur : des bilans complets organisés par région anatomique, avec tests orthopédiques et fonctionnels intégrés.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+        </div>
+        <h3>Comptes-rendus automatiques</h3>
+        <p>Le CR médecin se génère en un clic à partir des données saisies. Pathologies, amplitudes et signes cliniques sont mis en forme automatiquement.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.4 7.4 16.6 16.6"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
+        </div>
+        <h3>Programmes d'exercices</h3>
+        <p>Une bibliothèque de plus de 200 exercices, des cycles organisés par semaine et un partage direct du programme avec vos patients, au format PDF ou lien web.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
+        </div>
+        <h3>Scores et suivi d'évolution</h3>
+        <p>Questionnaires PRO, scores fonctionnels et historique complet : visualisez la progression de vos patients séance après séance.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="4"/><path d="M1 21v-1a8 8 0 0 1 16 0v1"/><path d="M17 4a4 4 0 0 1 0 8"/><path d="M23 21v-1a8 8 0 0 0-6-7.7"/></svg>
+        </div>
+        <h3>Gestion multi-patients</h3>
+        <p>Passez d'un patient à l'autre sans perdre vos données. Chaque dossier reste accessible, organisé et synchronisé en permanence.</p>
+      </div>
+      <div class="feature">
+        <div class="feature-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <h3>Sécurité des données</h3>
+        <p>Authentification sécurisée, données chiffrées et isolées par praticien, hébergement conforme aux exigences européennes.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ÉTAPES ============ -->
+<section class="section" id="etapes">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Comment ça marche</span>
+      <h2>Opérationnel en trois étapes</h2>
+      <p>Pas de formation nécessaire : l'outil suit votre raisonnement clinique naturel.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step">
+        <div class="step-num">1</div>
+        <h3>Créez votre patient</h3>
+        <p>Ajoutez un dossier en quelques secondes et sélectionnez la région anatomique à évaluer.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <h3>Réalisez le bilan</h3>
+        <p>Renseignez vos tests au fil de la séance. Les scores et déficits se calculent automatiquement.</p>
+      </div>
+      <div class="step">
+        <div class="step-num">3</div>
+        <h3>Prescrivez et partagez</h3>
+        <p>Générez le CR pour le médecin et envoyez le programme d'exercices à votre patient.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINANCES ============ -->
+<section class="section finances" id="finances">
+  <div class="container finances-inner">
+    <div class="finances-text">
+      <div class="finances-badge">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21.2 8.4c.5.4.8 1 .8 1.6v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V10a2 2 0 0 1 .8-1.6l8-6a2 2 0 0 1 2.4 0z"/></svg>
+        Également développé par Rehab4Perf
+      </div>
+      <h2>Finances — votre budget personnel, enfin clair</h2>
+      <p>Tableau de bord, suivi des dépenses, gestion des comptes et des investissements : une application sobre et efficace pour piloter vos finances personnelles.</p>
+      <a href="#" class="btn btn-green btn-lg">
+        Découvrir Finances
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      </a>
+    </div>
+    <div class="finances-cards">
+      <div class="fin-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+        <h4>Tableau de bord</h4>
+        <p>Vue d'ensemble de votre situation en un coup d'œil.</p>
+      </div>
+      <div class="fin-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1z"/><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"/><path d="M12 17.5v-11"/></svg>
+        <h4>Dépenses</h4>
+        <p>Catégorisation et suivi mensuel de chaque euro.</p>
+      </div>
+      <div class="fin-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg>
+        <h4>Comptes</h4>
+        <p>Tous vos comptes bancaires regroupés au même endroit.</p>
+      </div>
+      <div class="fin-card">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 16 4-6 4 3 5-7"/></svg>
+        <h4>Investissements</h4>
+        <p>Suivez la performance de votre patrimoine dans le temps.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TARIFS ============ -->
+<section class="section" id="tarifs">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-tag">Tarifs</span>
+      <h2>Simple et transparent</h2>
+      <p>Commencez gratuitement, passez au plan Pro quand vous êtes prêt.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="price-name">Découverte</div>
+        <div class="price-amount">0 € <span>/ mois</span></div>
+        <div class="price-desc">Pour tester l'outil en conditions réelles</div>
+        <ul class="price-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bilans cliniques complets</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Nombre de patients limité</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bibliothèque d'exercices</li>
+        </ul>
+        <a href="https://rehab4perf.netlify.app/auth.html" class="btn btn-outline">Commencer</a>
+      </div>
+      <div class="price-card featured">
+        <div class="price-badge">Recommandé</div>
+        <div class="price-name">Pro</div>
+        <div class="price-amount">— <span>€ / mois</span></div>
+        <div class="price-desc">L'outil complet pour votre pratique quotidienne</div>
+        <ul class="price-list">
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Patients illimités</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>CR médecin et exports PDF</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Partage des programmes patients</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Support prioritaire</li>
+        </ul>
+        <a href="https://rehab4perf.netlify.app/auth.html" class="btn btn-primary">Essayer gratuitement</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section class="cta-final">
+  <div class="container">
+    <h2>Prêt à simplifier vos bilans ?</h2>
+    <p>Créez votre compte gratuitement et réalisez votre premier bilan dès aujourd'hui.</p>
+    <a href="https://rehab4perf.netlify.app/auth.html" class="btn btn-primary btn-lg">
+      Créer mon compte
+      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="logo">
+          <span class="logo-mark">R4</span>
+          Rehab4Perf
+        </div>
+        <p class="footer-tagline">L'outil de bilan clinique et de prescription d'exercices pensé pour les kinésithérapeutes.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h5>Produits</h5>
+          <a href="#fonctionnalites">Rehab4Perf</a>
+          <a href="#finances">Finances</a>
+          <a href="#tarifs">Tarifs</a>
+        </div>
+        <div class="footer-col">
+          <h5>Légal</h5>
+          <a href="#">Mentions légales</a>
+          <a href="#">CGU</a>
+          <a href="#">Confidentialité</a>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <a href="mailto:contact@rehab4perf.com">contact@rehab4perf.com</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Rehab4Perf — Tous droits réservés</span>
+      <span>Fait avec soin en France</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
