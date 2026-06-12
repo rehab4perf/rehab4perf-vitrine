@@ -45,15 +45,17 @@ a { color: inherit; text-decoration: none; }
 /* ---------- Marque ---------- */
 .brand {
   display: inline-flex;
-  align-items: baseline;
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: -0.01em;
+  align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 0.16em;
 }
-.brand .b1 { color: var(--blue); }
-.brand .b2 { color: var(--text); font-weight: 900; }
-.brand .b3 { color: var(--red); }
-.footer .brand .b2 { color: #fff; }
+.brand svg { flex-shrink: 0; display: block; }
+.brand .b1, .brand .b3 { color: var(--text); }
+.brand .b2 { color: var(--blue); font-weight: 800; }
+.footer .brand .b1, .footer .brand .b3 { color: #fff; }
+.footer .brand .b2 { color: #7FA8D9; }
 
 /* ---------- Boutons ---------- */
 .btn {
@@ -267,10 +269,9 @@ a { color: inherit; text-decoration: none; }
   padding: 0 16px;
   gap: 2px;
 }
-.app-topnav .brand { font-size: 14px; margin-right: 18px; }
-.app-topnav .brand .b1 { color: #7FA8D9; }
-.app-topnav .brand .b2 { color: #fff; }
-.app-topnav .brand .b3 { color: #E8836F; }
+.app-topnav .brand { font-size: 11px; margin-right: 18px; gap: 7px; letter-spacing: 0.14em; }
+.app-topnav .brand .b1, .app-topnav .brand .b3 { color: #fff; }
+.app-topnav .brand .b2 { color: #7FA8D9; }
 .app-tab {
   color: rgba(255, 255, 255, 0.55);
   font-size: 12.5px;
