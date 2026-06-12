@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rehab4Perf — Comparatif logomarks</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#FFFFFF; min-height:100vh; font-family:'Sora',sans-serif; display:flex; align-items:stretch; }
+.half { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:44px; padding:60px 24px; }
+.half + .half { border-left:1px solid #EEEDEA; }
+.word { font-weight:600; font-size:16px; letter-spacing:0.42em; color:#111; }
+.word .four { color:#2B5FA6; }
+.tag { font-size:10.5px; letter-spacing:0.14em; color:#B5B2AA; text-transform:uppercase; }
+.sizes { display:flex; align-items:flex-end; gap:26px; }
+.sizes figure { display:flex; flex-direction:column; align-items:center; gap:8px; }
+.sizes figcaption { font-size:9.5px; color:#C5C2BA; letter-spacing:0.06em; }
+@media (max-width:760px){ body { flex-direction:column; } .half + .half { border-left:none; border-top:1px solid #EEEDEA; } }
+</style>
+</head>
+<body>
+
+<!-- ============ A · REDRESSEMENT ============ -->
+<div class="half">
+  <span class="tag">A — Redressement</span>
+  <svg width="260" height="200" viewBox="0 0 200 160" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#2B5FA6" stroke-width="15" stroke-linecap="round" fill="none">
+      <line x1="20"  y1="118" x2="56"  y2="104"/>
+      <line x1="70"  y1="122" x2="100" y2="84"/>
+      <line x1="112" y1="125" x2="134" y2="66"/>
+      <line x1="158" y1="128" x2="158" y2="46"/>
+    </g>
+  </svg>
+  <div class="word">rehab<span class="four">4</span>perf</div>
+  <div class="sizes">
+    <figure>
+      <svg width="48" height="38" viewBox="0 0 200 160"><g stroke="#2B5FA6" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+      <figcaption>48 px</figcaption>
+    </figure>
+    <figure>
+      <svg width="24" height="19" viewBox="0 0 200 160"><g stroke="#2B5FA6" stroke-width="20" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+      <figcaption>24 px</figcaption>
+    </figure>
+    <figure>
+      <svg width="16" height="13" viewBox="0 0 200 160"><g stroke="#2B5FA6" stroke-width="24" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+      <figcaption>16 px</figcaption>
+    </figure>
+  </div>
+</div>
+
+<!-- ============ B · HÉLICE ============ -->
+<div class="half">
+  <span class="tag">B — Hélice</span>
+  <img src="img/logomark-blue.svg" width="220" height="220" alt="Logomark hélice 4 lames">
+  <div class="word">rehab<span class="four">4</span>perf</div>
+  <div class="sizes">
+    <figure><img src="img/logomark-blue.svg" width="48" height="48" alt=""><figcaption>48 px</figcaption></figure>
+    <figure><img src="img/logomark-blue.svg" width="24" height="24" alt=""><figcaption>24 px</figcaption></figure>
+    <figure><img src="img/logomark-blue.svg" width="16" height="16" alt=""><figcaption>16 px</figcaption></figure>
+  </div>
+</div>
+
+</body>
+</html>
