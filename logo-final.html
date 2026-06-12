@@ -3,29 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Rehab4Perf — Logomark final</title>
+<title>Rehab4Perf — Logo final</title>
 <link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&display=swap" rel="stylesheet">
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
-body { background:#FFFFFF; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:48px; font-family:'Sora',sans-serif; }
-.word { font-weight:600; font-size:17px; letter-spacing:0.42em; color:#111; }
+body { background:#FFFFFF; min-height:100vh; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:72px; font-family:'Sora',sans-serif; }
+.lockup { display:flex; flex-direction:column; align-items:center; gap:10px; }
+.word { font-weight:600; font-size:17px; letter-spacing:0.42em; color:#111; padding-left:0.42em; }
 .word .four { color:#2B5FA6; }
-.sizes { display:flex; align-items:flex-end; gap:36px; margin-top:24px; }
+.sizes { display:flex; align-items:flex-end; gap:40px; }
 .sizes figure { display:flex; flex-direction:column; align-items:center; gap:10px; }
-.sizes figcaption { font-size:10px; color:#AAA; letter-spacing:0.08em; }
+.sizes figcaption { font-size:10px; color:#C5C2BA; letter-spacing:0.08em; }
+.mini { display:flex; flex-direction:column; align-items:center; gap:4px; }
+.mini .w { font-weight:600; font-size:8.5px; letter-spacing:0.32em; color:#111; padding-left:0.32em; }
+.mini .w .four { color:#2B5FA6; }
 </style>
 </head>
 <body>
 
-<img src="img/logomark-blue.svg" width="280" height="280" alt="Logomark Rehab4Perf — vortex 4 lames bleu">
+<!-- Lockup principal : symbole + mot rapprochés -->
+<div class="lockup">
+  <svg width="240" height="150" viewBox="10 30 180 110" xmlns="http://www.w3.org/2000/svg">
+    <g stroke="#2B5FA6" stroke-width="15" stroke-linecap="round" fill="none">
+      <line x1="20"  y1="118" x2="56"  y2="104"/>
+      <line x1="70"  y1="122" x2="100" y2="84"/>
+      <line x1="112" y1="125" x2="134" y2="66"/>
+      <line x1="158" y1="128" x2="158" y2="46"/>
+    </g>
+  </svg>
+  <div class="word">rehab<span class="four">4</span>perf</div>
+</div>
 
-<div class="word">rehab<span class="four">4</span>perf</div>
-
+<!-- Déclinaisons -->
 <div class="sizes">
-  <figure><img src="img/logomark-blue.svg" width="96" height="96" alt=""><figcaption>96 px</figcaption></figure>
-  <figure><img src="img/logomark-blue.svg" width="48" height="48" alt=""><figcaption>48 px</figcaption></figure>
-  <figure><img src="img/logomark-blue.svg" width="24" height="24" alt=""><figcaption>24 px</figcaption></figure>
-  <figure><img src="img/logomark-blue.svg" width="16" height="16" alt=""><figcaption>16 px</figcaption></figure>
+  <figure>
+    <div class="mini">
+      <svg width="110" height="68" viewBox="10 30 180 110"><g stroke="#2B5FA6" stroke-width="15" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+      <div class="w">rehab<span class="four">4</span>perf</div>
+    </div>
+    <figcaption>lockup réduit</figcaption>
+  </figure>
+  <figure>
+    <svg width="48" height="30" viewBox="10 30 180 110"><g stroke="#2B5FA6" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+    <figcaption>48 px</figcaption>
+  </figure>
+  <figure>
+    <svg width="24" height="15" viewBox="10 30 180 110"><g stroke="#2B5FA6" stroke-width="20" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+    <figcaption>24 px</figcaption>
+  </figure>
+  <figure>
+    <svg width="16" height="10" viewBox="10 30 180 110"><g stroke="#2B5FA6" stroke-width="24" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+    <figcaption>16 px</figcaption>
+  </figure>
 </div>
 
 </body>
