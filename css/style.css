@@ -43,19 +43,12 @@ a { color: inherit; text-decoration: none; }
 .container { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
 
 /* ---------- Marque ---------- */
-.brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  font-size: 15px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-}
-.brand svg { flex-shrink: 0; display: block; }
-.brand .b1, .brand .b3 { color: var(--text); }
-.brand .b2 { color: var(--blue); font-weight: 800; }
-.footer .brand .b1, .footer .brand .b3 { color: #fff; }
-.footer .brand .b2 { color: #7FA8D9; }
+.brand { display: inline-flex; align-items: baseline; line-height: 1; white-space: nowrap; }
+.brand-r { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: 24px; color: var(--text); letter-spacing: -.01em; }
+.brand-e { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: .44em; vertical-align: super; color: var(--blue); margin: 0 .05em 0 .01em; line-height: 0; }
+.brand-p { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 20px; color: var(--text); letter-spacing: -.025em; margin-left: .02em; }
+.footer .brand-r, .footer .brand-p { color: #fff; }
+.footer .brand-e { color: #7FA8D9; }
 
 /* ---------- Boutons ---------- */
 .btn {
@@ -269,9 +262,10 @@ a { color: inherit; text-decoration: none; }
   padding: 0 16px;
   gap: 2px;
 }
-.app-topnav .brand { font-size: 11px; margin-right: 18px; gap: 7px; letter-spacing: 0.14em; }
-.app-topnav .brand .b1, .app-topnav .brand .b3 { color: #fff; }
-.app-topnav .brand .b2 { color: #7FA8D9; }
+.app-topnav .brand { margin-right: 18px; }
+.app-topnav .brand-r { font-size: 14px; color: #fff; }
+.app-topnav .brand-e { color: #fff; }
+.app-topnav .brand-p { font-size: 11px; color: #fff; }
 .app-tab {
   color: rgba(255, 255, 255, 0.55);
   font-size: 12.5px;
