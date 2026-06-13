@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Paiement confirmé — Rehab4Perf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@1,600&family=Poppins:wght@800&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .merci-wrap {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 48px 24px;
+    }
+    .merci-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 56px 48px;
+      max-width: 560px;
+      width: 100%;
+      text-align: center;
+      box-shadow: var(--shadow-md);
+    }
+    .merci-icon {
+      width: 72px;
+      height: 72px;
+      background: #EAF7EE;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+    }
+    .merci-icon svg { color: #1a7a3a; }
+    .merci-card h1 { font-size: 26px; font-weight: 800; color: var(--blue-dark); margin-bottom: 12px; }
+    .merci-card p { font-size: 15px; line-height: 1.7; color: var(--text-muted); margin-bottom: 10px; }
+    .merci-steps {
+      background: var(--bg);
+      border-radius: var(--radius);
+      padding: 24px 28px;
+      margin: 28px 0;
+      text-align: left;
+    }
+    .merci-steps h3 { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; color: var(--blue-dark); margin-bottom: 14px; }
+    .merci-step {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+    .merci-step:last-child { margin-bottom: 0; }
+    .step-num {
+      width: 24px;
+      height: 24px;
+      background: var(--blue);
+      color: #fff;
+      border-radius: 50%;
+      font-size: 12px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .step-text { font-size: 14px; line-height: 1.6; color: var(--text-muted); }
+    .step-text strong { color: var(--text); }
+    @media (max-width: 600px) {
+      .merci-card { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="container nav-inner">
+    <a href="/" class="brand">
+      <svg viewBox="8 34 164 104" width="34" height="22" aria-hidden="true"><g stroke="#2B5FA6" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+      <span class="brand-w"><span class="brand-r">rehab<sup class="brand-e">4</sup></span><span class="brand-p">perf</span></span>
+    </a>
+  </div>
+</nav>
+
+<div class="merci-wrap">
+  <div class="merci-card">
+    <div class="merci-icon">
+      <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+    </div>
+    <h1>Paiement confirmé !</h1>
+    <p>Bienvenue sur Rehab4Perf. Votre abonnement est actif.</p>
+    <p>Un email d'invitation va vous être envoyé <strong>dans les prochaines minutes</strong>.</p>
+
+    <div class="merci-steps">
+      <h3>Prochaines étapes</h3>
+      <div class="merci-step">
+        <div class="step-num">1</div>
+        <div class="step-text">Vérifiez votre boîte mail (et vos spams) — vous allez recevoir un <strong>email d'invitation Rehab4Perf</strong>.</div>
+      </div>
+      <div class="merci-step">
+        <div class="step-num">2</div>
+        <div class="step-text">Cliquez sur le lien dans l'email pour <strong>créer votre mot de passe</strong>.</div>
+      </div>
+      <div class="merci-step">
+        <div class="step-num">3</div>
+        <div class="step-text">Connectez-vous sur <strong>app.rehab4perf.com</strong> et commencez à utiliser l'outil.</div>
+      </div>
+    </div>
+
+    <p style="font-size:13px;color:var(--text-faint)">Pas d'email après 10 minutes ? Contactez-nous à <a href="mailto:contact@rehab4perf.com" style="color:var(--blue)">contact@rehab4perf.com</a></p>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <div class="footer-bottom" style="border-top:none;padding-top:0">
+      <span>© 2026 Rehab4Perf — Tous droits réservés</span>
+      <span>Fait avec soin en France</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
