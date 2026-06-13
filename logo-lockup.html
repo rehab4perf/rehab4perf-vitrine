@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>rehab⁴perf — Lockup final</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Poppins:wght@800&display=swap" rel="stylesheet">
+<style>
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:#fff; font-family:-apple-system,sans-serif; padding:60px 40px 100px; }
+
+h2 {
+  font-size:9px; letter-spacing:.18em; text-transform:uppercase;
+  color:#bbb; margin:52px 0 24px; font-family:'Poppins',sans-serif;
+}
+
+/* ── Lockup commun ───────────────────────────────────── */
+.lockup {
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+}
+.wordmark {
+  display:inline-flex;
+  align-items:baseline;
+  line-height:1;
+  white-space:nowrap;
+}
+.r { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:600; letter-spacing:-.01em; }
+.e { font-family:'Cormorant Garamond',serif; font-style:italic; font-weight:600; font-size:.44em; vertical-align:super; margin:0 .05em 0 .01em; line-height:0; }
+.p { font-family:'Poppins',sans-serif; font-weight:800; letter-spacing:-.025em; margin-left:.02em; }
+
+/* ── Tailles ─────────────────────────────────────────── */
+
+/* Grande (auth / vitrine hero) */
+.sz-xl .r  { font-size:54px; }
+.sz-xl .p  { font-size:44px; }
+.sz-xl svg { width:68px; height:42px; }
+
+/* Medium (vitrine nav, pages standalone) */
+.sz-md .r  { font-size:24px; }
+.sz-md .p  { font-size:20px; }
+.sz-md svg { width:34px; height:21px; }
+
+/* Small (app topnav, iframe index.html) */
+.sz-sm .r  { font-size:20px; }
+.sz-sm .p  { font-size:16px; }
+.sz-sm svg { width:26px; height:16px; }
+
+/* Micro (outils header, sidebar section) */
+.sz-xs .r  { font-size:16px; }
+.sz-xs .p  { font-size:13px; }
+.sz-xs svg { width:20px; height:12px; }
+
+/* ── Couleurs claires (fond blanc) ───────────────────── */
+.light .r { color:#1A1917; }
+.light .e { color:#2B5FA6; }
+.light .p { color:#1A1917; }
+
+/* ── Couleurs sombres (topnav bleu marine) ───────────── */
+.dark .r { color:#fff; }
+.dark .e { color:#7FA8D9; }
+.dark .p { color:#fff; }
+
+/* ── Zones ───────────────────────────────────────────── */
+.zone-light {
+  background:#fff;
+  padding:40px 48px;
+  display:inline-flex;
+  flex-direction:column;
+  gap:40px;
+  border:1px solid #EBEBEA;
+  border-radius:12px;
+  margin-bottom:8px;
+}
+.zone-dark {
+  background:#1A3A5C;
+  padding:40px 48px;
+  display:inline-flex;
+  flex-direction:column;
+  gap:40px;
+  border-radius:12px;
+  margin-bottom:8px;
+}
+
+/* ── Sidebar simulation ──────────────────────────────── */
+.sidebar-demo {
+  display:inline-flex;
+  flex-direction:column;
+  background:#fff;
+  border:1px solid #E5E3DE;
+  border-radius:10px;
+  width:220px;
+  overflow:hidden;
+  font-family:-apple-system,sans-serif;
+}
+.sidebar-header-demo {
+  background:#fff;
+  border-bottom:1px solid #E5E3DE;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+}
+.sidebar-logo-label {
+  font-size:.76rem;
+  font-weight:600;
+  color:#6B6860;
+  letter-spacing:.01em;
+}
+.sidebar-row {
+  padding:8px 16px;
+  font-size:.8rem;
+  color:#555;
+  border-bottom:1px solid #F1F0ED;
+}
+.sidebar-row.active { color:#2B5FA6; font-weight:600; background:#EEF3FB; }
+
+/* ── Topnav simulation ───────────────────────────────── */
+.topnav-demo {
+  display:inline-flex;
+  align-items:center;
+  gap:4px;
+  background:#1A3A5C;
+  border-radius:10px;
+  padding:0 18px;
+  height:48px;
+}
+.tab-demo {
+  padding:0 14px;
+  height:100%;
+  display:flex;
+  align-items:center;
+  color:rgba(255,255,255,.5);
+  font-size:.82rem;
+  white-space:nowrap;
+}
+.tab-demo.active {
+  color:#fff;
+  border-bottom:3px solid #4A90D9;
+}
+
+label { font-size:10px; color:#aaa; letter-spacing:.1em; text-transform:uppercase; display:block; margin-top:8px; }
+</style>
+</head>
+<body>
+
+<h2>1 — Grande version (fond blanc) · Auth / Vitrine hero</h2>
+<div class="zone-light">
+  <div class="lockup sz-xl light">
+    <svg viewBox="8 34 164 104" aria-hidden="true"><g stroke="#2B5FA6" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+    <span class="wordmark">
+      <span class="r">rehab<sup class="e">4</sup></span><span class="p">perf</span>
+    </span>
+  </div>
+</div>
+<label>SVG bars #2B5FA6 · rehab/perf #1A1917 · exposant #2B5FA6</label>
+
+<h2>2 — Nav vitrine (fond blanc)</h2>
+<div class="zone-light">
+  <div class="lockup sz-md light">
+    <svg viewBox="8 34 164 104" aria-hidden="true"><g stroke="#2B5FA6" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+    <span class="wordmark">
+      <span class="r">rehab<sup class="e">4</sup></span><span class="p">perf</span>
+    </span>
+  </div>
+</div>
+
+<h2>3 — App topnav (fond sombre)</h2>
+<div class="topnav-demo">
+  <div class="lockup sz-sm dark" style="margin-right:16px">
+    <svg viewBox="8 34 164 104" aria-hidden="true"><g stroke="#4A90D9" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+    <span class="wordmark">
+      <span class="r">rehab<sup class="e">4</sup></span><span class="p">perf</span>
+    </span>
+  </div>
+  <span class="tab-demo active">Bilan clinique</span>
+  <span class="tab-demo">Outils</span>
+  <span class="tab-demo">Programme</span>
+</div>
+<label>SVG bars #4A90D9 · rehab/perf blanc · exposant #7FA8D9</label>
+
+<h2>4 — Bilan sidebar (fond blanc) · SVG seul + label section</h2>
+<div class="sidebar-demo">
+  <div class="sidebar-header-demo">
+    <svg viewBox="8 34 164 104" width="20" height="12" aria-hidden="true"><g stroke="#2B5FA6" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+    <span class="sidebar-logo-label">Bilan clinique</span>
+  </div>
+  <div class="sidebar-row">Infos Patient</div>
+  <div class="sidebar-row active">Épaule</div>
+  <div class="sidebar-row">Rachis</div>
+  <div class="sidebar-row">Genou</div>
+</div>
+<label>Sidebar : symbole seul + "Bilan clinique" — pas de doublon avec topnav</label>
+
+<h2>5 — Document généré (fond sombre · header)</h2>
+<div class="zone-dark">
+  <div class="lockup sz-sm dark">
+    <svg viewBox="8 34 164 104" aria-hidden="true"><g stroke="#4A90D9" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
+    <span class="wordmark">
+      <span class="r">rehab<sup class="e">4</sup></span><span class="p">perf</span>
+    </span>
+  </div>
+</div>
+
+</body>
+</html>
