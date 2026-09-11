@@ -1236,3 +1236,65 @@ a { color: inherit; text-decoration: none; }
   .ecran-choix { gap: 6px; margin-top: 18px; }
   .ecran-choix button { font-size: 12.5px; padding: 8px 12px; }
 }
+
+/* ---------- Côté patient : trois téléphones ----------
+   Le décalage du téléphone central passe par la MARGE, pas par `transform` :
+   `.js-reveal .reveal.visible` pose `transform: translateY(0)` et l'écraserait.
+   Le cadre arrondi figure un appareil : il sort volontairement de l'échelle des
+   rayons de la page (10 / 18 px). */
+.telephones {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 48px;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+.tel { margin: 0; min-width: 0; }
+.tel:nth-child(2) { margin-top: 48px; }
+.tel-cadre {
+  background: var(--blue-deep);
+  border-radius: 40px;
+  padding: 10px;
+  box-shadow: var(--shadow-3d);
+}
+.tel-cadre img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 390 / 844;
+  border-radius: 30px;
+  background: var(--surface);
+}
+.tel figcaption {
+  margin-top: 22px;
+  font-size: 14.5px;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+.tel figcaption strong {
+  display: block;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--blue-dark);
+  margin-bottom: 4px;
+}
+
+/* Sur mobile : une rangée qui défile au doigt, un téléphone à la fois,
+   plutôt que trois écrans de 650 px empilés. La rangée déborde du
+   conteneur jusqu'aux bords de l'écran, jamais au-delà. */
+@media (max-width: 860px) {
+  .telephones {
+    display: flex;
+    gap: 18px;
+    max-width: none;
+    margin: 0 -24px;
+    padding: 0 24px 8px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+  }
+  .telephones::-webkit-scrollbar { display: none; }
+  .tel { flex: 0 0 72%; scroll-snap-align: center; }
+  .tel:nth-child(2) { margin-top: 0; }
+}

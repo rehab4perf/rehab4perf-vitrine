@@ -22,6 +22,7 @@
     </a>
     <div class="nav-links">
       <a href="#produit">Le produit</a>
+      <a href="#patient">Côté patient</a>
       <a href="#etapes">Comment ça marche</a>
       <a href="#tarifs">Tarifs</a>
     </div>
@@ -76,12 +77,14 @@
         <span>Programme envoyé<small>200+ exercices en bibliothèque</small></span>
       </div>
 
-      <!-- Trois captures réelles de l'application (compte de démo, patient fictif),
+      <!-- Quatre captures réelles de l'application (compte de démo, patient fictif),
            en fondu enchaîné. Le rythme est donné par la barre du bouton actif. -->
       <div class="app-window" id="appWindow">
         <div class="ecrans">
           <img class="ecran actif" src="img/app/charge-1280.webp" srcset="img/app/charge-1280.webp 1280w, img/app/charge-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="high"
                alt="Bilan de charge dans Rehab4Perf : charge sur sept jours, monotonie, charge quotidienne sur deux semaines, et ACWR à 1,01 sur huit semaines, dans la zone favorable">
+          <img class="ecran" src="img/app/builder-1280.webp" srcset="img/app/builder-1280.webp 1280w, img/app/builder-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
+               alt="Construction de séance : bloc avec split squat, 3 séries de 12 par côté et 10 kg de charge cible, consigne du praticien, et bibliothèque d'exercices en vidéo">
           <img class="ecran" src="img/app/evolution-1280.webp" srcset="img/app/evolution-1280.webp 1280w, img/app/evolution-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
                alt="Page Évolution : la douleur passe de 4 à 1 sur 10, et la force du quadriceps opéré rattrape le côté sain sur trois bilans">
           <img class="ecran" src="img/app/cr-1280.webp" srcset="img/app/cr-1280.webp 1280w, img/app/cr-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
@@ -90,6 +93,7 @@
       </div>
       <div class="ecran-choix" role="group" aria-label="Écran affiché">
         <button type="button" class="actif" aria-pressed="true">Suivi de charge</button>
+        <button type="button" aria-pressed="false">Construction de séance</button>
         <button type="button" aria-pressed="false">Évolution du patient</button>
         <button type="button" aria-pressed="false">Compte-rendu médecin</button>
       </div>
@@ -446,6 +450,43 @@
   </div>
 </section>
 
+<!-- ============ CÔTÉ PATIENT ============ -->
+<section class="section" id="patient">
+  <div class="container">
+    <div class="tete-gauche reveal">
+      <h2>Votre patient repart avec une vraie application</h2>
+      <p>Un lien suffit, sans compte ni mot de passe. Il retrouve ses séances et leurs vidéos, et vous renvoie son ressenti.</p>
+    </div>
+    <!-- Trois captures réelles de l'espace athlète (compte de démo, patient fictif). -->
+    <div class="telephones">
+      <figure class="tel reveal">
+        <div class="tel-cadre">
+          <img src="img/app/athlete-calendrier-390.webp" srcset="img/app/athlete-calendrier-390.webp 390w, img/app/athlete-calendrier-780.webp 780w"
+               sizes="(max-width: 860px) 72vw, 300px" width="390" height="844" loading="lazy" decoding="async"
+               alt="Espace athlète sur téléphone : cycle de réathlétisation en cours, critères du protocole LCA à valider, et calendrier du mois">
+        </div>
+        <figcaption><strong>Son programme</strong>Le cycle en cours, les critères de passage de son protocole et ses séances du mois.</figcaption>
+      </figure>
+      <figure class="tel reveal">
+        <div class="tel-cadre">
+          <img src="img/app/athlete-seance-390.webp" srcset="img/app/athlete-seance-390.webp 390w, img/app/athlete-seance-780.webp 780w"
+               sizes="(max-width: 860px) 72vw, 300px" width="390" height="844" loading="lazy" decoding="async"
+               alt="Séance vue par l'athlète : split squat, 3 séries de 12 par côté avec 10 kg de charge cible, consigne du praticien et curseur de douleur">
+        </div>
+        <figcaption><strong>Sa séance</strong>Chaque exercice avec sa vidéo, ses séries, sa charge cible et vos consignes.</figcaption>
+      </figure>
+      <figure class="tel reveal">
+        <div class="tel-cadre">
+          <img src="img/app/athlete-retour-390.webp" srcset="img/app/athlete-retour-390.webp 390w, img/app/athlete-retour-780.webp 780w"
+               sizes="(max-width: 860px) 72vw, 300px" width="390" height="844" loading="lazy" decoding="async"
+               alt="Fin de séance côté athlète : durée réelle, effort perçu sur l'échelle de Borg, et charge calculée de 70 UA">
+        </div>
+        <figcaption><strong>Son retour</strong>Douleur par exercice et effort perçu. Sa charge remonte seule dans votre suivi.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
 <!-- ============ PARCOURS ============ -->
 <section class="section" id="etapes">
   <div class="container">
@@ -571,6 +612,7 @@
         <div class="footer-col">
           <h5>Produit</h5>
           <a href="#produit">Fonctionnalités</a>
+          <a href="#patient">Côté patient</a>
           <a href="#etapes">Comment ça marche</a>
           <a href="#tarifs">Tarifs</a>
         </div>
