@@ -229,46 +229,6 @@ a { color: inherit; text-decoration: none; }
   }
 }
 
-/* Chips flottants */
-.chip {
-  position: absolute;
-  z-index: 5;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 14px;
-  padding: 13px 17px;
-  box-shadow: 0 18px 44px -12px rgba(18, 40, 63, 0.28);
-  display: flex;
-  align-items: center;
-  gap: 11px;
-  font-size: 13.5px;
-  font-weight: 600;
-  color: var(--text);
-  will-change: transform;
-  animation: float 6s ease-in-out infinite;
-}
-.chip small { display: block; font-size: 11.5px; font-weight: 500; color: var(--text-faint); }
-.chip-icon {
-  width: 34px;
-  height: 34px;
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.chip-1 { top: 6%; left: -68px; animation-delay: 0s; }
-.chip-1 .chip-icon { background: var(--green-light); color: var(--green); }
-.chip-2 { top: 42%; right: -76px; animation-delay: 1.6s; }
-.chip-2 .chip-icon { background: var(--blue-light); color: var(--blue); }
-.chip-3 { bottom: 10%; left: -50px; animation-delay: 3.1s; }
-.chip-3 .chip-icon { background: var(--red-light); color: var(--red); }
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-13px); }
-}
-
 /* ---------- Mockup fidèle à l'app ---------- */
 .app-topnav {
   background: var(--blue-dark);
@@ -637,17 +597,11 @@ a { color: inherit; text-decoration: none; }
 .js-reveal .reveal.visible { opacity: 1; transform: translateY(0); }
 
 /* ---------- Responsive ---------- */
-@media (max-width: 1100px) {
-  .chip-1 { left: 8px; }
-  .chip-2 { right: 8px; }
-  .chip-3 { left: 16px; }
-}
 @media (max-width: 860px) {
   .nav-links { display: none; }
   .app-side { display: none; }
   .hero { padding: 56px 0 32px; }
   .section { padding: 60px 0; }
-  .chip { display: none; }
   .app-window { transform: none !important; }
 }
 @media (max-width: 520px) {

@@ -58,25 +58,6 @@
     <!-- Scène : reproduction de la fenêtre applicative -->
     <div class="scene" id="scene">
 
-      <div class="chip chip-1" data-depth="1.4">
-        <span class="chip-icon">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-        </span>
-        <span>Compte-rendu généré<small>7 sections, depuis le bilan</small></span>
-      </div>
-      <div class="chip chip-2" data-depth="1.8">
-        <span class="chip-icon">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
-        </span>
-        <span>ACWR 1,01<small>zone favorable, calculée en direct</small></span>
-      </div>
-      <div class="chip chip-3" data-depth="1.2">
-        <span class="chip-icon">
-          <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.4 7.4 16.6 16.6"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
-        </span>
-        <span>Programme envoyé<small>200+ exercices en bibliothèque</small></span>
-      </div>
-
       <!-- Quatre captures réelles de l'application (compte de démo, patient fictif),
            en fondu enchaîné. Le rythme est donné par la barre du bouton actif. -->
       <div class="app-window" id="appWindow">
@@ -700,7 +681,7 @@
     });
   }
 
-  /* — Parallaxe souris sur les chips et les orbes du hero —
+  /* — Parallaxe souris sur les halos flous du fond du hero —
      Écouteur de pointeur, pas de scroll : le redressement de la fenêtre est
      désormais piloté par une timeline CSS native (voir style.css). */
   if (!reduceMotion && !isMobile) {
