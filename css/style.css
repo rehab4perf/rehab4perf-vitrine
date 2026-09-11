@@ -1181,3 +1181,58 @@ a { color: inherit; text-decoration: none; }
 .friction-inner > *,
 .mot-inner > *,
 .bandeau-inner > * { min-width: 0; }
+
+/* ---------- Hero : captures réelles en fondu enchaîné ----------
+   Le défilement automatique est piloté par l'animation de la barre du bouton
+   actif (`animationend` côté script). Conséquences voulues, sans code en plus :
+   le survol de la scène met en pause, et en mouvement réduit la règle globale
+   coupe l'animation, donc aucun défilement automatique : on choisit à la main. */
+.ecrans { position: relative; aspect-ratio: 16 / 10; background: var(--surface); }
+.ecran {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top left;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+}
+.ecran.actif { opacity: 1; }
+
+.ecran-choix { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 26px; }
+.ecran-choix button {
+  position: relative;
+  overflow: hidden;
+  font-family: var(--font);
+  font-size: 13.5px;
+  font-weight: 600;
+  padding: 9px 17px;
+  border-radius: var(--radius);
+  border: 1px solid var(--border-strong);
+  background: var(--surface);
+  color: var(--text-muted);
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+}
+.ecran-choix button:hover { border-color: var(--blue); color: var(--blue); }
+.ecran-choix button:active { transform: scale(0.98); }
+.ecran-choix button.actif { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+.ecran-choix button.actif::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  width: 100%;
+  background: var(--blue);
+  transform-origin: left;
+  animation: ecranDefile 6s linear both;
+}
+.scene:hover .ecran-choix button.actif::after { animation-play-state: paused; }
+@keyframes ecranDefile { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+@media (max-width: 520px) {
+  .ecran-choix { gap: 6px; margin-top: 18px; }
+  .ecran-choix button { font-size: 12.5px; padding: 8px 12px; }
+}

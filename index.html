@@ -67,7 +67,7 @@
         <span class="chip-icon">
           <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
         </span>
-        <span>ACWR 1.23<small>zone optimale, calculée en direct</small></span>
+        <span>ACWR 1,01<small>zone favorable, calculée en direct</small></span>
       </div>
       <div class="chip chip-3" data-depth="1.2">
         <span class="chip-icon">
@@ -76,82 +76,22 @@
         <span>Programme envoyé<small>200+ exercices en bibliothèque</small></span>
       </div>
 
-      <div class="app-window" id="appWindow" role="img" aria-label="Interface de Rehab4Perf : bilan d'épaule avec tests traumatiques et tests fonctionnels">
-        <div class="app-topnav">
-          <span class="brand"><svg viewBox="8 34 164 104" width="20" height="13" aria-hidden="true"><g stroke="#4A90D9" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg><span class="brand-w"><span class="brand-r">rehab<sup class="brand-e">4</sup></span><span class="brand-p">perf</span></span></span>
-          <span class="app-tab active">Bilan clinique</span>
-          <span class="app-tab">Outils</span>
-          <span class="app-tab">Programme</span>
-          <span class="app-tab">Patients</span>
-          <span class="app-topnav-right">Mon compte</span>
+      <!-- Trois captures réelles de l'application (compte de démo, patient fictif),
+           en fondu enchaîné. Le rythme est donné par la barre du bouton actif. -->
+      <div class="app-window" id="appWindow">
+        <div class="ecrans">
+          <img class="ecran actif" src="img/app/charge-1280.webp" srcset="img/app/charge-1280.webp 1280w, img/app/charge-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="high"
+               alt="Bilan de charge dans Rehab4Perf : charge sur sept jours, monotonie, charge quotidienne sur deux semaines, et ACWR à 1,01 sur huit semaines, dans la zone favorable">
+          <img class="ecran" src="img/app/evolution-1280.webp" srcset="img/app/evolution-1280.webp 1280w, img/app/evolution-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
+               alt="Page Évolution : la douleur passe de 4 à 1 sur 10, et la force du quadriceps opéré rattrape le côté sain sur trois bilans">
+          <img class="ecran" src="img/app/cr-1280.webp" srcset="img/app/cr-1280.webp 1280w, img/app/cr-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
+               alt="Générateur de compte-rendu : lettre au médecin avec le tableau des tests de force et leurs asymétries">
         </div>
-        <div class="app-body">
-          <div class="app-side">
-            <div class="patient-card">
-              <div class="p-name">Yanis Cabrol</div>
-              <div class="p-meta">34 ans · Épaule droite · 12 juin</div>
-              <div class="p-progress"><div></div></div>
-            </div>
-            <div class="side-section">Dossier</div>
-            <div class="side-item">Infos Patient</div>
-            <div class="side-section">Bilan orthopédique</div>
-            <div class="side-item active">Épaule</div>
-            <div class="side-item">Rachis</div>
-            <div class="side-item">Hanche</div>
-            <div class="side-item">Genou</div>
-            <div class="side-item">Pied / Cheville</div>
-            <div class="side-section">Tests objectifs</div>
-            <div class="side-item">Tests fonctionnels MS</div>
-            <div class="side-item">Tests musculaires</div>
-            <div class="side-section">Synthèse</div>
-            <div class="side-item">CR Tests</div>
-            <div class="side-item">CR Complet</div>
-            <div class="side-item">Évolution</div>
-          </div>
-          <div class="app-main">
-            <div class="block">
-              <div class="block-header red">Tests traumatiques · Positif = signe clinique</div>
-              <table class="t-table">
-                <thead><tr><th style="width:42%">Test</th><th style="width:120px">Résultat</th><th>Observations</th></tr></thead>
-                <tbody>
-                  <tr>
-                    <td>Relocation Test</td>
-                    <td><span class="res res-neg">Négatif</span></td>
-                    <td class="t-obs">RAS</td>
-                  </tr>
-                  <tr>
-                    <td>Palm-Up Test</td>
-                    <td><span class="res res-pos">Positif</span></td>
-                    <td class="t-obs">Douleur antérieure</td>
-                  </tr>
-                  <tr>
-                    <td>Drop Arm Test</td>
-                    <td><span class="res res-neg">Négatif</span></td>
-                    <td class="t-obs">Sans particularité</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div class="block">
-              <div class="block-header green">Tests fonctionnels · Positif = signe favorable</div>
-              <table class="t-table">
-                <thead><tr><th style="width:42%">Test</th><th style="width:120px">Résultat</th><th>Observations</th></tr></thead>
-                <tbody>
-                  <tr>
-                    <td>Élévation complète</td>
-                    <td><span class="res res-neg">Positif</span></td>
-                    <td class="t-obs">170° sans douleur</td>
-                  </tr>
-                  <tr>
-                    <td>Main dans le dos</td>
-                    <td><span class="res res-pos">Négatif</span></td>
-                    <td class="t-obs">Limité à L5</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+      </div>
+      <div class="ecran-choix" role="group" aria-label="Écran affiché">
+        <button type="button" class="actif" aria-pressed="true">Suivi de charge</button>
+        <button type="button" aria-pressed="false">Évolution du patient</button>
+        <button type="button" aria-pressed="false">Compte-rendu médecin</button>
       </div>
     </div>
   </div>
@@ -657,6 +597,31 @@
 (function () {
   var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var isMobile = window.matchMedia('(max-width: 860px)').matches;
+
+  /* — Hero : trois écrans réels, en fondu —
+     Le passage à l'écran suivant est déclenché par la FIN de l'animation de la
+     barre du bouton actif. Le survol la met en pause (CSS) ; en mouvement
+     réduit elle n'existe pas, donc rien ne défile tout seul. */
+  var choix = document.querySelectorAll('.ecran-choix button');
+  var ecrans = document.querySelectorAll('.ecrans .ecran');
+  function montrerEcran(index) {
+    choix.forEach(function (bouton, i) {
+      var actif = i === index;
+      bouton.classList.toggle('actif', actif);
+      bouton.setAttribute('aria-pressed', actif ? 'true' : 'false');
+    });
+    ecrans.forEach(function (image, i) {
+      var actif = i === index;
+      image.classList.toggle('actif', actif);
+      if (actif) { image.removeAttribute('aria-hidden'); } else { image.setAttribute('aria-hidden', 'true'); }
+    });
+  }
+  choix.forEach(function (bouton, i) {
+    bouton.addEventListener('click', function () { montrerEcran(i); });
+    bouton.addEventListener('animationend', function (e) {
+      if (e.animationName === 'ecranDefile') { montrerEcran((i + 1) % choix.length); }
+    });
+  });
 
   /* — Onglets du démonstrateur —
      Le clavier suit le motif ARIA : flèches pour changer d'onglet, Début/Fin
