@@ -62,21 +62,21 @@
            en fondu enchaîné. Le rythme est donné par la barre du bouton actif. -->
       <div class="app-window" id="appWindow">
         <div class="ecrans">
-          <img class="ecran actif" src="img/app/charge-1280.webp" srcset="img/app/charge-1280.webp 1280w, img/app/charge-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="high"
-               alt="Bilan de charge dans Rehab4Perf : charge sur sept jours, monotonie, charge quotidienne sur deux semaines, et ACWR à 1,01 sur huit semaines, dans la zone favorable">
+          <img class="ecran actif" src="img/app/suivi-corps-1280.webp" srcset="img/app/suivi-corps-1280.webp 1280w, img/app/suivi-corps-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="high"
+               alt="Onglet Suivi : le corps 3D du patient, genou droit en vert à 1 sur 10, et sa fiche de zone avec la courbe de douleur, le diagnostic et les tests liés (quadriceps 36 contre 44 kg, symétrie 82 %)">
           <img class="ecran" src="img/app/builder-1280.webp" srcset="img/app/builder-1280.webp 1280w, img/app/builder-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
-               alt="Construction de séance : bloc avec split squat, 3 séries de 12 par côté et 10 kg de charge cible, consigne du praticien, et bibliothèque d'exercices en vidéo">
-          <img class="ecran" src="img/app/evolution-1280.webp" srcset="img/app/evolution-1280.webp 1280w, img/app/evolution-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
-               alt="Page Évolution : la douleur passe de 4 à 1 sur 10, et la force du quadriceps opéré rattrape le côté sain sur trois bilans">
+               alt="Construction d'une séance : bloc avec split squat 3 séries de 12 par côté à 10 kg, rappel de la dernière séance et progression, et bibliothèque d'exercices en vidéo">
           <img class="ecran" src="img/app/cr-1280.webp" srcset="img/app/cr-1280.webp 1280w, img/app/cr-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
-               alt="Générateur de compte-rendu : lettre au médecin avec le tableau des tests de force et leurs asymétries">
+               alt="Générateur de compte-rendu : la lettre au médecin avec le tableau des tests de force et leurs asymétries">
+          <img class="ecran" src="img/app/partage-1280.webp" srcset="img/app/partage-1280.webp 1280w, img/app/partage-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
+               alt="Menu Partager : ouvrir l'espace de l'athlète, copier son lien, partager à un kiné, ou partager le dossier à un confrère préparateur">
         </div>
       </div>
       <div class="ecran-choix" role="group" aria-label="Écran affiché">
-        <button type="button" class="actif" aria-pressed="true">Suivi de charge</button>
+        <button type="button" class="actif" aria-pressed="true">Le corps du patient</button>
         <button type="button" aria-pressed="false">Construction de séance</button>
-        <button type="button" aria-pressed="false">Évolution du patient</button>
         <button type="button" aria-pressed="false">Compte-rendu médecin</button>
+        <button type="button" aria-pressed="false">Kiné et préparateur</button>
       </div>
     </div>
   </div>
@@ -86,13 +86,13 @@
 <section class="bandeau" aria-label="Chiffres clés">
   <div class="container bandeau-inner">
     <div class="bandeau-legende">
-      Un seul outil, du premier test au programme envoyé.
-      <span>Rien à ressaisir entre les deux.</span>
+      Du premier test au retour du patient, sans ressaisie.
+      <span>Et deux métiers sur le même dossier.</span>
     </div>
     <div class="bandeau-chiffres">
       <div>
-        <div class="bandeau-num">6</div>
-        <div class="bandeau-lbl">Régions anatomiques couvertes</div>
+        <div class="bandeau-num">11</div>
+        <div class="bandeau-lbl">Zones du corps suivies sur le mannequin 3D</div>
       </div>
       <div>
         <div class="bandeau-num">200+</div>
@@ -146,286 +146,58 @@
   </div>
 </section>
 
-<!-- ============ DÉMONSTRATEUR À ONGLETS ============ -->
+<!-- ============ LES DEUX MODES ============ -->
 <section class="section sur-surface" id="produit">
   <div class="container">
     <div class="tete-gauche reveal">
       <span class="section-tag">Le produit</span>
-      <h2>Quatre moments d'une prise en charge, un seul dossier</h2>
-      <p>Voici ce que voit un praticien qui suit Maëlys, 24 ans, six mois après une ligamentoplastie du genou droit.</p>
+      <h2>Deux métiers, un seul dossier</h2>
+      <p>Le kinésithérapeute soigne, le préparateur reconstruit. Chacun son outil, mais le même patient : autant que le dossier les suive.</p>
     </div>
 
-    <div class="ong-rail" role="tablist" aria-label="Fonctionnalités de Rehab4Perf">
-      <button class="ong-btn" role="tab" id="ong-bilan" aria-controls="pan-bilan" aria-selected="true">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1"/><path d="m9 14 2 2 4-4"/></svg>
-        Bilan clinique
-      </button>
-      <button class="ong-btn" role="tab" id="ong-charge" aria-controls="pan-charge" aria-selected="false">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg>
-        Surcharge progressive
-      </button>
-      <button class="ong-btn" role="tab" id="ong-cr" aria-controls="pan-cr" aria-selected="false">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
-        Compte-rendu médecin
-      </button>
-      <button class="ong-btn" role="tab" id="ong-prog" aria-controls="pan-prog" aria-selected="false">
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.4 7.4 16.6 16.6"/><path d="m18 22 4-4"/><path d="m2 6 4-4"/><path d="m3 10 7-7"/><path d="m14 21 7-7"/></svg>
-        Prescription
-      </button>
+    <div class="modes">
+      <article class="mode reveal">
+        <h3>Mode kiné</h3>
+        <p class="mode-sous">Le dossier clinique en entier</p>
+        <ul class="ong-preuves">
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Bilan par région</strong> : épaule, rachis, hanche, genou, pied, lésion musculaire.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Mobilités actif et passif, tests de force et <strong>indice de symétrie</strong> calculé seul.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le <strong>corps 3D</strong> : chaque zone de douleur datée, reliée à ses tests.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le <strong>compte-rendu médecin</strong> en sept sections, généré depuis le bilan.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Questionnaires validés, remplis en séance ou à distance.</span></li>
+        </ul>
+      </article>
+
+      <article class="mode reveal">
+        <h3>Mode préparateur physique</h3>
+        <p class="mode-sous">La performance, sans le médical</p>
+        <ul class="ong-preuves">
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Construction de séances et de cycles, <strong>200+ exercices en vidéo</strong>.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Charge d'entraînement</strong> : ACWR, monotonie et contrainte, méthode de Foster.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Profil d'effort, zones d'allure, et les sorties qui arrivent de Strava ou de la montre.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Cycles avec <strong>critères de passage</strong>, et non des durées fixes.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Ni tests orthopédiques, ni diagnostic : ce n'est pas son métier.</span></li>
+        </ul>
+      </article>
     </div>
 
-    <!-- Onglet 1 : bilan -->
-    <div class="ong-panneau actif" role="tabpanel" id="pan-bilan" aria-labelledby="ong-bilan">
-      <div class="ong-grille">
-        <div class="ong-copie">
-          <h3>L'asymétrie se lit, elle ne se calcule pas de tête</h3>
-          <p>Vous saisissez le côté sain et le côté opéré. Le déficit et l'indice de symétrie tombent seuls, colorés selon les seuils que vous connaissez.</p>
-          <ul class="ong-preuves">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Six régions</strong> : épaule, rachis, hanche, genou, pied et lésion myo-aponévrotique.</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tests <strong>traumatiques et fonctionnels</strong> séparés, pour trier vite en début de séance.</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Seuils <strong>90 % et 75 %</strong> appliqués automatiquement à chaque ligne.</span></li>
-          </ul>
-        </div>
-        <div>
-          <div class="demo">
-            <div class="app-topnav">
-              <span class="app-tab active">Bilan clinique</span>
-              <span class="app-tab">Outils</span>
-              <span class="app-tab">Programme</span>
-              <span class="app-topnav-right">Maëlys Fabre</span>
-            </div>
-            <div class="app-body">
-              <div class="app-main">
-                <div class="block">
-                  <div class="block-header red">Tests traumatiques · Positif = signe clinique</div>
-                  <table class="t-table">
-                    <thead><tr><th style="width:44%">Test</th><th style="width:112px">Résultat</th><th>Observations</th></tr></thead>
-                    <tbody>
-                      <tr><td>Lachman</td><td><span class="res res-neg">Négatif</span></td><td class="t-obs">Arrêt dur</td></tr>
-                      <tr><td>Tiroir antérieur</td><td><span class="res res-neg">Négatif</span></td><td class="t-obs">Greffe continente</td></tr>
-                      <tr><td>Appréhension rotule</td><td><span class="res res-pos">Positif</span></td><td class="t-obs">Gêne en fin de course</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-                <div class="block">
-                  <div class="block-header green">Tests de force · Indice de symétrie</div>
-                  <div class="demo-scroll">
-                  <table class="t-table">
-                    <thead><tr><th style="width:38%">Test</th><th>Gauche</th><th>Droit</th><th>Asym.</th></tr></thead>
-                    <tbody>
-                      <tr><td>Extension genou (Nm/kg)</td><td>2.84</td><td>2.31</td><td><span class="cr-tag warn">81.3 %</span></td></tr>
-                      <tr><td>Flexion genou (Nm/kg)</td><td>1.62</td><td>1.48</td><td><span class="cr-tag good">91.4 %</span></td></tr>
-                      <tr><td>Hop test simple (cm)</td><td>148</td><td>129</td><td><span class="cr-tag warn">87.2 %</span></td></tr>
-                    </tbody>
-                  </table>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="demo-legende">Reproduction de l'écran de bilan. Le quadriceps reste sous le seuil de 90 % : l'outil le remontera seul dans les points à travailler.</p>
-        </div>
+    <div class="pont reveal">
+      <div>
+        <h3>Et entre les deux, le dossier circule</h3>
+        <p>Le kiné invite le préparateur. Le préparateur accepte. <strong>Le patient donne son accord depuis son espace.</strong> Sans ces trois-là, rien ne s'ouvre.</p>
+        <ul class="ong-preuves">
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le préparateur voit la force, les mobilités, les zones de douleur, les programmes et la charge.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Jamais les tests orthopédiques, jamais le diagnostic, jamais les notes cliniques.</span></li>
+      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Chaque lecture du dossier est inscrite au journal.</span></li>
+        </ul>
       </div>
-    </div>
-
-    <!-- Onglet 2 : surcharge progressive -->
-    <div class="ong-panneau" role="tabpanel" id="pan-charge" aria-labelledby="ong-charge" hidden>
-      <div class="ong-grille">
-        <div class="ong-copie">
-          <h3>Savoir si vous chargez trop, avant que le patient vous le dise</h3>
-          <p>L'outil rapporte la charge des sept derniers jours à la charge de fond des quatre dernières semaines. C'est l'ACWR, et il situe chaque semaine sur une échelle de risque.</p>
-          <ul class="ong-preuves">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Zone visée <strong>0.8 à 1.3</strong>, vigilance jusqu'à 1.5, risque au-delà.</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Monotonie et contrainte</strong> de Foster calculées sur la même semaine.</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Semaines de décharge planifiées et repérées dans l'historique.</span></li>
-          </ul>
+      <div>
+        <div class="demo">
+          <img src="img/app/partage-1280.webp" srcset="img/app/partage-1280.webp 1280w, img/app/partage-2560.webp 2560w"
+               sizes="(max-width: 980px) 100vw, 620px" width="1280" height="800" loading="lazy" decoding="async"
+               alt="Menu Partager : ouvrir l'espace de l'athlète, copier son lien, partager à un kiné, ou partager le dossier à un confrère préparateur">
         </div>
-        <div>
-          <div class="demo">
-            <div class="app-topnav">
-              <span class="app-tab">Bilan clinique</span>
-              <span class="app-tab">Outils</span>
-              <span class="app-tab active">Programme</span>
-              <span class="app-topnav-right">Maëlys Fabre</span>
-            </div>
-            <div class="app-body">
-              <div class="app-main">
-                <div class="acwr-carte">
-                  <div class="acwr-titre">ACWR · Ratio charge aiguë / chronique</div>
-                  <div class="acwr-chiffres">
-                    <div><div class="acwr-val optimal">1.23</div><div class="acwr-sous">Ratio ACWR</div></div>
-                    <div><div class="acwr-val">1610</div><div class="acwr-sous">Charge 7 j (aiguë), UA</div></div>
-                    <div><div class="acwr-val">1313</div><div class="acwr-sous">Charge chronique / sem.</div></div>
-                  </div>
-                  <div class="acwr-track" role="img" aria-label="Ratio de 1.23 situé dans la zone optimale">
-                    <div class="seg" style="flex:0.8;background:#3B82F6"></div>
-                    <div class="seg" style="flex:0.5;background:#16A34A"></div>
-                    <div class="seg" style="flex:0.2;background:#D97706"></div>
-                    <div class="seg" style="flex:0.5;background:#DC2626"></div>
-                    <div class="acwr-needle" style="left:61.5%"></div>
-                  </div>
-                  <div class="acwr-echelle"><span>0</span><span>0.8</span><span>1.3</span><span>1.5</span><span>2+</span></div>
-                  <span class="acwr-badge">Optimal</span>
-                  <p class="acwr-note">Zone optimale. Bon équilibre entre stimulus et récupération.</p>
-                </div>
-                <div class="charge-carte">
-                  <div class="charge-legende"><span>Charge hebdomadaire (UA)</span><span>ACWR</span></div>
-                  <svg viewBox="0 0 320 96" role="img" aria-label="Charge hebdomadaire sur six semaines et courbe ACWR, restée sous le seuil de 1.3">
-                    <line x1="24" y1="20.4" x2="310" y2="20.4" stroke="#FCA5A5" stroke-width="1" stroke-dasharray="3 2"/>
-                    <text x="313" y="23" font-size="6.5" fill="#DC2626" font-family="Figtree, sans-serif" text-anchor="end" opacity="0">1.3</text>
-                    <rect x="32.5" y="29.1" width="30.5" height="40.9" rx="1.5" fill="#3B82F6"/>
-                    <rect x="80.2" y="23.9" width="30.5" height="46.1" rx="1.5" fill="#3B82F6"/>
-                    <rect x="127.9" y="21.6" width="30.5" height="48.4" rx="1.5" fill="#3B82F6"/>
-                    <rect x="175.6" y="36.6" width="30.5" height="33.4" rx="1.5" fill="#BFDBFE"/>
-                    <rect x="223.2" y="18.8" width="30.5" height="51.2" rx="1.5" fill="#3B82F6"/>
-                    <rect x="270.9" y="15.1" width="30.5" height="54.9" rx="1.5" fill="#3B82F6"/>
-                    <polyline points="47.8,37.8 95.5,34.0 143.2,32.2 190.8,42.7 238.5,27.8 286.2,24.7" fill="none" stroke="#059669" stroke-width="1.4" stroke-linejoin="round"/>
-                    <g fill="#059669">
-                      <circle cx="47.8" cy="37.8" r="2.4"/><circle cx="95.5" cy="34.0" r="2.4"/><circle cx="143.2" cy="32.2" r="2.4"/>
-                      <circle cx="190.8" cy="42.7" r="2.4"/><circle cx="238.5" cy="27.8" r="2.4"/><circle cx="286.2" cy="24.7" r="2.4"/>
-                    </g>
-                    <line x1="24" y1="70" x2="310" y2="70" stroke="#E8E6E1" stroke-width="1"/>
-                    <g font-size="7.5" fill="#9D9B96" font-family="Figtree, sans-serif" text-anchor="middle">
-                      <text x="47.8" y="82">S1</text><text x="95.5" y="82">S2</text><text x="143.2" y="82">S3</text>
-                      <text x="190.8" y="82">S4</text><text x="238.5" y="82">S5</text><text x="286.2" y="82">S6</text>
-                    </g>
-                    <text x="190.8" y="92" font-size="6.5" fill="#2563EB" font-family="Figtree, sans-serif" text-anchor="middle">décharge</text>
-                  </svg>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="demo-legende">Six semaines de rééducation. La semaine 4 est une décharge planifiée : la courbe redescend à 0.94, puis remonte sans jamais franchir le seuil de 1.3.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Onglet 3 : compte-rendu -->
-    <div class="ong-panneau" role="tabpanel" id="pan-cr" aria-labelledby="ong-cr" hidden>
-      <div class="ong-grille">
-        <div class="ong-copie">
-          <h3>Le courrier au médecin, écrit par le bilan</h3>
-          <p>Aucune ressaisie. Les amplitudes deviennent un tableau, les déficits deviennent des points à travailler, et le document part en PDF sous votre en-tête.</p>
-          <ul class="ong-preuves">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Sept sections</strong>, de l'anamnèse aux points à travailler.</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Version <strong>courte</strong> pour le médecin, version <strong>complète</strong> pour le dossier.</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Graphiques d'évolution ajoutés dès le <strong>deuxième bilan</strong>.</span></li>
-          </ul>
-        </div>
-        <div>
-          <div class="demo">
-            <div class="app-topnav">
-              <span class="app-tab active">Bilan clinique</span>
-              <span class="app-tab">Outils</span>
-              <span class="app-tab">Programme</span>
-              <span class="app-topnav-right">CR Complet</span>
-            </div>
-            <div class="app-body">
-              <div class="app-main">
-                <div class="cr-doc">
-                  <div class="cr-entete">
-                    <span class="cr-pastille">MF</span>
-                    <div>
-                      <div class="cr-nom">Maëlys Fabre</div>
-                      <div class="cr-meta">24 ans · Femme · 12 mars 2026</div>
-                      <span class="pz-chip">Genou · DROIT</span>
-                    </div>
-                  </div>
-
-                  <div class="cr-sec">1. Infos Patient &amp; Anamnèse</div>
-                  <div class="cr-corps">
-                    <div class="cr-item"><span class="cr-key">Diagnostic</span><span class="cr-val">Rupture du LCA, ligamentoplastie DIDT</span></div>
-                    <div class="cr-item"><span class="cr-key">Date opération</span><span class="cr-val">14/11/2025</span></div>
-                    <div class="cr-item"><span class="cr-key">Sport / Objectif</span><span class="cr-val">Handball, reprise en compétition</span></div>
-                    <div class="cr-item"><span class="cr-key">EVA actuelle</span><span class="cr-val">2/10</span></div>
-                  </div>
-
-                  <div class="cr-sec">2. Bilan orthopédique</div>
-                  <div class="cr-corps">
-                    <div class="rom-titre">Amplitudes articulaires · Genou (°)</div>
-                    <div class="demo-scroll">
-                    <table class="rom-table">
-                      <thead><tr><th style="width:46%">Mouvement</th><th>Gauche</th><th>Droit</th></tr></thead>
-                      <tbody>
-                        <tr><td>Flexion active</td><td>142°<span class="cr-tag good">Normal</span></td><td>128°<span class="cr-tag warn">Acceptable</span></td></tr>
-                        <tr><td>Flexion passive</td><td>148°<span class="cr-tag good">Normal</span></td><td>136°<span class="cr-tag warn">Acceptable</span></td></tr>
-                        <tr><td>Déficit extension</td><td>0°<span class="cr-tag good">Normal</span></td><td>4°<span class="cr-tag warn">Acceptable</span></td></tr>
-                      </tbody>
-                    </table>
-                    </div>
-                  </div>
-
-                  <div class="cr-sec">7. Points à travailler</div>
-                  <div class="cr-corps">
-                    <div class="cr-todo"><b>&gt;</b><span>Renforcement ischio-jambiers, Nordic Hamstring excentrique (déficit 18.4 %)</span></div>
-                    <div class="cr-todo"><b>&gt;</b><span>Travail pliométrique, explosivité verticale (Drop Jump asym. 82 %)</span></div>
-                    <div class="cr-todo"><b>&gt;</b><span>Contrôle postural dynamique, SEBT postéro-médial (asym. 86.3 %)</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="demo-legende">Extrait du compte-rendu généré. Les trois points à travailler sont déduits des tests de l'onglet précédent, pas rédigés à la main.</p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Onglet 4 : prescription -->
-    <div class="ong-panneau" role="tabpanel" id="pan-prog" aria-labelledby="ong-prog" hidden>
-      <div class="ong-grille">
-        <div class="ong-copie">
-          <h3>Une séance montée en deux minutes, pas en vingt</h3>
-          <p>Choisissez un objectif et une méthode : séries, répétitions, récupération et tempo se remplissent seuls. Vous n'ajustez que ce qui doit l'être.</p>
-          <ul class="ong-preuves">
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Six objectifs</strong> : endurance de force, puissance, hypertrophie, force maximale, tendinopathie.</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Cibles en <strong>kg, RPE, RIR, % 1RM ou vitesse</strong>, au choix par exercice.</span></li>
-            <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Envoi au patient par <strong>lien web ou PDF</strong>, vidéo de chaque exercice incluse.</span></li>
-          </ul>
-        </div>
-        <div>
-          <div class="demo">
-            <div class="app-topnav">
-              <span class="app-tab">Bilan clinique</span>
-              <span class="app-tab">Outils</span>
-              <span class="app-tab active">Programme</span>
-              <span class="app-topnav-right">Maëlys Fabre</span>
-            </div>
-            <div class="app-body">
-              <div class="app-main">
-                <div class="meth-bar">
-                  <span class="obj-label">Objectif :</span>
-                  <span class="faux-select">Puissance</span>
-                  <span class="faux-select">Contraste de charge, option 1</span>
-                </div>
-                <div class="demo-scroll">
-                <table class="exo-table">
-                  <thead>
-                    <tr><th style="width:34%">Exercice</th><th>Reps</th><th>Séries</th><th>Récup</th><th>Tempo</th><th>Cible</th></tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td class="exo-nom">Squat barre<span class="exo-video">Vidéo</span></td>
-                      <td>4</td><td>4</td><td>3'</td><td>2/0/X</td>
-                      <td><span class="cible-pill">85 % 1RM</span></td>
-                    </tr>
-                    <tr>
-                      <td class="exo-nom">Squat sauté<span class="exo-video">Vidéo</span></td>
-                      <td>6</td><td>4</td><td>3'</td><td class="exo-vide">-</td>
-                      <td><span class="cible-pill">RPE 8</span></td>
-                    </tr>
-                    <tr>
-                      <td class="exo-nom">Nordic hamstring<span class="exo-video">Vidéo</span></td>
-                      <td>5</td><td>3</td><td>2'</td><td>3/0/1</td>
-                      <td><span class="cible-pill">RIR 1</span></td>
-                    </tr>
-                  </tbody>
-                </table>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="demo-legende">Bloc « puissance » en contraste de charge. Le Nordic hamstring répond directement au déficit ischio-jambier relevé au bilan.</p>
-        </div>
+        <p class="demo-legende">Le menu de partage, côté praticien. L'athlète, un confrère kiné, un préparateur : chacun reçoit ce qui le concerne.</p>
       </div>
     </div>
   </div>
@@ -436,31 +208,39 @@
   <div class="container">
     <div class="tete-gauche reveal">
       <h2>Votre patient repart avec une vraie application</h2>
-      <p>Un lien suffit, sans compte ni mot de passe. Il retrouve ses séances et leurs vidéos, et vous renvoie son ressenti.</p>
+      <p>Un lien suffit, sans compte ni mot de passe. Il voit son programme, son corps et ses progrès, et vous renvoie son ressenti.</p>
     </div>
-    <!-- Trois captures réelles de l'espace athlète (compte de démo, patient fictif). -->
+    <!-- Quatre captures réelles de l'espace athlète (compte de démo, patient fictif). -->
     <div class="telephones">
       <figure class="tel reveal">
         <div class="tel-cadre">
-          <img src="img/app/athlete-calendrier-390.webp" srcset="img/app/athlete-calendrier-390.webp 390w, img/app/athlete-calendrier-780.webp 780w"
-               sizes="(max-width: 860px) 72vw, 300px" width="390" height="844" loading="lazy" decoding="async"
-               alt="Espace athlète sur téléphone : cycle de réathlétisation en cours, critères du protocole LCA à valider, et calendrier du mois">
+          <img src="img/app/athlete-programme-390.webp" srcset="img/app/athlete-programme-390.webp 390w, img/app/athlete-programme-780.webp 780w"
+               sizes="(max-width: 860px) 72vw, 250px" width="390" height="844" loading="lazy" decoding="async"
+               alt="Espace athlète : cycle de réathlétisation en cours, critères du protocole LCA dont un validé, et calendrier du mois">
         </div>
         <figcaption><strong>Son programme</strong>Le cycle en cours, les critères de passage de son protocole et ses séances du mois.</figcaption>
       </figure>
       <figure class="tel reveal">
         <div class="tel-cadre">
+          <img src="img/app/athlete-suivi-390.webp" srcset="img/app/athlete-suivi-390.webp 390w, img/app/athlete-suivi-780.webp 780w"
+               sizes="(max-width: 860px) 72vw, 250px" width="390" height="844" loading="lazy" decoding="async"
+               alt="Onglet Mon suivi côté athlète : son corps 3D avec le genou droit suivi, force à 86 % et tests fonctionnels à 90 % d'équilibre gauche droite">
+        </div>
+        <figcaption><strong>Son corps</strong>Les zones que vous suivez, sa force et ses tests, en équilibre gauche / droite.</figcaption>
+      </figure>
+      <figure class="tel reveal">
+        <div class="tel-cadre">
           <img src="img/app/athlete-seance-390.webp" srcset="img/app/athlete-seance-390.webp 390w, img/app/athlete-seance-780.webp 780w"
-               sizes="(max-width: 860px) 72vw, 300px" width="390" height="844" loading="lazy" decoding="async"
-               alt="Séance vue par l'athlète : split squat, 3 séries de 12 par côté avec 10 kg de charge cible, consigne du praticien et curseur de douleur">
+               sizes="(max-width: 860px) 72vw, 250px" width="390" height="844" loading="lazy" decoding="async"
+               alt="Séance vue par l'athlète : split squat, 3 séries de 12 par côté à 10 kg, consigne du praticien et curseur de douleur">
         </div>
         <figcaption><strong>Sa séance</strong>Chaque exercice avec sa vidéo, ses séries, sa charge cible et vos consignes.</figcaption>
       </figure>
       <figure class="tel reveal">
         <div class="tel-cadre">
           <img src="img/app/athlete-retour-390.webp" srcset="img/app/athlete-retour-390.webp 390w, img/app/athlete-retour-780.webp 780w"
-               sizes="(max-width: 860px) 72vw, 300px" width="390" height="844" loading="lazy" decoding="async"
-               alt="Fin de séance côté athlète : durée réelle, effort perçu sur l'échelle de Borg, et charge calculée de 70 UA">
+               sizes="(max-width: 860px) 72vw, 250px" width="390" height="844" loading="lazy" decoding="async"
+               alt="Fin de séance côté athlète : durée réelle, effort perçu sur l'échelle de Borg, et charge calculée en unités arbitraires">
         </div>
         <figcaption><strong>Son retour</strong>Douleur par exercice et effort perçu. Sa charge remonte seule dans votre suivi.</figcaption>
       </figure>
@@ -522,7 +302,7 @@
     <div class="section-head reveal">
       <span class="section-tag">Tarifs</span>
       <h2>Un plan pour chaque profil</h2>
-      <p>Kinésithérapeute ou préparateur physique, choisissez l'outil adapté à votre pratique.</p>
+      <p>Deux modes, deux tarifs. Le dossier, lui, passe de l'un à l'autre avec l'accord du patient.</p>
     </div>
     <div class="pricing-grid">
       <div class="price-card reveal">
@@ -539,11 +319,11 @@
       <div class="price-card reveal">
         <div class="price-name">Performance</div>
         <div class="price-amount">19 € <span>/ mois</span></div>
-        <div class="price-desc">Pour les préparateurs physiques et coaches</div>
+        <div class="price-desc">Le mode préparateur physique</div>
         <ul class="price-list">
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Patients et athlètes illimités</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Programmes d'exercices personnalisés</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suivi de charge et calcul ACWR</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suivi de charge, ACWR et corps 3D</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Exports PDF des prescriptions</li>
         </ul>
         <a href="https://buy.stripe.com/3cI8wOfAxcggc7L3laaEE02" class="btn btn-outline">Choisir Performance</a>
@@ -552,13 +332,13 @@
         <div class="price-badge">Kinésithérapeutes</div>
         <div class="price-name">Clinique</div>
         <div class="price-amount">29 € <span>/ mois</span></div>
-        <div class="price-desc">L'outil complet pour votre pratique clinique</div>
+        <div class="price-desc">Le mode kiné, dossier clinique compris</div>
         <ul class="price-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Tout le plan Performance</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Tout le mode préparateur</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bilans cliniques par région anatomique</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Comptes-rendus médecin automatiques</li>
           <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Outils PRO (questionnaires validés)</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Support prioritaire</li>
+          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Partage du dossier à un préparateur</li>
         </ul>
         <a href="https://buy.stripe.com/3cIfZg0FDeoo4Fjg7WaEE01" class="btn btn-primary">Choisir Clinique</a>
       </div>
