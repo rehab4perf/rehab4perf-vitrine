@@ -524,6 +524,35 @@ a { color: inherit; text-decoration: none; }
 .price-list svg { color: var(--green); flex-shrink: 0; margin-top: 3px; }
 .price-card .btn { width: 100%; justify-content: center; }
 
+/* ---------- Offre Cabinet (tarifs par place) ---------- */
+.cabinet-offre {
+  max-width: 1020px;
+  margin: 32px auto 0;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 36px 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 36px;
+  align-items: center;
+}
+.cabinet-texte h3 { font-size: 22px; font-weight: 800; color: var(--text); letter-spacing: -0.02em; margin-bottom: 10px; text-wrap: balance; }
+.cabinet-texte p { font-size: 15px; color: var(--text-muted); line-height: 1.6; margin-bottom: 22px; }
+.cabinet-grille { overflow-x: auto; }
+.cabinet-grille table { width: 100%; border-collapse: collapse; font-size: 14px; font-variant-numeric: tabular-nums; }
+.cabinet-grille caption { text-align: left; font-size: 12px; font-weight: 700; color: var(--text-faint); text-transform: uppercase; letter-spacing: .05em; padding-bottom: 10px; }
+.cabinet-grille th, .cabinet-grille td { padding: 9px 12px; border-bottom: 1px solid var(--border); text-align: right; }
+.cabinet-grille th[scope="row"], .cabinet-grille thead th:first-child { text-align: left; }
+.cabinet-grille thead th { font-weight: 700; color: var(--blue-dark); }
+.cabinet-grille th[scope="row"] { font-weight: 600; color: var(--text); }
+.cabinet-grille td { color: var(--text-muted); }
+.cabinet-grille tbody tr:last-child th, .cabinet-grille tbody tr:last-child td { border-bottom: 0; }
+.cabinet-note { font-size: 13px; color: var(--text-faint); margin-top: 10px; }
+@media (max-width: 760px) {
+  .cabinet-offre { grid-template-columns: 1fr; gap: 24px; padding: 28px 20px; }
+}
+
 /* ---------- CTA final ---------- */
 .cta-final {
   text-align: center;
