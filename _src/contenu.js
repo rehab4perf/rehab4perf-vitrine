@@ -76,6 +76,17 @@ const THEMES = [
           'Pour le patient, les coordonnées du médecin disparaissent et le vouvoiement reste.',
           'Les informations du bilan s\'associent toutes seules, et se corrigent si le bilan bouge.'
         ], img: null },
+      { type: 'doc', img: { src: 'img/app/cr-complet', alt: 'Compte-rendu complet généré par Rehab4Perf : en-tête du cabinet, tests de force avec asymétrie, analyse fonctionnelle du membre inférieur, tests fonctionnels avec leurs repères, examen orthopédique du genou, puis la signature du praticien' },
+        h2: 'Le courrier entier, tel qu\'il part',
+        p: 'Voilà ce que le médecin ouvre. Une page, votre en-tête, et les mesures du bilan rangées section par section. Rien n\'a été remis en forme pour cette image : c\'est le document généré, sur un dossier fictif.',
+        preuves: [
+          'Votre <strong>en-tête</strong> : cabinet, numéro AM, téléphone, courriel, logo et signature.',
+          '<strong>Tests de force</strong> : gauche, droite, l\'asymétrie calculée, et sa lecture en clair — pas au médecin de faire le pourcentage.',
+          '<strong>Analyse fonctionnelle</strong> : une compensation par ligne, squat bras levés et squat sur une jambe, côté par côté.',
+          '<strong>Tests fonctionnels</strong> : chaque test rappelle son repère de réussite — 80 % du côté sain, seuil de retour au sport, objectif d\'amplitude.',
+          'Les tests <strong>sans particularité</strong> tiennent en une phrase : le médecin voit qu\'ils ont été faits sans les lire un par un.',
+          'Et ce qui reste au cabinet y reste : le score interne de l\'analyse fonctionnelle n\'en sort pas, et une case décide si l\'EVA part.'
+        ] },
       { type: 'points', h2: 'Un document qui tient debout à l\'impression', p: 'Ce qui part chez un confrère engage votre sérieux. La mise en page est traitée comme telle.',
         items: [
           { h3: 'Les colonnes s\'adaptent', p: 'Une colonne de côté n\'apparaît qu\'à partir de la moitié des lignes. Sinon la valeur passe en toutes lettres.' },
@@ -167,7 +178,7 @@ const THEMES = [
           'Toutes les courbes s\'affichent d\'emblée ; vous choisissez celles qui partent au courrier.',
           'La période se règle : un mois, trois, six, un an, ou vos dates.'
         ] },
-      { type: 'duo', img: { src: 'img/app/suivi-charge', alt: 'Suivi, espace Entraînement : ACWR à 0,98 en zone favorable, 856 unités arbitraires sur sept jours, charge chronique à 876, et la courbe au jour près' },
+      { type: 'duo', img: { src: 'img/app/suivi-charge-an', alt: 'Suivi, espace Entraînement : une année de charge au jour près, ACWR à 1,04 en zone favorable, 954 unités arbitraires sur sept jours, charge chronique à 916, et le pic à 2,85 lors de la reprise' },
         h2: 'Ce que l\'analyse de charge vous apporte',
         p: 'Des chiffres bruts, personne n\'en fait rien. Lus ensemble, ils répondent à trois questions que vous vous posez chaque semaine.',
         preuves: [
@@ -176,7 +187,7 @@ const THEMES = [
           '<strong>Et la course ?</strong> Volume, part courue vite, allure par zone cardiaque, dérive sur un fractionné.',
           'Une douleur se superpose à la charge : vous voyez ce qui a précédé, et non ce qui a suivi.'
         ] },
-      { type: 'duo', inverse: true, img: { src: 'img/app/suivi-sorties', alt: 'Suivi, vue Sorties : volume de course sur sept jours glissants, la bande de son habitude, le ratio volume et le rapport aigu sur chronique' },
+      { type: 'duo', inverse: true, img: { src: 'img/app/suivi-sorties-an', alt: 'Suivi, vue Sorties : une année de volume de course sur sept jours glissants, la bande de son habitude, les kilomètres courus plus vite qu\'elle, et le rapport aigu sur chronique' },
         h2: 'La course lue comme elle se vit',
         p: 'Un coureur ne se blesse pas parce qu\'il court. Il se blesse parce qu\'il a changé quelque chose. L\'écran montre ce qui a changé, et quand.',
         preuves: [
@@ -202,10 +213,10 @@ const THEMES = [
     titre: 'La charge d\'entraînement',
     chapoCarte: 'Des unités arbitraires à l\'ACWR, et les sorties qui arrivent seules de Strava ou de la montre.',
     mots: ['UA de Foster', 'ACWR', 'Monotonie', 'Strava', 'Montres'],
-    vignette: { src: 'img/app/suivi-charge-1280.webp', alt: 'Suivi de la charge : ACWR à 0,98 en zone favorable et courbe au jour près' },
+    vignette: { src: 'img/app/suivi-charge-an-1280.webp', alt: 'Suivi de la charge : une année au jour près, ACWR à 1,04 en zone favorable' },
     h1: 'Savoir si vous chargez trop,<br>avant qu\'il vous le dise',
     chapo: 'La charge des sept derniers jours, rapportée à la charge de fond des quatre dernières semaines. C\'est l\'ACWR, et il situe chaque semaine sur une échelle de risque.',
-    heroImg: { src: 'img/app/suivi-charge', alt: 'Suivi, espace Entraînement : ACWR à 0,98 en zone favorable, 856 unités arbitraires sur sept jours, charge chronique à 876, et la courbe au jour près' },
+    heroImg: { src: 'img/app/suivi-charge-an', alt: 'Suivi, espace Entraînement : une année de charge au jour près, ACWR à 1,04 en zone favorable, 954 unités arbitraires sur sept jours, charge chronique à 916, et le pic à 2,85 lors de la reprise' },
     blocs: [
       { type: 'points', h2: 'Trois chiffres, et ce qu\'ils veulent dire', p: 'La méthode de Foster, appliquée sans jargon : une charge de séance vaut l\'effort perçu multiplié par la durée.',
         items: [
@@ -216,7 +227,7 @@ const THEMES = [
           { h3: 'Les paliers', p: 'Certaines semaines n\'augmentent pas : l\'os se décharge, le tendon se maintient. C\'est voulu.' },
           { h3: 'Un seul levier', p: 'Volume, allure, cadence : jamais deux la même semaine, sinon on ne sait plus ce qui a fait mal.' }
         ] },
-      { type: 'duo', img: { src: 'img/app/suivi-sorties', alt: 'Vue Sorties du Suivi : volume de course sur sept jours glissants, bande d\'habitude, ratio volume et rapport aigu sur chronique' },
+      { type: 'duo', img: { src: 'img/app/suivi-sorties-an', alt: 'Vue Sorties du Suivi : une année de volume de course sur sept jours glissants, bande d\'habitude, kilomètres courus plus vite qu\'elle et rapport aigu sur chronique' },
         h2: 'La course, levier par levier',
         p: 'Volume, allure, cadence : un seul change à la fois, sinon on ne sait plus ce qui a fait mal. L\'écran dit lequel a bougé, et de combien.',
         preuves: [
@@ -346,8 +357,8 @@ const PRODUIT = {
   diapos: [
     { img: 'img/app/suivi-corps', libelle: 'Le corps', alt: 'Onglet Suivi : le corps 3D du patient, sa zone de douleur datée et ses tests liés' },
     { img: 'img/app/evolution', libelle: 'Les courbes', alt: 'Page Évolution : courbes de douleur et de force bilan après bilan, avec les variations' },
-    { img: 'img/app/suivi-charge', libelle: 'La charge', alt: 'Suivi de la charge : ACWR à 0,98 en zone favorable et courbe au jour près' },
-    { img: 'img/app/suivi-sorties', libelle: 'La course', alt: 'Vue Sorties : volume sur sept jours glissants et bande d\'habitude' },
+    { img: 'img/app/suivi-charge-an', libelle: 'La charge', alt: 'Suivi de la charge : une année au jour près, ACWR à 1,04 en zone favorable' },
+    { img: 'img/app/suivi-sorties-an', libelle: 'La course', alt: 'Vue Sorties : une année de volume sur sept jours glissants et la bande d\'habitude' },
     { img: 'img/app/builder', libelle: 'La séance', alt: 'Construction de séance : blocs, séries, charges cibles et bibliothèque en vidéo' },
     { img: 'img/app/cr', libelle: 'Le courrier', alt: 'Générateur de compte-rendu : le formulaire et la lettre au médecin' },
     { img: 'img/app/bilan-perso', libelle: 'Votre bilan', alt: 'Mode personnalisation : les blocs se déplacent, se masquent, et vos tests s\'ajoutent' }
@@ -356,7 +367,7 @@ const PRODUIT = {
     { img: 'img/app/evolution', alt: 'Page Évolution : courbes de douleur et de force, avec les variations entre chaque mesure',
       h2: 'Trois bilans, et la progression se voit',
       p: 'Le chiffre du jour en grand, la variation depuis le début, le pourcentage entre chaque mesure. Ce que le patient demande, et ce que le médecin attend.' },
-    { img: 'img/app/suivi-sorties', inverse: true, alt: 'Vue Sorties du Suivi : volume de course sur sept jours glissants, bande d\'habitude et ratios',
+    { img: 'img/app/suivi-sorties-an', inverse: true, alt: 'Vue Sorties du Suivi : une année de volume de course, bande d\'habitude et ratios',
       h2: 'La charge cesse d\'être une intuition',
       p: 'Le volume, la part courue vite, l\'habitude autour, et le rapport aigu sur chronique. Un seul levier bouge à la fois, et vous voyez lequel.' },
     { img: 'img/app/suivi-corps', alt: 'Le corps 3D du Suivi avec la zone du genou et sa fiche',
@@ -365,6 +376,18 @@ const PRODUIT = {
     { img: 'img/app/ecran-salle', inverse: true, alt: 'Aperçu de l\'écran de salle : deux patients, leurs blocs et leurs charges sur la télévision',
       h2: 'Et la salle suit',
       p: 'La séance s\'affiche sur la télévision du cabinet. Le prénom, les blocs, les charges. Jamais le diagnostic.' }
+  ]
+};
+
+const PRODUIT_DOC = {
+  img: { src: 'img/app/cr-complet', alt: 'Compte-rendu complet généré par Rehab4Perf : en-tête du cabinet, tests de force avec asymétrie, analyse fonctionnelle, tests fonctionnels et examen orthopédique' },
+  h2: 'Et au bout, un document',
+  p: 'Tout ce qui précède finit là : une page que le médecin ouvre et comprend. Vos mesures y sont rangées, comparées et lues — c\'est la sortie du dossier, pas un gadget de plus.',
+  preuves: [
+    'Chaque test porte son chiffre, son asymétrie et sa lecture en clair.',
+    'Votre en-tête, votre signature, votre tampon : le courrier est le vôtre.',
+    'Aperçu et PDF sont le même document — aucune surprise à l\'ouverture.',
+    'Ce qui ne doit pas sortir du cabinet ne sort pas.'
   ]
 };
 
@@ -449,4 +472,4 @@ const TELS = [
     alt: 'Fin de séance côté athlète : durée réelle, effort perçu sur l\'échelle de Borg, et charge calculée en unités arbitraires' }
 ];
 
-module.exports = { APP, THEMES, ACCUEIL, PRODUIT, TELS };
+module.exports = { APP, THEMES, ACCUEIL, PRODUIT, PRODUIT_DOC, TELS };

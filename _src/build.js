@@ -4,7 +4,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { APP, THEMES, ACCUEIL, PRODUIT, TELS } = require('./contenu.js');
+const { APP, THEMES, ACCUEIL, PRODUIT, PRODUIT_DOC, TELS } = require('./contenu.js');
 
 const RACINE = path.join(__dirname, '..');
 const LOGO = (c, w, h) => `<svg viewBox="8 34 164 104" width="${w}" height="${h}" aria-hidden="true"><g stroke="${c}" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>`;
@@ -13,15 +13,19 @@ const COCHE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" strok
 const FLECHE = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>';
 
 /* Une capture : soit un fichier précis, soit un préfixe à deux largeurs. */
-function image(src, alt, { large = false, tel = false, prio = false } = {}) {
+function image(src, alt, { large = false, tel = false, doc = false, prio = false } = {}) {
   if (!src) return '';
   const charge = prio ? ' fetchpriority="high"' : ' loading="lazy"';
   if (/\.webp$/.test(src)) return `<img src="${src}" alt="${alt}" width="1280" height="800" decoding="async"${charge}>`;
-  const [a, b] = tel ? [390, 780] : [1280, 2560];
-  const tailles = tel ? '(max-width: 900px) 72vw, 250px'
+  const [a, b] = doc ? [640, 1280] : tel ? [390, 780] : [1280, 2560];
+  const tailles = doc ? '(max-width: 980px) min(92vw, 440px), 440px'
+    : tel ? '(max-width: 900px) 72vw, 250px'
     : large ? '(max-width: 1188px) 100vw, 1140px' : '(max-width: 980px) 100vw, 620px';
+  /* Le courrier est une page portrait : ses vraies dimensions, sinon la place
+     réservée avant chargement est fausse et la page saute. */
+  const [lw, lh] = doc ? [1310, 2356] : tel ? [390, 844] : [1280, 800];
   return `<img src="${src}-${a}.webp" srcset="${src}-${a}.webp ${a}w, ${src}-${b}.webp ${b}w" sizes="${tailles}"`
-    + ` width="${tel ? 390 : 1280}" height="${tel ? 844 : 800}" alt="${alt}" decoding="async"${charge}>`;
+    + ` width="${lw}" height="${lh}" alt="${alt}" decoding="async"${charge}>`;
 }
 const preuves = (items) => `<ul class="preuves">${items.map(t => `<li>${COCHE}<span>${t}</span></li>`).join('')}</ul>`;
 
@@ -138,8 +142,18 @@ function diaporama(diapos) {
     </div>`;
 }
 
+/* Le document en entier : texte collant à gauche, la page à droite. */
+function document_(b) {
+  return `<section class="sec sur-blanc"><div class="wrap">
+    <div class="doc reveal">
+      <div class="duo-txt"><h2 class="t-moyen">${b.h2}</h2><p>${b.p}</p>${preuves(b.preuves)}</div>
+      <figure class="doc-page">${image(b.img.src, b.img.alt, { doc: true })}</figure>
+    </div></div></section>`;
+}
+
 /* ── Blocs d'une page de thème ───────────────────────────────────────────── */
 function bloc(b) {
+  if (b.type === 'doc') return document_(b);
   if (b.type === 'tels') {
     return `<section class="sec sur-blanc"><div class="wrap">
       <div class="tete reveal"><h2 class="t-grand">Ce qu'il a dans la poche</h2><p class="chapo">Quatre écrans, pris dans l'application telle qu'elle est aujourd'hui.</p></div>
@@ -274,6 +288,7 @@ ${P.blocs.map((b, i) => `<section class="sec${i % 2 === 0 ? ' sur-blanc' : ''}">
     <div class="duo-txt"><h2 class="t-moyen">${b.h2}</h2><p>${b.p}</p></div>
     <div><div class="ecran ecran-doux">${image(b.img, b.alt)}</div></div>
   </div></div></section>`).join('')}
+${document_(PRODUIT_DOC)}
 <section class="sec"><div class="wrap">
   <div class="tete reveal"><h2 class="t-grand">Ce qu'il a dans la poche</h2>
   <p class="chapo">L'athlète ouvre un lien, sans compte ni mot de passe.</p></div>
