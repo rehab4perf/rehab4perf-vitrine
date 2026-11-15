@@ -1,555 +1,153 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rehab4Perf · Bilan clinique, compte-rendu et prescription d'exercices</title>
-  <meta name="description" content="Rehab4Perf réunit le bilan clinique structuré, le compte-rendu médecin généré automatiquement et la prescription d'exercices quantifiée dans un seul outil, pensé par un kinésithérapeute.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@1,600&family=Poppins:wght@800&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="stylesheet" href="css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rehab4Perf · Le dossier du sportif, du bilan clinique au retour de terrain</title>
+<meta name="description" content="Bilan clinique, compte-rendu, programme, charge d'entraînement et espace athlète. Un seul outil, une seule saisie, pensé par un kinésithérapeute.">
+<link rel="canonical" href="https://rehab4perf.com/">
+<meta property="og:title" content="Rehab4Perf · Le dossier du sportif, du bilan clinique au retour de terrain">
+<meta property="og:description" content="Bilan clinique, compte-rendu, programme, charge d'entraînement et espace athlète. Un seul outil, une seule saisie, pensé par un kinésithérapeute.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="fr_FR">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@1,600&family=Poppins:wght@800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="stylesheet" href="css/site.css">
 </head>
 <body>
-
-<!-- ============ NAV ============ -->
 <nav class="nav">
-  <div class="container nav-inner">
-    <a href="#" class="brand">
-      <svg viewBox="8 34 164 104" width="34" height="22" aria-hidden="true"><g stroke="#2B5FA6" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
-      <span class="brand-w"><span class="brand-r">rehab<sup class="brand-e">4</sup></span><span class="brand-p">perf</span></span>
-    </a>
-    <div class="nav-links">
-      <a href="#produit">Le produit</a>
-      <a href="#patient">Côté patient</a>
-      <a href="#etapes">Comment ça marche</a>
-      <a href="#tarifs">Tarifs</a>
-    </div>
+  <div class="wrap nav-in">
+    <a href="index.html" aria-label="Rehab4Perf, accueil"><span class="brand"><svg viewBox="8 34 164 104" width="32" height="21" aria-hidden="true"><g stroke="#2B5FA6" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg><span class="brand-w"><span class="brand-r">rehab<sup class="brand-e">4</sup></span><span class="brand-p">perf</span></span></span></a>
+    <div class="nav-liens"><a href="bilan.html">Le produit</a><a href="index.html#tarifs">Tarifs</a><a href="athlete.html">Côté athlète</a></div>
     <div class="nav-cta">
-      <a href="https://app.rehab4perf.com/auth.html" class="btn btn-outline">Connexion</a>
-      <a href="https://app.rehab4perf.com/auth.html" class="btn btn-primary">Essai gratuit</a>
+      <a href="https://app.rehab4perf.com/auth.html" class="btn btn-ligne">Connexion</a>
+      <a href="https://app.rehab4perf.com/auth.html" class="btn btn-plein">Essai gratuit</a>
     </div>
   </div>
 </nav>
-
-<!-- ============ HERO ============ -->
-<header class="hero">
-  <div class="hero-bg">
-    <div class="orb orb-1" data-depth="0.4"></div>
-    <div class="orb orb-2" data-depth="0.7"></div>
-    <div class="orb orb-3" data-depth="0.5"></div>
+<div class="rail"><div class="wrap rail-in"><a href="bilan.html">Bilan clinique</a><a href="compte-rendu.html">Compte-rendu</a><a href="programme.html">Programme</a><a href="suivi.html">Suivi</a><a href="charge.html">Charge et course</a><a href="athlete.html">Espace athlète</a><a href="cabinet.html">Cabinet</a></div></div>
+<header class="hero"><div class="hero-fond"><div class="halo halo-1"></div><div class="halo halo-2"></div><div class="halo halo-3"></div></div>
+  <div class="wrap">
+    <h1 class="t-geant">Tout le dossier du sportif,<br>du premier test au retour de terrain</h1>
+    <p class="chapo">Bilan clinique, compte-rendu, programme, charge d'entraînement et espace athlète. Un seul outil, une seule saisie, pensé par un kinésithérapeute.</p>
+    <div class="hero-actions"><a href="https://app.rehab4perf.com/auth.html" class="btn btn-plein btn-lg">Commencer gratuitement <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="#trame" class="btn btn-ligne btn-lg">Voir le produit</a></div>
+    <div class="hero-vue"><div class="ecran"><img src="img/app/suivi-corps-1280.webp" srcset="img/app/suivi-corps-1280.webp 1280w, img/app/suivi-corps-2560.webp 2560w" sizes="(max-width: 1188px) 100vw, 1140px" width="1280" height="800" alt="Onglet Suivi de Rehab4Perf : le corps 3D du patient avec le genou droit coloré, sa fiche de zone, la courbe de douleur et les tests liés avec leurs indices de symétrie" decoding="async" fetchpriority="high"></div><p class="legende">Le Suivi : le corps du patient, ses zones datées, et les tests qui vont avec.</p></div>
+  </div></header>
+<section class="sec-serre sur-blanc"><div class="wrap"><div class="chiffres"><div class="reveal"><div class="chiffre">11</div><div class="chiffre-lbl">Zones du corps suivies sur le mannequin 3D</div></div><div class="reveal"><div class="chiffre">200+</div><div class="chiffre-lbl">Exercices filmés dans la bibliothèque</div></div><div class="reveal"><div class="chiffre">7</div><div class="chiffre-lbl">Sections dans le compte-rendu généré</div></div><div class="reveal"><div class="chiffre">0,8 à 1,3</div><div class="chiffre-lbl">La zone de charge visée, calculée en direct</div></div></div></div></section>
+<section class="sec" id="trame"><div class="wrap">
+  <div class="tete reveal"><span class="eyebrow">Le produit</span><h2 class="t-grand">Sept domaines, un seul dossier</h2>
+  <p class="chapo">Chaque thème a sa page. Entrez par celui qui vous concerne.</p></div>
+  <div class="trame"><a href="bilan.html" class="carte reveal">
+    <div class="carte-vue"><img src="img/app/bilan-1280.webp" alt="Page de bilan du genou : amplitudes et tests, côté gauche et côté droit" width="1280" height="800" decoding="async" loading="lazy"></div>
+    <div class="carte-txt"><h3>Le bilan clinique</h3><p>Six régions, vos propres onglets, et des tests qui se lisent en symétrie sans que vous comptiez.</p>
+      <div class="carte-mots"><span class="mot">Tests par région</span><span class="mot">Actif / passif</span><span class="mot">Symétrie</span><span class="mot">Onglets sur mesure</span></div>
+      <span class="carte-fin lien-fleche">Voir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div></a><a href="compte-rendu.html" class="carte reveal">
+    <div class="carte-vue"><img src="img/app/cr-1280.webp" alt="Générateur de compte-rendu : le formulaire à gauche, la lettre au médecin à droite" width="1280" height="800" decoding="async" loading="lazy"></div>
+    <div class="carte-txt"><h3>Le compte-rendu médecin</h3><p>Le courrier s'écrit pendant que vous remplissez le bilan. Il ne reste qu'à l'envoyer.</p>
+      <div class="carte-mots"><span class="mot">Aperçu vivant</span><span class="mot">Médecin ou patient</span><span class="mot">PDF</span><span class="mot">Batteries validées</span></div>
+      <span class="carte-fin lien-fleche">Voir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div></a><a href="programme.html" class="carte reveal">
+    <div class="carte-vue"><img src="img/app/builder-1280.webp" alt="Construction d'une séance : blocs, exercices, séries et charges cibles" width="1280" height="800" decoding="async" loading="lazy"></div>
+    <div class="carte-txt"><h3>Programme et agenda</h3><p>Une bibliothèque en vidéo, un builder qui se souvient, des modèles et un agenda qui planifie.</p>
+      <div class="carte-mots"><span class="mot">Bibliothèque</span><span class="mot">Builder</span><span class="mot">Modèles</span><span class="mot">Cycles</span><span class="mot">Protocoles</span></div>
+      <span class="carte-fin lien-fleche">Voir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div></a><a href="suivi.html" class="carte reveal">
+    <div class="carte-vue"><img src="img/app/suivi-corps-1280.webp" alt="Onglet Suivi : le corps 3D du patient et la fiche de la zone douloureuse" width="1280" height="800" decoding="async" loading="lazy"></div>
+    <div class="carte-txt"><h3>Le Suivi</h3><p>Quatre espaces et un corps en trois dimensions : où en est-il, comment va son corps, que fait-il, de quoi est-il capable.</p>
+      <div class="carte-mots"><span class="mot">Corps 3D</span><span class="mot">Zones de douleur</span><span class="mot">Fiche athlète</span><span class="mot">VMA</span><span class="mot">Plan de course</span></div>
+      <span class="carte-fin lien-fleche">Voir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div></a><a href="charge.html" class="carte reveal">
+    <div class="carte-vue"><img src="img/app/charge-1280.webp" alt="Bilan de charge : ACWR à 1,05 en zone favorable et courbe sur huit semaines" width="1280" height="800" decoding="async" loading="lazy"></div>
+    <div class="carte-txt"><h3>La charge d'entraînement</h3><p>Des unités arbitraires à l'ACWR, et les sorties qui arrivent seules de Strava ou de la montre.</p>
+      <div class="carte-mots"><span class="mot">UA de Foster</span><span class="mot">ACWR</span><span class="mot">Monotonie</span><span class="mot">Strava</span><span class="mot">Montres</span></div>
+      <span class="carte-fin lien-fleche">Voir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div></a><a href="athlete.html" class="carte reveal">
+    <div class="carte-vue carte-vue-tel"><img src="img/app/athlete-suivi-780.webp" alt="Espace athlète sur téléphone : son corps 3D et ses scores de force" width="1280" height="800" decoding="async" loading="lazy"></div>
+    <div class="carte-txt"><h3>L'espace athlète</h3><p>Un lien, sans compte ni mot de passe. Son programme, son corps, ses vidéos, et son retour après la séance.</p>
+      <div class="carte-mots"><span class="mot">Sans compte</span><span class="mot">Vidéos</span><span class="mot">Douleur par exercice</span><span class="mot">Notifications</span></div>
+      <span class="carte-fin lien-fleche">Voir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div></a><a href="cabinet.html" class="carte reveal">
+    <div class="carte-vue"><img src="img/app/partage-1280.webp" alt="Menu de partage : l'espace athlète, un confrère kiné, un préparateur physique" width="1280" height="800" decoding="async" loading="lazy"></div>
+    <div class="carte-txt"><h3>Cabinet et écran de salle</h3><p>Trois rôles, une bibliothèque commune, des dossiers qui se transfèrent, et la séance affichée sur la télé.</p>
+      <div class="carte-mots"><span class="mot">Trois rôles</span><span class="mot">Bibliothèque partagée</span><span class="mot">Écran de salle</span><span class="mot">Partage de dossier</span></div>
+      <span class="carte-fin lien-fleche">Voir <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></span>
+    </div></a></div>
+</div></section><section class="sec sur-blanc"><div class="wrap">
+  <div class="tete reveal"><h2 class="t-grand">Deux métiers, un seul dossier</h2><p class="chapo">Le kinésithérapeute soigne, le préparateur reconstruit. Chacun son mode, mais le même patient.</p></div>
+  <div class="duo" style="grid-template-columns:1fr 1fr;align-items:start">
+    <div class="reveal"><h3 class="t-petit" style="color:var(--blue)">Le dossier clinique en entier</h3><h3 class="t-moyen" style="margin:2px 0 8px">Mode kiné</h3><ul class="preuves"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Bilan par région, amplitudes actif et passif, tests de force en symétrie.</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le corps 3D, ses zones datées, reliées à leurs tests.</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le compte-rendu médecin, écrit pendant que vous remplissez.</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Questionnaires validés et batteries, remplis en séance ou à distance.</span></li></ul></div><div class="reveal"><h3 class="t-petit" style="color:var(--blue)">La performance, sans le médical</h3><h3 class="t-moyen" style="margin:2px 0 8px">Mode préparateur physique</h3><ul class="preuves"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Séances, cycles et protocoles, avec plus de 200 exercices filmés.</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Charge d'entraînement, ACWR, monotonie et contrainte.</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>VMA, zones d'allure, plan de course et sorties connectées.</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Ni tests orthopédiques, ni diagnostic : ce n'est pas son métier.</span></li></ul></div>
   </div>
-  <div class="container">
-    <div class="hero-badge">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6 6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3"/><path d="M8 15v1a6 6 0 0 0 6 6 6 6 0 0 0 6-6v-4"/><circle cx="20" cy="10" r="2"/></svg>
-      Conçu par un kinésithérapeute, pour les kinésithérapeutes
-    </div>
-    <h1>Le bilan clinique et la prescription d'exercices, <em>enfin réunis</em></h1>
-    <p>Bilan structuré, compte-rendu généré, programme prescrit. Une seule saisie, un seul outil.</p>
-    <div class="hero-actions">
-      <a href="https://app.rehab4perf.com/auth.html" class="btn btn-primary btn-lg">
-        Commencer gratuitement
-        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-      </a>
-      <a href="#produit" class="btn btn-outline btn-lg">Voir l'outil</a>
-    </div>
-
-    <!-- Scène : reproduction de la fenêtre applicative -->
-    <div class="scene" id="scene">
-
-      <!-- Quatre captures réelles de l'application (compte de démo, patient fictif),
-           en fondu enchaîné. Le rythme est donné par la barre du bouton actif. -->
-      <div class="app-window" id="appWindow">
-        <div class="ecrans">
-          <img class="ecran actif" src="img/app/suivi-corps-1280.webp" srcset="img/app/suivi-corps-1280.webp 1280w, img/app/suivi-corps-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="high"
-               alt="Onglet Suivi : le corps 3D du patient, genou droit en vert à 1 sur 10, et sa fiche de zone avec la courbe de douleur, le diagnostic et les tests liés (quadriceps 36 contre 44 kg, symétrie 82 %)">
-          <img class="ecran" src="img/app/builder-1280.webp" srcset="img/app/builder-1280.webp 1280w, img/app/builder-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
-               alt="Construction d'une séance : bloc avec split squat 3 séries de 12 par côté à 10 kg, rappel de la dernière séance et progression, et bibliothèque d'exercices en vidéo">
-          <img class="ecran" src="img/app/cr-1280.webp" srcset="img/app/cr-1280.webp 1280w, img/app/cr-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
-               alt="Générateur de compte-rendu : la lettre au médecin avec le tableau des tests de force et leurs asymétries">
-          <img class="ecran" src="img/app/partage-1280.webp" srcset="img/app/partage-1280.webp 1280w, img/app/partage-2560.webp 2560w" sizes="(max-width: 1068px) 100vw, 1020px" width="1280" height="800" decoding="async" fetchpriority="low" aria-hidden="true"
-               alt="Menu Partager : ouvrir l'espace de l'athlète, copier son lien, partager à un kiné, ou partager le dossier à un confrère préparateur">
-        </div>
-      </div>
-      <div class="ecran-choix" role="group" aria-label="Écran affiché">
-        <button type="button" class="actif" aria-pressed="true">Le corps du patient</button>
-        <button type="button" aria-pressed="false">Construction de séance</button>
-        <button type="button" aria-pressed="false">Compte-rendu médecin</button>
-        <button type="button" aria-pressed="false">Kiné et préparateur</button>
-      </div>
-    </div>
-  </div>
-</header>
-
-<!-- ============ BANDEAU CHIFFRES ============ -->
-<section class="bandeau" aria-label="Chiffres clés">
-  <div class="container bandeau-inner">
-    <div class="bandeau-legende">
-      Du premier test au retour du patient, sans ressaisie.
-      <span>Et deux métiers sur le même dossier.</span>
-    </div>
-    <div class="bandeau-chiffres">
+</div></section><section class="sec"><div class="wrap">
+  <div class="tete reveal"><h2 class="t-grand">Votre patient repart avec une vraie application</h2>
+  <p class="chapo">Un lien suffit, sans compte ni mot de passe. Il voit son programme, son corps et ses progrès, et vous renvoie son ressenti.</p></div>
+  <div class="tels"><figure class="tel reveal"><div class="tel-cadre"><img src="img/app/athlete-programme-390.webp" srcset="img/app/athlete-programme-390.webp 390w, img/app/athlete-programme-780.webp 780w" sizes="(max-width: 900px) 72vw, 250px" width="390" height="844" alt="Espace athlète : cycle de réathlétisation en cours, critères du protocole dont un validé, et calendrier du mois" decoding="async" loading="lazy"></div><figcaption><strong>Son programme</strong>Le cycle en cours, les critères de passage de son protocole et ses séances du mois.</figcaption></figure><figure class="tel reveal"><div class="tel-cadre"><img src="img/app/athlete-suivi-390.webp" srcset="img/app/athlete-suivi-390.webp 390w, img/app/athlete-suivi-780.webp 780w" sizes="(max-width: 900px) 72vw, 250px" width="390" height="844" alt="Onglet Mon suivi côté athlète : son corps 3D avec le genou droit suivi, force à 86 % et tests fonctionnels à 90 %" decoding="async" loading="lazy"></div><figcaption><strong>Son corps</strong>Les zones que vous suivez, sa force et ses tests, en équilibre gauche et droite.</figcaption></figure><figure class="tel reveal"><div class="tel-cadre"><img src="img/app/athlete-seance-390.webp" srcset="img/app/athlete-seance-390.webp 390w, img/app/athlete-seance-780.webp 780w" sizes="(max-width: 900px) 72vw, 250px" width="390" height="844" alt="Séance vue par l'athlète : split squat, 3 séries de 12 par côté à 10 kg, consigne du praticien et curseur de douleur" decoding="async" loading="lazy"></div><figcaption><strong>Sa séance</strong>Chaque exercice avec sa vidéo, ses séries, sa charge cible et vos consignes.</figcaption></figure><figure class="tel reveal"><div class="tel-cadre"><img src="img/app/athlete-retour-390.webp" srcset="img/app/athlete-retour-390.webp 390w, img/app/athlete-retour-780.webp 780w" sizes="(max-width: 900px) 72vw, 250px" width="390" height="844" alt="Fin de séance côté athlète : durée réelle, effort perçu sur l'échelle de Borg, et charge calculée en unités arbitraires" decoding="async" loading="lazy"></div><figcaption><strong>Son retour</strong>Douleur par exercice et effort perçu. Sa charge remonte seule dans votre suivi.</figcaption></figure></div>
+  <div class="reveal" style="margin-top:34px"><a href="athlete.html" class="lien-fleche">Tout l'espace athlète <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+</div></section><section class="sec sur-blanc" id="tarifs"><div class="wrap">
+  <div class="tete-centre reveal"><span class="eyebrow">Tarifs</span><h2 class="t-grand">Un mode, un tarif</h2><p class="chapo">Le dossier, lui, passe de l'un à l'autre avec l'accord du patient.</p></div>
+  <div class="prix-grille"><div class="prix reveal">
+    
+    <div class="prix-nom">Découverte</div>
+    <div class="prix-montant">0 € <span>/ mois</span></div>
+    <div class="prix-sous">Pour essayer sans engagement</div>
+    <ul class="preuves"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Accès complet, limité dans le temps</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Bilans, programmes et compte-rendu</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Aucune carte bancaire</span></li></ul>
+    <a href="https://app.rehab4perf.com/auth.html" class="btn btn-ligne">Commencer gratuitement</a>
+  </div><div class="prix reveal">
+    
+    <div class="prix-nom">Performance</div>
+    <div class="prix-montant">29 € <span>/ mois</span></div>
+    <div class="prix-sous">Le mode préparateur physique</div>
+    <ul class="preuves"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Athlètes illimités</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Programmes, cycles et protocoles</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Charge, ACWR et corps 3D</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Espace athlète et sorties connectées</span></li></ul>
+    <a href="https://buy.stripe.com/3cI8wOfAxcggc7L3laaEE02" class="btn btn-ligne">Choisir Performance</a>
+  </div><div class="prix phare reveal">
+    <span class="prix-badge">Kinésithérapeutes</span>
+    <div class="prix-nom">Clinique</div>
+    <div class="prix-montant">49 € <span>/ mois</span></div>
+    <div class="prix-sous">Le mode kiné, dossier clinique compris</div>
+    <ul class="preuves"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Tout le mode préparateur</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Bilans cliniques par région</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Compte-rendu médecin</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Questionnaires et batteries validées</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Partage du dossier à un préparateur</span></li></ul>
+    <a href="https://buy.stripe.com/3cIfZg0FDeoo4Fjg7WaEE01" class="btn btn-plein">Choisir Clinique</a>
+  </div></div>
+  <p class="legende reveal" style="text-align:center;margin-top:22px">Tarifs par place. Le cabinet bénéficie d'un tarif dégressif à partir de deux places.</p>
+</div></section><section class="final sur-blanc"><div class="wrap-etroit">
+  <h2 class="t-grand">Votre prochain bilan peut être le premier</h2>
+  <p class="chapo">Créez votre compte gratuitement, sans carte bancaire, et testez sur un dossier réel dès aujourd'hui.</p>
+  <a href="https://app.rehab4perf.com/auth.html" class="btn btn-plein btn-lg">Commencer gratuitement <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+</div></section>
+<footer class="pied">
+  <div class="wrap">
+    <div class="pied-grille">
       <div>
-        <div class="bandeau-num">11</div>
-        <div class="bandeau-lbl">Zones du corps suivies sur le mannequin 3D</div>
+        <span class="brand"><svg viewBox="8 34 164 104" width="30" height="19" aria-hidden="true"><g stroke="#7FA8D9" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg><span class="brand-w"><span class="brand-r">rehab<sup class="brand-e">4</sup></span><span class="brand-p">perf</span></span></span>
+        <p class="pied-mot">Le dossier du sportif, du bilan clinique au retour de terrain. Conçu par un kinésithérapeute.</p>
       </div>
-      <div>
-        <div class="bandeau-num">200+</div>
-        <div class="bandeau-lbl">Exercices en bibliothèque</div>
-      </div>
-      <div>
-        <div class="bandeau-num">7</div>
-        <div class="bandeau-lbl">Sections dans le compte-rendu généré</div>
-      </div>
-      <div>
-        <div class="bandeau-num">0.8 à 1.3</div>
-        <div class="bandeau-lbl">La zone ACWR visée, calculée en direct</div>
-      </div>
+      <div><h5>Le produit</h5><a href="bilan.html">Bilan clinique</a><a href="compte-rendu.html">Compte-rendu</a><a href="programme.html">Programme</a><a href="suivi.html">Suivi</a></div>
+      <div><h5>Aussi</h5><a href="charge.html">Charge et course</a><a href="athlete.html">Espace athlète</a><a href="cabinet.html">Cabinet</a><a href="index.html#tarifs">Tarifs</a></div>
+      <div><h5>Légal</h5><a href="mentions-legales.html">Mentions légales</a><a href="cgu.html">CGU</a><a href="confidentialite.html">Confidentialité</a><a href="mailto:contact@rehab4perf.com">contact@rehab4perf.com</a></div>
     </div>
-  </div>
-</section>
-
-<!-- ============ FRICTION ============ -->
-<section class="section">
-  <div class="container friction-inner">
-    <div class="friction-tete reveal">
-      <h2>Trois outils, trois saisies, et le compte-rendu le soir</h2>
-      <p>Le bilan sur papier, la progression décidée à l'estime, le programme monté dans un tableur : chaque étape redemande ce que la précédente savait déjà.</p>
-    </div>
-    <div class="friction-liste">
-      <div class="reveal">
-        <h3>Le compte-rendu se retape après la journée</h3>
-        <p>Les amplitudes, les tests, les déficits sont déjà notés quelque part. Ils sont pourtant ressaisis une seconde fois, de mémoire, plusieurs heures après la séance.</p>
-        <span class="apres">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          Le courrier se génère à partir du bilan déjà rempli
-        </span>
-      </div>
-      <div class="reveal">
-        <h3>La progression se décide à l'intuition</h3>
-        <p>Augmenter la charge de combien, cette semaine ? Sans rapport entre la charge récente et la charge de fond, la réponse tient au ressenti du praticien.</p>
-        <span class="apres">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          ACWR, monotonie et contrainte calculés à chaque séance
-        </span>
-      </div>
-      <div class="reveal">
-        <h3>Le patient repart avec une feuille photocopiée</h3>
-        <p>Sans vidéo, sans charge cible, sans trace de ce qui a été fait. La séance suivante commence par reconstituer la précédente.</p>
-        <span class="apres">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
-          Un lien web ou un PDF, envoyé depuis la séance
-        </span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ LES DEUX MODES ============ -->
-<section class="section sur-surface" id="produit">
-  <div class="container">
-    <div class="tete-gauche reveal">
-      <span class="section-tag">Le produit</span>
-      <h2>Deux métiers, un seul dossier</h2>
-      <p>Le kinésithérapeute soigne, le préparateur reconstruit. Chacun son outil, mais le même patient : autant que le dossier les suive.</p>
-    </div>
-
-    <div class="modes">
-      <article class="mode reveal">
-        <h3>Mode kiné</h3>
-        <p class="mode-sous">Le dossier clinique en entier</p>
-        <ul class="ong-preuves">
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Bilan par région</strong> : épaule, rachis, hanche, genou, pied, lésion musculaire.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Mobilités actif et passif, tests de force et <strong>indice de symétrie</strong> calculé seul.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le <strong>corps 3D</strong> : chaque zone de douleur datée, reliée à ses tests.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le <strong>compte-rendu médecin</strong> en sept sections, généré depuis le bilan.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Questionnaires validés, remplis en séance ou à distance.</span></li>
-        </ul>
-      </article>
-
-      <article class="mode reveal">
-        <h3>Mode préparateur physique</h3>
-        <p class="mode-sous">La performance, sans le médical</p>
-        <ul class="ong-preuves">
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Construction de séances et de cycles, <strong>200+ exercices en vidéo</strong>.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Charge d'entraînement</strong> : ACWR, monotonie et contrainte, méthode de Foster.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Profil d'effort, zones d'allure, et les sorties qui arrivent seules de Strava ou de la montre Garmin.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Cycles avec <strong>critères de passage</strong>, et non des durées fixes.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Ni tests orthopédiques, ni diagnostic : ce n'est pas son métier.</span></li>
-        </ul>
-      </article>
-    </div>
-
-    <div class="pont reveal">
-      <div>
-        <h3>Et entre les deux, le dossier circule</h3>
-        <p>Le kiné invite le préparateur. Le préparateur accepte. <strong>Le patient donne son accord depuis son espace.</strong> Sans ces trois-là, rien ne s'ouvre.</p>
-        <ul class="ong-preuves">
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le préparateur voit la force, les mobilités, les zones de douleur, les programmes et la charge.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Jamais les tests orthopédiques, jamais le diagnostic, jamais les notes cliniques.</span></li>
-      <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Chaque lecture du dossier est inscrite au journal.</span></li>
-        </ul>
-      </div>
-      <div>
-        <div class="demo">
-          <img src="img/app/partage-1280.webp" srcset="img/app/partage-1280.webp 1280w, img/app/partage-2560.webp 2560w"
-               sizes="(max-width: 980px) 100vw, 620px" width="1280" height="800" loading="lazy" decoding="async"
-               alt="Menu Partager : ouvrir l'espace de l'athlète, copier son lien, partager à un kiné, ou partager le dossier à un confrère préparateur">
-        </div>
-        <p class="demo-legende">Le menu de partage, côté praticien. L'athlète, un confrère kiné, un préparateur : chacun reçoit ce qui le concerne.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CÔTÉ PATIENT ============ -->
-<section class="section" id="patient">
-  <div class="container">
-    <div class="tete-gauche reveal">
-      <h2>Votre patient repart avec une vraie application</h2>
-      <p>Un lien suffit, sans compte ni mot de passe. Il voit son programme, son corps et ses progrès, et vous renvoie son ressenti.</p>
-    </div>
-    <!-- Quatre captures réelles de l'espace athlète (compte de démo, patient fictif). -->
-    <div class="telephones">
-      <figure class="tel reveal">
-        <div class="tel-cadre">
-          <img src="img/app/athlete-programme-390.webp" srcset="img/app/athlete-programme-390.webp 390w, img/app/athlete-programme-780.webp 780w"
-               sizes="(max-width: 860px) 72vw, 250px" width="390" height="844" loading="lazy" decoding="async"
-               alt="Espace athlète : cycle de réathlétisation en cours, critères du protocole LCA dont un validé, et calendrier du mois">
-        </div>
-        <figcaption><strong>Son programme</strong>Le cycle en cours, les critères de passage de son protocole et ses séances du mois.</figcaption>
-      </figure>
-      <figure class="tel reveal">
-        <div class="tel-cadre">
-          <img src="img/app/athlete-suivi-390.webp" srcset="img/app/athlete-suivi-390.webp 390w, img/app/athlete-suivi-780.webp 780w"
-               sizes="(max-width: 860px) 72vw, 250px" width="390" height="844" loading="lazy" decoding="async"
-               alt="Onglet Mon suivi côté athlète : son corps 3D avec le genou droit suivi, force à 86 % et tests fonctionnels à 90 % d'équilibre gauche droite">
-        </div>
-        <figcaption><strong>Son corps</strong>Les zones que vous suivez, sa force et ses tests, en équilibre gauche / droite.</figcaption>
-      </figure>
-      <figure class="tel reveal">
-        <div class="tel-cadre">
-          <img src="img/app/athlete-seance-390.webp" srcset="img/app/athlete-seance-390.webp 390w, img/app/athlete-seance-780.webp 780w"
-               sizes="(max-width: 860px) 72vw, 250px" width="390" height="844" loading="lazy" decoding="async"
-               alt="Séance vue par l'athlète : split squat, 3 séries de 12 par côté à 10 kg, consigne du praticien et curseur de douleur">
-        </div>
-        <figcaption><strong>Sa séance</strong>Chaque exercice avec sa vidéo, ses séries, sa charge cible et vos consignes.</figcaption>
-      </figure>
-      <figure class="tel reveal">
-        <div class="tel-cadre">
-          <img src="img/app/athlete-retour-390.webp" srcset="img/app/athlete-retour-390.webp 390w, img/app/athlete-retour-780.webp 780w"
-               sizes="(max-width: 860px) 72vw, 250px" width="390" height="844" loading="lazy" decoding="async"
-               alt="Fin de séance côté athlète : durée réelle, effort perçu sur l'échelle de Borg, et charge calculée en unités arbitraires">
-        </div>
-        <figcaption><strong>Son retour</strong>Douleur par exercice et effort perçu. Sa charge remonte seule dans votre suivi.</figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
-<!-- ============ PARCOURS ============ -->
-<section class="section" id="etapes">
-  <div class="container">
-    <div class="tete-gauche reveal">
-      <h2>Opérationnel dès la première séance</h2>
-      <p>Aucune formation à suivre : l'outil épouse l'ordre dans lequel vous travaillez déjà.</p>
-    </div>
-    <div class="parcours">
-      <div class="jalon reveal">
-        <h3>Ouvrez le dossier</h3>
-        <p>Nom, âge, région à évaluer. Le patient existe, et il restera accessible d'une séance à l'autre.</p>
-        <span class="duree">Moins d'une minute</span>
-      </div>
-      <div class="jalon reveal">
-        <h3>Testez au fil de la séance</h3>
-        <p>Vous saisissez pendant que vous évaluez. Déficits, symétries et scores se calculent au fur et à mesure.</p>
-        <span class="duree">Pendant la séance, pas après</span>
-      </div>
-      <div class="jalon reveal">
-        <h3>Générez et transmettez</h3>
-        <p>Le compte-rendu part au médecin, le programme part au patient. Les deux sortent du même bilan.</p>
-        <span class="duree">Avant que le patient ait remis sa veste</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CONTENUS REHAB4PERF ============ -->
-<section class="section" id="contenus">
-  <div class="container friction-inner">
-    <div class="friction-tete reveal">
-      <h2>Une base commune, que chacun adapte</h2>
-      <p>Rehab4Perf filme ses exercices et publie ses protocoles. Ils arrivent dans chaque compte, et chaque praticien les ajuste à sa pratique, sans toucher à ceux des autres.</p>
-    </div>
-    <div class="friction-liste">
-      <div class="reveal">
-        <h3>Des exercices filmés par Rehab4Perf</h3>
-        <p>Chaque nouvelle vidéo rejoint la bibliothèque de tous les praticiens. Vos propres vidéos restent les vôtres, visibles par vous seul.</p>
-      </div>
-      <div class="reveal">
-        <h3>Des protocoles de rééducation prêts à suivre</h3>
-        <p>LCA, Latarjet et d'autres, découpés en phases avec leurs critères de passage. Le patient voit sa phase et ses critères dans son espace.</p>
-      </div>
-      <div class="reveal">
-        <h3>Votre version reste la vôtre</h3>
-        <p>Modifiez un protocole : les mises à jour publiées ne l'écrasent pas. Retirez-le ou revenez à la version d'origine quand vous voulez. Vos patients gardent celle qu'ils suivent.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ MOT DU FONDATEUR ============ -->
-<section class="section sur-surface">
-  <div class="container mot-inner">
-    <div class="reveal">
-      <blockquote>« Faire le bilan, programmer les exercices, envoyer le courrier. À chaque étape, ce dont j'avais besoin était ailleurs. »</blockquote>
-      <div class="mot-signature">
-        <span class="mot-initiales">AP</span>
-        <span class="mot-qui">Antoine Peronnaud<span>Kinésithérapeute, fondateur de Rehab4Perf</span></span>
-      </div>
-    </div>
-    <div class="mot-aside reveal">
-      <h4>Ce que cela change concrètement</h4>
-      <ul>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg><span>Le compte-rendu ne survit plus à la fin de la journée de travail.</span></li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m7 14 4-4 4 4 5-6"/></svg><span>La progression se défend avec un chiffre, devant le patient comme devant le médecin.</span></li>
-        <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><span>Les dossiers sont chiffrés, isolés par praticien, hébergés en Europe.</span></li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<!-- ============ TARIFS ============ -->
-<section class="section" id="tarifs">
-  <div class="container">
-    <div class="section-head reveal">
-      <span class="section-tag">Tarifs</span>
-      <h2>Un plan pour chaque profil</h2>
-      <p>Deux modes, deux tarifs, par praticien. Le dossier, lui, passe de l'un à l'autre avec l'accord du patient.</p>
-    </div>
-    <div class="pricing-grid">
-      <div class="price-card reveal">
-        <div class="price-name">Découverte</div>
-        <div class="price-amount">0 € <span>/ mois</span></div>
-        <div class="price-desc">Pour tester l'outil sans engagement</div>
-        <ul class="price-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Accès complet limité dans le temps</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bilans cliniques et programmes</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Aucune carte bancaire requise</li>
-        </ul>
-        <a href="https://app.rehab4perf.com/auth.html" class="btn btn-outline">Commencer gratuitement</a>
-      </div>
-      <div class="price-card reveal">
-        <div class="price-name">Performance</div>
-        <div class="price-amount">29 € <span>HT / mois</span></div>
-        <div class="price-desc">Le mode préparateur physique, par praticien</div>
-        <ul class="price-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Patients et athlètes illimités</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Programmes d'exercices personnalisés</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Suivi de charge, ACWR et corps 3D</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Exports PDF des prescriptions</li>
-        </ul>
-        <!-- Abonnements fermés (2026-10-15) : voir « Chose à faire / 9 - Réouverture des abonnements ». -->
-        <span class="btn btn-outline btn-ferme" aria-disabled="true">Bientôt disponible</span>
-      </div>
-      <div class="price-card featured reveal">
-        <div class="price-badge">Kinésithérapeutes</div>
-        <div class="price-name">Clinique</div>
-        <div class="price-amount">49 € <span>HT / mois</span></div>
-        <div class="price-desc">Le mode kiné, dossier clinique compris, par praticien</div>
-        <ul class="price-list">
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Tout le mode préparateur</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Bilans cliniques par région anatomique</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Comptes-rendus médecin automatiques</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Outils PRO (questionnaires validés)</li>
-          <li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>Partage du dossier à un préparateur</li>
-        </ul>
-        <!-- Abonnements fermés (2026-10-15) : voir « Chose à faire / 9 - Réouverture des abonnements ». -->
-        <span class="btn btn-primary btn-ferme" aria-disabled="true">Bientôt disponible</span>
-      </div>
-    </div>
-
-    <div class="cabinet-offre reveal">
-      <div class="cabinet-texte">
-        <div class="price-name">Cabinet</div>
-        <h3>Toute l'équipe, un seul abonnement</h3>
-        <p>Le titulaire choisit le nombre de places et invite ses collaborateurs. Il partage à l'équipe ses modèles de séance, ses réglages de bilan et l'en-tête des courriers ; chacun garde ses patients. Le prix par place baisse avec la taille de l'équipe.</p>
-        <a href="mailto:contact@rehab4perf.com" class="btn btn-outline">Parler de votre cabinet</a>
-      </div>
-      <div class="cabinet-grille">
-        <table>
-          <caption>Prix par place, hors taxes, par mois</caption>
-          <thead><tr><th scope="col">Places</th><th scope="col">Clinique</th><th scope="col">Performance</th></tr></thead>
-          <tbody>
-            <tr><th scope="row">1</th><td>49 €</td><td>29 €</td></tr>
-            <tr><th scope="row">2 à 4</th><td>44 €</td><td>26 €</td></tr>
-            <tr><th scope="row">5 à 9</th><td>39 €</td><td>23 €</td></tr>
-            <tr><th scope="row">10 à 19</th><td>34 €</td><td>20 €</td></tr>
-            <tr><th scope="row">20 et plus</th><td colspan="2">Sur devis</td></tr>
-          </tbody>
-        </table>
-        <p class="cabinet-note">En annuel, 10 mois payés pour 12.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============ CTA FINAL ============ -->
-<section class="cta-final">
-  <div class="container reveal">
-    <h2>Votre prochain bilan peut être le premier</h2>
-    <p>Créez votre compte gratuitement, sans carte bancaire, et testez sur un dossier réel dès aujourd'hui.</p>
-    <a href="https://app.rehab4perf.com/auth.html" class="btn btn-primary btn-lg">
-      Commencer gratuitement
-      <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-    </a>
-  </div>
-</section>
-
-<!-- ============ FOOTER ============ -->
-<footer class="footer">
-  <div class="container">
-    <div class="footer-grid">
-      <div>
-        <span class="brand">
-          <svg viewBox="8 34 164 104" width="30" height="19" aria-hidden="true"><g stroke="#7FA8D9" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>
-          <span class="brand-w"><span class="brand-r">rehab<sup class="brand-e">4</sup></span><span class="brand-p">perf</span></span>
-        </span>
-        <p class="footer-tagline">L'outil de bilan clinique et de prescription d'exercices pensé pour les kinésithérapeutes.</p>
-      </div>
-      <div class="footer-cols">
-        <div class="footer-col">
-          <h5>Produit</h5>
-          <a href="#produit">Fonctionnalités</a>
-          <a href="#patient">Côté patient</a>
-          <a href="#etapes">Comment ça marche</a>
-          <a href="#tarifs">Tarifs</a>
-        </div>
-        <div class="footer-col">
-          <h5>Légal</h5>
-          <a href="mentions-legales.html">Mentions légales</a>
-          <a href="cgu.html">CGU</a>
-          <a href="confidentialite.html">Confidentialité</a>
-        </div>
-        <div class="footer-col">
-          <h5>Contact</h5>
-          <a href="mailto:contact@rehab4perf.com">contact@rehab4perf.com</a>
-        </div>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Rehab4Perf. Tous droits réservés.</span>
-      <span>Fait avec soin en France</span>
-    </div>
+    <div class="pied-bas"><span>© 2026 Rehab4Perf. Tous droits réservés.</span><span>Fait avec soin en France</span></div>
   </div>
 </footer>
-
 <script>
 (function () {
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  var isMobile = window.matchMedia('(max-width: 860px)').matches;
-
-  /* — Hero : trois écrans réels, en fondu —
-     Le passage à l'écran suivant est déclenché par la FIN de l'animation de la
-     barre du bouton actif. Le survol la met en pause (CSS) ; en mouvement
-     réduit elle n'existe pas, donc rien ne défile tout seul. */
-  var choix = document.querySelectorAll('.ecran-choix button');
-  var ecrans = document.querySelectorAll('.ecrans .ecran');
-  function montrerEcran(index) {
-    choix.forEach(function (bouton, i) {
-      var actif = i === index;
-      bouton.classList.toggle('actif', actif);
-      bouton.setAttribute('aria-pressed', actif ? 'true' : 'false');
-    });
-    ecrans.forEach(function (image, i) {
-      var actif = i === index;
-      image.classList.toggle('actif', actif);
-      if (actif) { image.removeAttribute('aria-hidden'); } else { image.setAttribute('aria-hidden', 'true'); }
-    });
-  }
-  choix.forEach(function (bouton, i) {
-    bouton.addEventListener('click', function () { montrerEcran(i); });
-    bouton.addEventListener('animationend', function (e) {
-      if (e.animationName === 'ecranDefile') { montrerEcran((i + 1) % choix.length); }
-    });
-  });
-
-  /* — Onglets du démonstrateur —
-     Le clavier suit le motif ARIA : flèches pour changer d'onglet, Début/Fin
-     pour aller aux extrémités. */
-  var rail = document.querySelector('.ong-rail');
-  if (rail) {
-    var onglets = Array.prototype.slice.call(rail.querySelectorAll('.ong-btn'));
-
-    function activer(index, donnerFocus) {
-      onglets.forEach(function (bouton, i) {
-        var actif = i === index;
-        var panneau = document.getElementById(bouton.getAttribute('aria-controls'));
-        bouton.setAttribute('aria-selected', actif ? 'true' : 'false');
-        bouton.tabIndex = actif ? 0 : -1;
-        if (!panneau) return;
-        panneau.classList.toggle('actif', actif);
-        if (actif) { panneau.removeAttribute('hidden'); }
-        else { panneau.setAttribute('hidden', ''); }
-      });
-      if (donnerFocus) { onglets[index].focus(); }
-    }
-
-    onglets.forEach(function (bouton, i) {
-      bouton.tabIndex = bouton.getAttribute('aria-selected') === 'true' ? 0 : -1;
-      bouton.addEventListener('click', function () { activer(i, false); });
-      bouton.addEventListener('keydown', function (e) {
-        var cible = null;
-        if (e.key === 'ArrowRight') { cible = (i + 1) % onglets.length; }
-        else if (e.key === 'ArrowLeft') { cible = (i - 1 + onglets.length) % onglets.length; }
-        else if (e.key === 'Home') { cible = 0; }
-        else if (e.key === 'End') { cible = onglets.length - 1; }
-        if (cible !== null) { e.preventDefault(); activer(cible, true); }
-      });
-    });
-  }
-
-  /* — Parallaxe souris sur les halos flous du fond du hero —
-     Écouteur de pointeur, pas de scroll : le redressement de la fenêtre est
-     désormais piloté par une timeline CSS native (voir style.css). */
-  if (!reduceMotion && !isMobile) {
-    var depthEls = document.querySelectorAll('[data-depth]');
-    if (depthEls.length) {
-      document.addEventListener('mousemove', function (e) {
-        var cx = (e.clientX / window.innerWidth - 0.5);
-        var cy = (e.clientY / window.innerHeight - 0.5);
-        requestAnimationFrame(function () {
-          depthEls.forEach(function (el) {
-            var d = parseFloat(el.getAttribute('data-depth'));
-            el.style.translate = (cx * d * -18) + 'px ' + (cy * d * -12) + 'px';
-          });
-        });
-      }, { passive: true });
-    }
-  }
-
-  /* — Révélation à l'entrée dans le champ —
-     La classe .js-reveal n'est posée que si l'observateur existe vraiment :
-     sans elle, le CSS laisse le contenu visible. Un contenu ne doit jamais
-     dépendre d'un script pour s'afficher. */
-  var revealEls = document.querySelectorAll('.reveal');
-  if ('IntersectionObserver' in window && !reduceMotion) {
+  /* L'état masqué vient du script, jamais de la feuille : sans JavaScript, ou
+     si le script échoue, le contenu reste visible. */
+  var reduit = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var cibles = document.querySelectorAll('.reveal');
+  if (cibles.length && 'IntersectionObserver' in window && !reduit) {
     document.documentElement.classList.add('js-reveal');
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          io.unobserve(entry.target);
-        }
-      });
+    var io = new IntersectionObserver(function (entrees) {
+      entrees.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('vu'); io.unobserve(e.target); } });
     }, { threshold: 0.12 });
-    revealEls.forEach(function (el) { io.observe(el); });
-  } else {
-    revealEls.forEach(function (el) { el.classList.add('visible'); });
+    cibles.forEach(function (el) { io.observe(el); });
+  }
+  /* Le rail d'onglets amène l'onglet courant dans le champ au chargement. */
+  var cour = document.querySelector('.rail a[aria-current="page"]');
+  if (cour && cour.scrollIntoView) {
+    try { cour.scrollIntoView({ block: 'nearest', inline: 'center' }); } catch (e) {}
   }
 })();
 </script>
-
 </body>
 </html>

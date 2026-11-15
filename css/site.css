@@ -1,0 +1,289 @@
+/* ═══════════════════════════════════════════════════════════════════════════
+   Rehab4Perf — vitrine v4
+   Une trame centrale et sept pages de thème, générées depuis _src/contenu.js.
+   Les JETONS sont ceux de la v2 : même marque, même papier, même navy.
+   ═══════════════════════════════════════════════════════════════════════════ */
+:root {
+  --blue: #2B5FA6;
+  --blue-dark: #1A3A5C;
+  --blue-deep: #12283F;
+  --blue-light: #EEF3FB;
+  --red: #C0392B;
+  --red-light: #FDECEA;
+  --green: #2D6A4F;
+  --green-light: #E8F3EE;
+  --bg: #F7F6F3;
+  --surface: #FFFFFF;
+  --surface2: #F1F0ED;
+  --border: #E8E6E1;
+  --border-strong: #D3D1CB;
+  --text: #1A1917;
+  --text-muted: #6B6860;
+  --text-faint: #6F6D68;
+  --radius: 10px;
+  --radius-lg: 18px;
+  --shadow-sm: 0 1px 2px rgba(26, 25, 23, .05);
+  --shadow-md: 0 6px 24px rgba(26, 58, 92, .10);
+  --shadow-xl: 0 40px 80px -24px rgba(18, 40, 63, .35), 0 18px 36px -18px rgba(18, 40, 63, .25);
+  --font: 'Figtree', -apple-system, 'Helvetica Neue', sans-serif;
+  --nav-h: 64px;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 56px); }
+body {
+  font-family: var(--font);
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+html, body { overflow-x: clip; }
+img { max-width: 100%; display: block; }
+a { color: inherit; text-decoration: none; }
+:focus-visible { outline: 3px solid rgba(43, 95, 166, .45); outline-offset: 2px; border-radius: 4px; }
+
+.wrap { max-width: 1140px; margin: 0 auto; padding: 0 24px; }
+.wrap-etroit { max-width: 760px; margin: 0 auto; padding: 0 24px; }
+
+/* ---------- Marque (inchangée) ---------- */
+.brand { display: inline-flex; align-items: center; gap: 10px; }
+.brand svg { display: block; flex-shrink: 0; }
+.brand-w { display: inline-flex; align-items: baseline; line-height: 1; white-space: nowrap; }
+.brand-r { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: 22px; color: var(--text); letter-spacing: -.01em; }
+.brand-e { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 600; font-size: .44em; vertical-align: super; color: var(--blue); margin: 0 .05em 0 .01em; line-height: 0; }
+.brand-p { font-family: 'Poppins', sans-serif; font-weight: 800; font-size: 18px; color: var(--text); letter-spacing: -.025em; margin-left: .02em; }
+.pied .brand-r, .pied .brand-p { color: #fff; }
+.pied .brand-e { color: #7FA8D9; }
+
+/* ---------- Boutons ---------- */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 22px; border-radius: var(--radius);
+  font-family: var(--font); font-size: 15px; font-weight: 600;
+  border: 1px solid transparent; cursor: pointer; white-space: nowrap;
+  transition: background .2s, color .2s, border-color .2s, transform .2s, box-shadow .2s;
+}
+.btn svg { transition: transform .2s; flex-shrink: 0; }
+.btn:hover svg { transform: translateX(3px); }
+.btn-plein { background: var(--blue); color: #fff; box-shadow: 0 4px 14px rgba(43, 95, 166, .28); }
+.btn-plein:hover { background: var(--blue-dark); transform: translateY(-2px); box-shadow: 0 10px 24px rgba(43, 95, 166, .36); }
+.btn-plein:active { transform: scale(.985); }
+.btn-ligne { background: var(--surface); color: var(--text); border-color: var(--border-strong); }
+.btn-ligne:hover { border-color: var(--blue); color: var(--blue); transform: translateY(-2px); }
+.btn-lg { padding: 15px 30px; font-size: 16px; }
+.lien-fleche { display: inline-flex; align-items: center; gap: 7px; font-weight: 600; color: var(--blue); font-size: 15px; }
+.lien-fleche svg { transition: transform .2s; }
+.lien-fleche:hover svg { transform: translateX(4px); }
+
+/* ---------- Barre de navigation ---------- */
+.nav {
+  position: sticky; top: 0; z-index: 100;
+  background: rgba(247, 246, 243, .86);
+  backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+}
+.nav-in { display: flex; align-items: center; gap: 20px; height: var(--nav-h); }
+.nav-liens { display: flex; gap: 26px; margin-left: 12px; font-size: 14.5px; font-weight: 500; color: var(--text-muted); }
+.nav-liens a { transition: color .2s; }
+.nav-liens a:hover, .nav-liens a[aria-current="page"] { color: var(--blue); }
+.nav-cta { margin-left: auto; display: flex; gap: 10px; align-items: center; }
+.nav-cta .btn { padding: 9px 17px; font-size: 14px; }
+.nav-burger { display: none; margin-left: auto; background: none; border: 1px solid var(--border-strong); border-radius: var(--radius); padding: 8px 12px; font: inherit; font-size: 14px; font-weight: 600; color: var(--text); cursor: pointer; }
+
+/* Rail des thèmes : les onglets du produit, collants sous la barre. */
+.rail { position: sticky; top: var(--nav-h); z-index: 90; background: var(--surface); border-bottom: 1px solid var(--border); }
+.rail-in { display: flex; gap: 4px; overflow-x: auto; scrollbar-width: none; padding: 9px 0; }
+.rail-in::-webkit-scrollbar { display: none; }
+.rail a {
+  flex: 0 0 auto; padding: 8px 15px; border-radius: 100px;
+  font-size: 14px; font-weight: 600; color: var(--text-muted);
+  transition: background .2s, color .2s;
+}
+.rail a:hover { background: var(--surface2); color: var(--text); }
+.rail a[aria-current="page"] { background: var(--blue); color: #fff; }
+
+/* ---------- Rythme vertical ---------- */
+.sec { padding: 92px 0; }
+.sec-serre { padding: 64px 0; }
+.sur-blanc { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.sur-navy { background: var(--blue-deep); color: #fff; }
+
+/* ---------- Titres ---------- */
+.eyebrow { display: block; font-size: 13px; font-weight: 700; letter-spacing: .09em; text-transform: uppercase; color: var(--blue); margin-bottom: 14px; }
+h1, h2, h3 { color: var(--blue-dark); letter-spacing: -.022em; line-height: 1.14; }
+.t-geant { font-size: clamp(34px, 4.6vw, 56px); font-weight: 800; }
+.t-grand { font-size: clamp(30px, 4vw, 46px); font-weight: 800; }
+.t-moyen { font-size: clamp(22px, 2.6vw, 30px); font-weight: 800; }
+.t-petit { font-size: 19px; font-weight: 700; }
+.chapo { font-size: clamp(17px, 1.6vw, 20px); color: var(--text-muted); line-height: 1.62; max-width: 62ch; }
+.sur-navy h1, .sur-navy h2, .sur-navy h3 { color: #fff; }
+.sur-navy .chapo, .sur-navy p { color: #BFD4EE; }
+.sur-navy .eyebrow { color: #7FA8D9; }
+
+.tete { max-width: 740px; margin-bottom: 52px; }
+.tete-centre { max-width: 740px; margin: 0 auto 52px; text-align: center; }
+.tete .chapo, .tete-centre .chapo { margin-top: 16px; }
+.tete-centre .chapo { margin-left: auto; margin-right: auto; }
+
+/* ---------- Hero ---------- */
+.hero { position: relative; padding: 76px 0 0; text-align: center; overflow: hidden; }
+.hero-fond { position: absolute; inset: 0; z-index: -1; pointer-events: none; }
+.halo { position: absolute; border-radius: 50%; filter: blur(80px); }
+.halo-1 { width: 520px; height: 520px; background: #D8E6F8; opacity: .55; top: -160px; left: -120px; }
+.halo-2 { width: 420px; height: 420px; background: #F8E3DF; opacity: .4; top: 40px; right: -140px; }
+.halo-3 { width: 460px; height: 460px; background: #DDEEE6; opacity: .45; bottom: -220px; left: 32%; }
+.hero h1 { max-width: 30ch; margin: 0 auto 20px; }
+.hero .chapo { margin: 0 auto; }
+.hero-actions { display: flex; gap: 13px; justify-content: center; flex-wrap: wrap; margin-top: 34px; }
+.hero-vue { margin-top: 62px; }
+
+/* Cadre d'écran : une capture de l'application, posée. */
+.ecran { border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--surface); box-shadow: var(--shadow-xl); overflow: hidden; }
+.ecran img { width: 100%; height: auto; }
+.ecran-doux { box-shadow: 0 24px 60px -22px rgba(18, 40, 63, .28); }
+.legende { font-size: 13px; color: var(--text-faint); margin-top: 12px; line-height: 1.5; }
+
+/* ---------- La trame : les cartes de thème ---------- */
+.trame { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.carte {
+  display: flex; flex-direction: column; min-width: 0;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius-lg); overflow: hidden;
+  transition: transform .25s, box-shadow .25s, border-color .25s;
+}
+.carte:hover { transform: translateY(-4px); box-shadow: var(--shadow-md); border-color: var(--border-strong); }
+.carte-vue { aspect-ratio: 16 / 10; background: var(--surface2); border-bottom: 1px solid var(--border); overflow: hidden; }
+.carte-vue img { width: 100%; height: 100%; object-fit: cover; object-position: top left; }
+.carte-txt { padding: 24px 24px 26px; display: flex; flex-direction: column; flex: 1; }
+.carte h3 { font-size: 20px; font-weight: 800; margin-bottom: 8px; }
+.carte p { font-size: 14.5px; color: var(--text-muted); line-height: 1.6; }
+.carte-mots { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px; }
+.mot { font-size: 12px; font-weight: 600; color: var(--text-muted); background: var(--surface2); border-radius: 100px; padding: 4px 11px; }
+.carte-fin { margin-top: 18px; }
+
+/* ---------- Bloc alterné : texte + écran ---------- */
+.duo { display: grid; grid-template-columns: 5fr 7fr; gap: 56px; align-items: center; }
+.duo + .duo { margin-top: 92px; }
+.duo > * { min-width: 0; }
+.duo-inverse .duo-txt { order: 2; }
+.duo h2 { margin-bottom: 14px; }
+.duo-txt > p { font-size: 16.5px; color: var(--text-muted); line-height: 1.7; }
+
+/* ---------- Listes de preuves ---------- */
+.preuves { list-style: none; margin-top: 22px; }
+.preuves li { display: flex; gap: 11px; align-items: flex-start; font-size: 15px; color: var(--text-muted); line-height: 1.6; padding: 7px 0; }
+.preuves svg { color: var(--green); flex-shrink: 0; margin-top: 4px; }
+.preuves strong { color: var(--text); font-weight: 600; }
+.sur-navy .preuves li { color: #BFD4EE; }
+.sur-navy .preuves strong { color: #fff; }
+.sur-navy .preuves svg { color: #7FA8D9; }
+
+/* ---------- Grille de points (3 colonnes, filets) ---------- */
+.points { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px 44px; }
+.point { padding: 26px 0; border-top: 1px solid var(--border); min-width: 0; }
+.point h3 { font-size: 17px; font-weight: 700; margin-bottom: 7px; }
+.point p { font-size: 14.5px; color: var(--text-muted); line-height: 1.65; }
+.sur-navy .point { border-color: rgba(255, 255, 255, .14); }
+
+/* ---------- Bandeau de chiffres ---------- */
+.chiffres { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; }
+.chiffres > div { padding: 0 24px; border-left: 1px solid var(--border); }
+.chiffres > div:first-child { padding-left: 0; border-left: 0; }
+.chiffre { font-size: 32px; font-weight: 800; color: var(--blue); letter-spacing: -.025em; font-variant-numeric: tabular-nums; line-height: 1.1; }
+.chiffre-lbl { font-size: 13.5px; color: var(--text-muted); margin-top: 6px; line-height: 1.45; }
+.sur-navy .chiffre { color: #fff; }
+.sur-navy .chiffre-lbl { color: #9DB8DC; }
+.sur-navy .chiffres > div { border-color: rgba(255, 255, 255, .16); }
+
+/* ---------- Téléphones ---------- */
+.tels { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; align-items: start; }
+.tel { margin: 0; min-width: 0; }
+.tel:nth-child(even) { margin-top: 38px; }
+.tel-cadre { background: var(--blue-deep); border-radius: 38px; padding: 9px; box-shadow: var(--shadow-xl); }
+.tel-cadre img { width: 100%; height: auto; aspect-ratio: 390 / 844; border-radius: 29px; background: var(--surface); }
+.tel figcaption { margin-top: 18px; font-size: 14px; color: var(--text-muted); line-height: 1.55; }
+.tel figcaption strong { display: block; font-size: 15.5px; font-weight: 700; color: var(--blue-dark); margin-bottom: 3px; }
+
+/* ---------- Tarifs ---------- */
+.prix-grille { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 1000px; margin: 0 auto; }
+.prix { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 34px 28px; display: flex; flex-direction: column; position: relative; }
+.prix.phare { border: 2px solid var(--blue); box-shadow: var(--shadow-md); }
+.prix-badge { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); background: var(--blue); color: #fff; font-size: 12px; font-weight: 700; padding: 4px 15px; border-radius: 100px; white-space: nowrap; }
+.prix-nom { font-size: 16px; font-weight: 700; color: var(--blue-dark); }
+.prix-montant { font-size: 40px; font-weight: 800; letter-spacing: -.03em; margin-top: 8px; }
+.prix-montant span { font-size: 15px; font-weight: 500; color: var(--text-faint); }
+.prix-sous { font-size: 14px; color: var(--text-muted); margin: 8px 0 22px; }
+.prix .preuves { margin: 0 0 26px; flex: 1; }
+.prix .btn { width: 100%; justify-content: center; }
+
+/* ---------- Suite : où aller ensuite ---------- */
+.suite { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.suite a { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg); padding: 22px 22px 20px; transition: transform .2s, border-color .2s, box-shadow .2s; }
+.suite a:hover { transform: translateY(-3px); border-color: var(--blue); box-shadow: var(--shadow-md); }
+.suite h3 { font-size: 16.5px; font-weight: 700; margin-bottom: 5px; }
+.suite p { font-size: 13.5px; color: var(--text-muted); line-height: 1.55; }
+
+/* ---------- Appel final ---------- */
+.final { text-align: center; padding: 96px 0; }
+.final .chapo { margin: 16px auto 32px; }
+
+/* ---------- Pied de page ---------- */
+.pied { background: var(--blue-deep); color: #9DB8DC; padding: 56px 0 30px; }
+.pied-grille { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+.pied-mot { font-size: 13.5px; max-width: 270px; margin-top: 10px; line-height: 1.6; }
+.pied h5 { font-size: 12.5px; font-weight: 700; text-transform: uppercase; letter-spacing: .07em; color: #fff; margin-bottom: 13px; }
+.pied a { display: block; font-size: 14px; padding: 4px 0; transition: color .2s; }
+.pied a:hover { color: #fff; }
+.pied-bas { border-top: 1px solid rgba(255, 255, 255, .13); padding-top: 22px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 10px; font-size: 13px; }
+
+/* ---------- Révélation (posée par le script, jamais par le CSS seul) ---------- */
+.js-reveal .reveal { opacity: 0; transform: translateY(26px); transition: opacity .7s ease, transform .7s cubic-bezier(.22, 1, .36, 1); }
+.js-reveal .reveal.vu { opacity: 1; transform: none; }
+
+/* ---------- Adaptations ---------- */
+@media (max-width: 1040px) {
+  .trame { grid-template-columns: repeat(2, 1fr); }
+  .points { grid-template-columns: repeat(2, 1fr); gap: 2px 32px; }
+  .pied-grille { grid-template-columns: 1fr 1fr; gap: 32px; }
+}
+@media (max-width: 900px) {
+  .nav-liens { display: none; }
+  .duo, .duo-inverse { grid-template-columns: 1fr; gap: 30px; }
+  .duo-inverse .duo-txt { order: 0; }
+  .duo + .duo { margin-top: 62px; }
+  .sec { padding: 64px 0; }
+  .tels { display: flex; gap: 16px; margin: 0 -24px; padding: 0 24px 8px; overflow-x: auto; scroll-snap-type: x mandatory; scrollbar-width: none; }
+  .tels::-webkit-scrollbar { display: none; }
+  .tel { flex: 0 0 72%; scroll-snap-align: center; }
+  .tel:nth-child(even) { margin-top: 0; }
+  .hero-vue { margin-top: 44px; }
+}
+@media (max-width: 720px) {
+  .trame { grid-template-columns: 1fr; }
+  .points { grid-template-columns: 1fr; gap: 0; }
+  .suite { grid-template-columns: 1fr; }
+  .prix-grille { grid-template-columns: 1fr; }
+  .chiffres { grid-template-columns: 1fr 1fr; gap: 22px 0; }
+  .chiffres > div:nth-child(odd) { padding-left: 0; border-left: 0; }
+  .final { padding: 70px 0; }
+}
+@media (max-width: 560px) {
+  .nav-cta .btn-ligne { display: none; }
+  .pied-grille { grid-template-columns: 1fr; gap: 26px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+  .js-reveal .reveal { opacity: 1 !important; transform: none !important; }
+}
+
+/* ---------- Bloc de texte seul (quand la capture n'existe pas encore) ---------- */
+.bloc-seul { max-width: 900px; }
+.bloc-seul .preuves { columns: 2; column-gap: 44px; margin-top: 20px; }
+.bloc-seul .preuves li { break-inside: avoid; }
+@media (max-width: 760px) { .bloc-seul .preuves { columns: 1; } }
+
+/* Une capture de téléphone dans une carte paysage : on la pose, on ne la rogne pas. */
+.carte-vue-tel { display: flex; align-items: flex-start; justify-content: center; background: var(--blue-light); }
+.carte-vue-tel img { width: auto; height: 100%; object-fit: contain; object-position: top center; }
