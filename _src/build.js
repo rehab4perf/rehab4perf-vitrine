@@ -4,7 +4,7 @@
 'use strict';
 const fs = require('fs');
 const path = require('path');
-const { APP, THEMES, ACCUEIL, TELS } = require('./contenu.js');
+const { APP, THEMES, ACCUEIL, PRODUIT, TELS } = require('./contenu.js');
 
 const RACINE = path.join(__dirname, '..');
 const LOGO = (c, w, h) => `<svg viewBox="8 34 164 104" width="${w}" height="${h}" aria-hidden="true"><g stroke="${c}" stroke-width="17" stroke-linecap="round" fill="none"><line x1="20" y1="118" x2="56" y2="104"/><line x1="70" y1="122" x2="100" y2="84"/><line x1="112" y1="125" x2="134" y2="66"/><line x1="158" y1="128" x2="158" y2="46"/></g></svg>`;
@@ -26,7 +26,7 @@ function image(src, alt, { large = false, tel = false, prio = false } = {}) {
 const preuves = (items) => `<ul class="preuves">${items.map(t => `<li>${COCHE}<span>${t}</span></li>`).join('')}</ul>`;
 
 function nav(actif) {
-  const liens = [['Le produit', 'bilan.html'], ['Tarifs', 'index.html#tarifs'], ['Côté athlète', 'athlete.html']];
+  const liens = [['Le produit', 'produit.html'], ['Sécurité', 'index.html#securite'], ['Tarifs', 'index.html#tarifs']];
   return `<nav class="nav">
   <div class="wrap nav-in">
     <a href="index.html" aria-label="Rehab4Perf, accueil">${MARQUE('#2B5FA6', 32, 21)}</a>
@@ -131,6 +131,13 @@ ${SCRIPT}
 `;
 }
 
+function diaporama(diapos) {
+  return `<div class="hero-vue">
+      <div class="ecran diapos">${diapos.map((d, i) => `<img class="diapo${i === 0 ? ' actif' : ''}" src="${d.img}-1280.webp" srcset="${d.img}-1280.webp 1280w, ${d.img}-2560.webp 2560w" sizes="(max-width: 1188px) 100vw, 1140px" width="1280" height="800" alt="${d.alt}" decoding="async"${i === 0 ? ' fetchpriority="high"' : ' fetchpriority="low" aria-hidden="true"'}>`).join('')}</div>
+      <div class="diapo-choix" role="group" aria-label="Écran affiché">${diapos.map((d, i) => `<button type="button"${i === 0 ? ' class="actif" aria-pressed="true"' : ' aria-pressed="false"'}>${d.libelle}</button>`).join('')}</div>
+    </div>`;
+}
+
 /* ── Blocs d'une page de thème ───────────────────────────────────────────── */
 function bloc(b) {
   if (b.type === 'tels') {
@@ -183,7 +190,7 @@ THEMES.forEach(t => {
     <span class="eyebrow">${t.titre}</span>
     <h1 class="t-geant">${t.h1}</h1>
     <p class="chapo">${t.chapo}</p>
-    <div class="hero-actions"><a href="${APP}" class="btn btn-plein btn-lg">Essayer gratuitement ${FLECHE}</a><a href="index.html#trame" class="btn btn-ligne btn-lg">Tout le produit</a></div>
+    <div class="hero-actions"><a href="${APP}" class="btn btn-plein btn-lg">Essayer gratuitement ${FLECHE}</a><a href="produit.html" class="btn btn-ligne btn-lg">Tout le produit</a></div>
     ${t.heroImg ? `<div class="hero-vue"><div class="ecran">${image(t.heroImg.src, t.heroImg.alt, { large: true, prio: true })}</div></div>` : ''}
   </div></header>`;
   const corps = hero + t.blocs.map(bloc).join('\n') + suite(t.suite) + FINAL;
@@ -241,10 +248,7 @@ const accueil = `<header class="hero"><div class="hero-fond"><div class="halo ha
     <h1 class="t-geant">${A.h1}</h1>
     <p class="chapo">${A.chapo}</p>
     <div class="hero-actions"><a href="${APP}" class="btn btn-plein btn-lg">Commencer gratuitement ${FLECHE}</a><a href="#trame" class="btn btn-ligne btn-lg">Voir le produit</a></div>
-    <div class="hero-vue">
-      <div class="ecran diapos">${A.diapos.map((d, i) => `<img class="diapo${i === 0 ? ' actif' : ''}" src="${d.img}-1280.webp" srcset="${d.img}-1280.webp 1280w, ${d.img}-2560.webp 2560w" sizes="(max-width: 1188px) 100vw, 1140px" width="1280" height="800" alt="${d.alt}" decoding="async"${i === 0 ? ' fetchpriority="high"' : ' fetchpriority="low" aria-hidden="true"'}>`).join('')}</div>
-      <div class="diapo-choix" role="group" aria-label="Écran affiché">${A.diapos.map((d, i) => `<button type="button"${i === 0 ? ' class="actif" aria-pressed="true"' : ' aria-pressed="false"'}>${d.libelle}</button>`).join('')}</div>
-    </div>
+    ${diaporama(A.diapos)}
   </div></header>
 <section class="sec-serre sur-blanc"><div class="wrap"><div class="chiffres">${
   A.chiffres.map(c => `<div class="reveal"><div class="chiffre">${c.n}</div><div class="chiffre-lbl">${c.l}</div></div>`).join('')
@@ -256,4 +260,30 @@ fs.writeFileSync(path.join(RACINE, 'index.html'), page({
   description: A.chapo.replace(/<[^>]+>/g, ''), actif: null, corps: accueil, canonique: ''
 }));
 
-console.log('Pages écrites : index.html + ' + THEMES.map(t => t.slug + '.html').join(', '));
+const P = PRODUIT;
+const produit = `<header class="hero"><div class="hero-fond"><div class="halo halo-1"></div><div class="halo halo-2"></div><div class="halo halo-3"></div></div>
+  <div class="wrap">
+    <span class="eyebrow">Le produit</span>
+    <h1 class="t-geant">${P.h1}</h1>
+    <p class="chapo">${P.chapo}</p>
+    <div class="hero-actions"><a href="${APP}" class="btn btn-plein btn-lg">Essayer gratuitement ${FLECHE}</a><a href="#trame" class="btn btn-ligne btn-lg">Par thème</a></div>
+    ${diaporama(P.diapos)}
+  </div></header>
+${P.blocs.map((b, i) => `<section class="sec${i % 2 === 0 ? ' sur-blanc' : ''}"><div class="wrap">
+  <div class="duo${b.inverse ? ' duo-inverse' : ''} reveal">
+    <div class="duo-txt"><h2 class="t-moyen">${b.h2}</h2><p>${b.p}</p></div>
+    <div><div class="ecran ecran-doux">${image(b.img, b.alt)}</div></div>
+  </div></div></section>`).join('')}
+<section class="sec"><div class="wrap">
+  <div class="tete reveal"><h2 class="t-grand">Ce qu'il a dans la poche</h2>
+  <p class="chapo">L'athlète ouvre un lien, sans compte ni mot de passe.</p></div>
+  <div class="tels">${TELS.map(t => `<figure class="tel reveal"><div class="tel-cadre">${image(t.img, t.alt, { tel: true })}</div><figcaption><strong>${t.titre}</strong>${t.txt}</figcaption></figure>`).join('')}</div>
+</div></section>
+${trame}${FINAL}`;
+
+fs.writeFileSync(path.join(RACINE, 'produit.html'), page({
+  titre: `${P.titre} · Rehab4Perf`, description: P.chapo.replace(/<[^>]+>/g, ''),
+  actif: null, corps: produit, canonique: 'produit'
+}));
+
+console.log('Pages écrites : index.html, produit.html + ' + THEMES.map(t => t.slug + '.html').join(', '));

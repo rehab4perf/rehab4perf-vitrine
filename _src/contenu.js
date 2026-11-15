@@ -167,7 +167,7 @@ const THEMES = [
           'Toutes les courbes s\'affichent d\'emblée ; vous choisissez celles qui partent au courrier.',
           'La période se règle : un mois, trois, six, un an, ou vos dates.'
         ] },
-      { type: 'duo', img: { src: 'img/app/charge', alt: 'Analyse de la charge : ACWR à 1,05, charge sur sept jours, monotonie, et courbe des unités arbitraires sur huit semaines avec la charge chronique' },
+      { type: 'duo', img: { src: 'img/app/suivi-charge', alt: 'Suivi, espace Entraînement : ACWR à 0,98 en zone favorable, 856 unités arbitraires sur sept jours, charge chronique à 876, et la courbe au jour près' },
         h2: 'Ce que l\'analyse de charge vous apporte',
         p: 'Des chiffres bruts, personne n\'en fait rien. Lus ensemble, ils répondent à trois questions que vous vous posez chaque semaine.',
         preuves: [
@@ -176,7 +176,16 @@ const THEMES = [
           '<strong>Et la course ?</strong> Volume, part courue vite, allure par zone cardiaque, dérive sur un fractionné.',
           'Une douleur se superpose à la charge : vous voyez ce qui a précédé, et non ce qui a suivi.'
         ] },
-      { type: 'duo', inverse: true, h2: 'Tester la VMA, préparer une course',
+      { type: 'duo', inverse: true, img: { src: 'img/app/suivi-sorties', alt: 'Suivi, vue Sorties : volume de course sur sept jours glissants, la bande de son habitude, le ratio volume et le rapport aigu sur chronique' },
+        h2: 'La course lue comme elle se vit',
+        p: 'Un coureur ne se blesse pas parce qu\'il court. Il se blesse parce qu\'il a changé quelque chose. L\'écran montre ce qui a changé, et quand.',
+        preuves: [
+          'Le volume sur <strong>sept jours glissants</strong>, et la bande de son habitude autour.',
+          'Ce qui est couru <strong>plus vite que d\'habitude</strong>, en kilomètres et en part du total.',
+          'Deux rapports dessous : volume et vitesse, chacun avec sa zone favorable.',
+          'La douleur se superpose d\'une case à cocher : vous voyez ce qui a précédé.'
+        ] },
+      { type: 'duo', h2: 'Tester la VMA, préparer une course',
         p: 'Le Suivi ne s\'arrête pas à la rééducation. Il va jusqu\'au dossard.',
         preuves: [
           'Test de VMA sur <strong>tapis, piste ou terrain</strong>, avec le chrono, les paliers, la FC et le RPE.',
@@ -193,10 +202,10 @@ const THEMES = [
     titre: 'La charge d\'entraînement',
     chapoCarte: 'Des unités arbitraires à l\'ACWR, et les sorties qui arrivent seules de Strava ou de la montre.',
     mots: ['UA de Foster', 'ACWR', 'Monotonie', 'Strava', 'Montres'],
-    vignette: { src: 'img/app/charge-1280.webp', alt: 'Bilan de charge : ACWR à 1,05 en zone favorable et courbe sur huit semaines' },
+    vignette: { src: 'img/app/suivi-charge-1280.webp', alt: 'Suivi de la charge : ACWR à 0,98 en zone favorable et courbe au jour près' },
     h1: 'Savoir si vous chargez trop,<br>avant qu\'il vous le dise',
     chapo: 'La charge des sept derniers jours, rapportée à la charge de fond des quatre dernières semaines. C\'est l\'ACWR, et il situe chaque semaine sur une échelle de risque.',
-    heroImg: { src: 'img/app/charge', alt: 'Bilan de charge dans Rehab4Perf : ACWR à 1,05 en zone favorable, charge sur sept jours, monotonie, et courbe des unités arbitraires sur huit semaines avec la charge chronique', legende: 'Le bilan de charge, sous l\'agenda. À gauche, le parcours du patient et la phase en cours de son protocole.' },
+    heroImg: { src: 'img/app/suivi-charge', alt: 'Suivi, espace Entraînement : ACWR à 0,98 en zone favorable, 856 unités arbitraires sur sept jours, charge chronique à 876, et la courbe au jour près' },
     blocs: [
       { type: 'points', h2: 'Trois chiffres, et ce qu\'ils veulent dire', p: 'La méthode de Foster, appliquée sans jargon : une charge de séance vaut l\'effort perçu multiplié par la durée.',
         items: [
@@ -207,7 +216,16 @@ const THEMES = [
           { h3: 'Les paliers', p: 'Certaines semaines n\'augmentent pas : l\'os se décharge, le tendon se maintient. C\'est voulu.' },
           { h3: 'Un seul levier', p: 'Volume, allure, cadence : jamais deux la même semaine, sinon on ne sait plus ce qui a fait mal.' }
         ] },
-      { type: 'duo', h2: 'Les sorties arrivent toutes seules',
+      { type: 'duo', img: { src: 'img/app/suivi-sorties', alt: 'Vue Sorties du Suivi : volume de course sur sept jours glissants, bande d\'habitude, ratio volume et rapport aigu sur chronique' },
+        h2: 'La course, levier par levier',
+        p: 'Volume, allure, cadence : un seul change à la fois, sinon on ne sait plus ce qui a fait mal. L\'écran dit lequel a bougé, et de combien.',
+        preuves: [
+          'Le volume sur sept jours glissants, avec <strong>la bande de son habitude</strong>.',
+          'La part courue plus vite que d\'habitude, isolée du volume.',
+          'Le rapport aigu sur chronique, pour le volume comme pour la vitesse.',
+          'Le profil des tours d\'une sortie, et la répartition par allure.'
+        ] },
+      { type: 'duo', inverse: true, h2: 'Les sorties arrivent toutes seules',
         p: 'L\'athlète relie son compte une fois. Ensuite, chaque sortie rejoint sa séance et sa charge sans que personne ne saisisse rien.',
         preuves: [
           '<strong>Strava</strong> : les 90 derniers jours à la connexion, puis chaque nouvelle sortie.',
@@ -318,6 +336,38 @@ const THEMES = [
   }
 ];
 
+/* ── « Le produit » : la visite, en images ────────────────────────────────
+   Elle ne refait pas l'argumentaire de l'accueil : elle MONTRE. Des écrans
+   qui défilent, puis quatre moments en grand, puis les sept thèmes. */
+const PRODUIT = {
+  titre: 'Le produit en images',
+  h1: 'Deux minutes pour voir<br>ce que ça change',
+  chapo: 'Les écrans que vous aurez sous les yeux tous les jours. Aucun n\'est redessiné : ce sont des captures de l\'application, sur un dossier fictif.',
+  diapos: [
+    { img: 'img/app/suivi-corps', libelle: 'Le corps', alt: 'Onglet Suivi : le corps 3D du patient, sa zone de douleur datée et ses tests liés' },
+    { img: 'img/app/evolution', libelle: 'Les courbes', alt: 'Page Évolution : courbes de douleur et de force bilan après bilan, avec les variations' },
+    { img: 'img/app/suivi-charge', libelle: 'La charge', alt: 'Suivi de la charge : ACWR à 0,98 en zone favorable et courbe au jour près' },
+    { img: 'img/app/suivi-sorties', libelle: 'La course', alt: 'Vue Sorties : volume sur sept jours glissants et bande d\'habitude' },
+    { img: 'img/app/builder', libelle: 'La séance', alt: 'Construction de séance : blocs, séries, charges cibles et bibliothèque en vidéo' },
+    { img: 'img/app/cr', libelle: 'Le courrier', alt: 'Générateur de compte-rendu : le formulaire et la lettre au médecin' },
+    { img: 'img/app/bilan-perso', libelle: 'Votre bilan', alt: 'Mode personnalisation : les blocs se déplacent, se masquent, et vos tests s\'ajoutent' }
+  ],
+  blocs: [
+    { img: 'img/app/evolution', alt: 'Page Évolution : courbes de douleur et de force, avec les variations entre chaque mesure',
+      h2: 'Trois bilans, et la progression se voit',
+      p: 'Le chiffre du jour en grand, la variation depuis le début, le pourcentage entre chaque mesure. Ce que le patient demande, et ce que le médecin attend.' },
+    { img: 'img/app/suivi-sorties', inverse: true, alt: 'Vue Sorties du Suivi : volume de course sur sept jours glissants, bande d\'habitude et ratios',
+      h2: 'La charge cesse d\'être une intuition',
+      p: 'Le volume, la part courue vite, l\'habitude autour, et le rapport aigu sur chronique. Un seul levier bouge à la fois, et vous voyez lequel.' },
+    { img: 'img/app/suivi-corps', alt: 'Le corps 3D du Suivi avec la zone du genou et sa fiche',
+      h2: 'Le corps porte le dossier',
+      p: 'Onze zones, datées, reliées à leurs tests. Un clic sur une zone ouvre sa fiche, sa courbe de douleur et son diagnostic.' },
+    { img: 'img/app/ecran-salle', inverse: true, alt: 'Aperçu de l\'écran de salle : deux patients, leurs blocs et leurs charges sur la télévision',
+      h2: 'Et la salle suit',
+      p: 'La séance s\'affiche sur la télévision du cabinet. Le prénom, les blocs, les charges. Jamais le diagnostic.' }
+  ]
+};
+
 /* ── L'accueil : la trame ────────────────────────────────────────────────── */
 const ACCUEIL = {
   h1: 'Tout le dossier du sportif,<br>du premier test au retour de terrain',
@@ -399,4 +449,4 @@ const TELS = [
     alt: 'Fin de séance côté athlète : durée réelle, effort perçu sur l\'échelle de Borg, et charge calculée en unités arbitraires' }
 ];
 
-module.exports = { APP, THEMES, ACCUEIL, TELS };
+module.exports = { APP, THEMES, ACCUEIL, PRODUIT, TELS };
