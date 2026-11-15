@@ -287,3 +287,30 @@ h1, h2, h3 { color: var(--blue-dark); letter-spacing: -.022em; line-height: 1.14
 /* Une capture de téléphone dans une carte paysage : on la pose, on ne la rogne pas. */
 .carte-vue-tel { display: flex; align-items: flex-start; justify-content: center; background: var(--blue-light); }
 .carte-vue-tel img { width: auto; height: 100%; object-fit: contain; object-position: top center; }
+
+/* ---------- Hero de l'accueil : plusieurs écrans en fondu ---------- */
+.diapos { position: relative; aspect-ratio: 16 / 10; background: var(--surface); }
+.diapo {
+  position: absolute; inset: 0; width: 100%; height: 100%;
+  object-fit: cover; object-position: top left;
+  opacity: 0; transition: opacity .7s ease;
+}
+.diapo.actif { opacity: 1; }
+.diapo-choix { display: flex; justify-content: center; gap: 8px; flex-wrap: wrap; margin-top: 22px; }
+.diapo-choix button {
+  position: relative; overflow: hidden;
+  font-family: var(--font); font-size: 13.5px; font-weight: 600;
+  padding: 9px 17px; border-radius: var(--radius);
+  border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-muted);
+  cursor: pointer; transition: color .2s, border-color .2s, background .2s, transform .2s;
+}
+.diapo-choix button:hover { border-color: var(--blue); color: var(--blue); }
+.diapo-choix button:active { transform: scale(.98); }
+.diapo-choix button.actif { border-color: var(--blue); color: var(--blue); background: var(--blue-light); }
+.diapo-choix button.actif::after {
+  content: ''; position: absolute; left: 0; bottom: 0; height: 2px; width: 100%;
+  background: var(--blue); transform-origin: left; animation: diapoDefile 6s linear both;
+}
+.hero-vue:hover .diapo-choix button.actif::after { animation-play-state: paused; }
+@keyframes diapoDefile { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+@media (max-width: 560px) { .diapo-choix { gap: 6px; } .diapo-choix button { font-size: 12.5px; padding: 8px 12px; } }

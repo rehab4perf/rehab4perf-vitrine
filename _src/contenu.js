@@ -22,12 +22,22 @@ const THEMES = [
     chapo: 'Vous testez, vous saisissez. L\'application calcule les écarts, nomme les côtés correctement et garde chaque bilan fidèle à sa date.',
     heroImg: { src: 'img/app/bilan', alt: 'Page de bilan du genou dans Rehab4Perf : amplitudes articulaires et tests de force, colonnes gauche et droite', legende: 'Le bilan du genou. Les valeurs saisies alimentent le compte-rendu, le Suivi et les courbes d\'évolution.' },
     blocs: [
-      { type: 'duo', h2: 'Six régions, et la place pour les vôtres',
-        p: 'Épaule, coude, poignet, rachis, hanche, genou, pied, lésion musculaire. Chaque page porte ses tests, ses amplitudes et ses observations.',
+      { type: 'duo', img: { src: 'img/app/bilan-perso', alt: 'Mode personnalisation du bilan : chaque bloc porte ses poignées pour monter, descendre ou masquer, et la barre du bas indique douze blocs affichés et aucun test masqué' },
+        h2: 'Aucun bilan ne ressemble<br>à celui du voisin',
+        p: 'Personne ne teste exactement comme son confrère. Plutôt que de vous demander d\'entrer dans un moule, l\'application vous laisse construire le vôtre, écran par écran.',
         preuves: [
-          'Masquez un test, réordonnez un bloc, <strong>créez le vôtre</strong> : la page suit votre raisonnement, pas l\'inverse.',
-          'Créez vos <strong>onglets et vos blocs sur mesure</strong>, avec leur icône, leur unité et leur appréciation.',
-          'Un bilan déjà sauvegardé <strong>reste fidèle à lui-même</strong>, même si vous changez vos pages ensuite.'
+          '<strong>Déplacez, masquez, renommez</strong> n\'importe quel bloc ou test, page par page.',
+          '<strong>Ajoutez vos propres tests</strong> dans un bloc existant, avec leur description et leur unité.',
+          '<strong>Créez vos onglets</strong>, avec leur icône, leurs blocs, leur forme : gauche et droite, écart en points, appréciation, mobilité actif et passif.',
+          'Rangez vos onglets dans vos dossiers, et retrouvez votre disposition sur chaque nouveau patient.',
+          'Enregistrez plusieurs <strong>dispositions</strong> et basculez de l\'une à l\'autre selon le motif.'
+        ] },
+      { type: 'duo', inverse: true, h2: 'Six régions pour commencer',
+        p: 'Épaule, coude, poignet, rachis, hanche, genou, pied, lésion musculaire. Chaque page porte ses tests, ses amplitudes et ses observations, et vous la retaillez à votre main.',
+        preuves: [
+          'Les tests de Rehab4Perf servent de base : vous en gardez ce qui vous sert.',
+          'Un bilan déjà sauvegardé <strong>reste fidèle à lui-même</strong>, même si vous changez vos pages ensuite.',
+          'Au cabinet, une disposition se partage : toute l\'équipe part de la même page.'
         ], img: null },
       { type: 'duo', inverse: true, h2: 'Actif et passif, pour trancher',
         p: 'Comparer les deux amplitudes range la limitation dans l\'un des quatre profils, et la fin de course affine le verdict.',
@@ -148,6 +158,24 @@ const THEMES = [
           'Les zones du bilan arrivent seules ; vous en ajoutez d\'autres d\'un clic sur le corps.',
           'Un corps <strong>masculin ou féminin</strong>, selon le patient.'
         ], img: null },
+      { type: 'duo', inverse: true, img: { src: 'img/app/evolution', alt: 'Page Évolution : courbes de douleur et de force bilan après bilan, avec les variations en pourcentage entre chaque mesure' },
+        h2: 'Chaque mesure devient une courbe',
+        p: 'Un bilan isolé dit où en est le patient. Trois bilans disent s\'il progresse, et à quelle vitesse. C\'est ce que le médecin et le patient attendent de vous.',
+        preuves: [
+          'Le chiffre du jour en grand, la variation depuis le début, et <strong>le pourcentage entre chaque mesure</strong>.',
+          'Un test à deux côtés montre les trois chiffres : atteint, sain, et l\'asymétrie.',
+          'Toutes les courbes s\'affichent d\'emblée ; vous choisissez celles qui partent au courrier.',
+          'La période se règle : un mois, trois, six, un an, ou vos dates.'
+        ] },
+      { type: 'duo', img: { src: 'img/app/charge', alt: 'Analyse de la charge : ACWR à 1,05, charge sur sept jours, monotonie, et courbe des unités arbitraires sur huit semaines avec la charge chronique' },
+        h2: 'Ce que l\'analyse de charge vous apporte',
+        p: 'Des chiffres bruts, personne n\'en fait rien. Lus ensemble, ils répondent à trois questions que vous vous posez chaque semaine.',
+        preuves: [
+          '<strong>Est-ce que je charge trop ?</strong> L\'ACWR situe la semaine sur une échelle, et la bande dit son habitude.',
+          '<strong>La semaine a-t-elle la bonne forme ?</strong> La monotonie distingue sept jours identiques de sept jours contrastés.',
+          '<strong>Et la course ?</strong> Volume, part courue vite, allure par zone cardiaque, dérive sur un fractionné.',
+          'Une douleur se superpose à la charge : vous voyez ce qui a précédé, et non ce qui a suivi.'
+        ] },
       { type: 'duo', inverse: true, h2: 'Tester la VMA, préparer une course',
         p: 'Le Suivi ne s\'arrête pas à la rééducation. Il va jusqu\'au dossard.',
         preuves: [
@@ -232,45 +260,58 @@ const THEMES = [
 
   {
     slug: 'cabinet', nav: 'Cabinet',
-    titre: 'Cabinet et écran de salle',
-    chapoCarte: 'Trois rôles, une bibliothèque commune, des dossiers qui se transfèrent, et la séance affichée sur la télé.',
-    mots: ['Trois rôles', 'Bibliothèque partagée', 'Écran de salle', 'Partage de dossier'],
+    titre: 'Le cabinet',
+    chapoCarte: 'Votre façon de travailler, partagée par toute l\'équipe : vos tests, vos modèles, votre bilan, votre en-tête.',
+    mots: ['Vos tests partagés', 'Trois rôles', 'Écran de salle', 'Statistiques'],
     vignette: { src: 'img/app/partage-1280.webp', alt: 'Menu de partage : l\'espace athlète, un confrère kiné, un préparateur physique' },
-    h1: 'À plusieurs,<br>sans se marcher dessus',
-    chapo: 'Le cabinet partage ce qui doit l\'être : les modèles, les protocoles, la version du bilan, l\'en-tête des courriers. Le reste reste personnel.',
-    heroImg: { src: 'img/app/partage', alt: 'Menu Partager de Rehab4Perf : ouvrir l\'espace de l\'athlète, copier son lien, partager à un kiné, ou partager le dossier à un confrère préparateur physique', legende: 'Le menu de partage. L\'athlète, un confrère kiné, un préparateur : chacun reçoit ce qui le concerne, et rien d\'autre.' },
+    h1: 'Un cabinet, ce n\'est pas<br>une addition de praticiens',
+    chapo: 'Vous avez une façon de tester, de prescrire, d\'écrire au médecin. Elle fait la valeur de votre maison. Encore faut-il qu\'elle se transmette, sans réunion et sans classeur.',
+    heroImg: { src: 'img/app/partage', alt: 'Menu Partager de Rehab4Perf : ouvrir l\'espace de l\'athlète, copier son lien, partager à un kiné, ou partager le dossier à un confrère préparateur physique' },
     blocs: [
-      { type: 'duo', h2: 'Le dossier passe d\'un métier à l\'autre',
-        p: 'Le kinésithérapeute soigne, le préparateur reconstruit. Le dossier les suit, mais pas en entier.',
+      { type: 'duo', img: { src: 'img/app/bilan-perso', alt: 'Mode personnalisation du bilan : les blocs se déplacent et se masquent, et une disposition s\'enregistre pour toute l\'équipe' },
+        h2: 'Votre méthode devient<br>celle du cabinet',
+        p: 'Vous avez construit vos onglets, vos tests, vos modèles de séance. Au lieu de rester dans votre compte, ils deviennent le socle commun. Un nouveau collaborateur ouvre l\'application et travaille déjà comme vous.',
+        preuves: [
+          '<strong>Vos tests maison</strong> et vos blocs sur mesure, disponibles pour toute l\'équipe.',
+          '<strong>La version du bilan du cabinet</strong> : dispositions enregistrées et playlists de tests, pour que chacun parte de la même page.',
+          '<strong>Vos modèles et protocoles</strong>, rangés en dossiers, partagés à un ou plusieurs cabinets.',
+          '<strong>L\'en-tête des courriers</strong> : le logo et l\'adresse du cabinet, avec la signature et le tampon de chacun.',
+          'Le compte-rendu du cabinet, pour que deux courriers signés chez vous se ressemblent.'
+        ] },
+      { type: 'points', h2: 'Ce que vous gardez sous contrôle', p: 'Partager ne veut pas dire tout ouvrir. Chacun garde ses patients, et vous gardez la main sur ce qui est commun.',
+        items: [
+          { h3: 'Trois rôles', p: 'Administrateur principal, administrateurs, collaborateurs. Qui range la bibliothèque, qui invite, qui change les réglages.' },
+          { h3: 'Ce qui reste personnel', p: 'Les patients, les notes cliniques, la signature et le tampon restent à chacun. Toujours.' },
+          { h3: 'Les transferts', p: 'Confier ses patients à un collègue lors d\'un départ ou d\'un congé, en sachant ce qui suit le dossier et ce qui ne suit pas.' },
+          { h3: 'L\'historique de l\'équipe', p: 'Qui est entré, qui est sorti, qui a changé de rôle. Rien ne se décide dans un couloir.' },
+          { h3: 'Les places', p: 'Une place payée par le cabinet, ou un abonnement personnel. Un départ ne casse rien, et la dernière personne garde la maison.' },
+          { h3: 'Plusieurs cabinets', p: 'Un praticien qui exerce dans deux structures bascule de l\'une à l\'autre, avec le bon en-tête et la bonne bibliothèque.' }
+        ] },
+      { type: 'duo', inverse: true, img: { src: 'img/app/statistiques', alt: 'Statistiques du cabinet : patients au total, actifs, dormants, et répartition par sexe, âge et sport' },
+        h2: 'Ce que votre patientèle raconte',
+        p: 'Combien de patients actifs, combien ne sont pas revenus, quelles régions vous traitez le plus. De quoi piloter une structure, pas seulement une consultation.',
+        preuves: [
+          '<strong>Les dormants</strong> : ceux qu\'on n\'a pas vus depuis 90 jours. L\'indicateur le plus actionnable de la page.',
+          'Répartition par sexe, âge et sport, régions atteintes et diagnostics.',
+          'Sports et diagnostics reconnus par mots-clés : vos collaborateurs écrivent naturellement, le regroupement suit.',
+          '« Non renseigné » et « non reconnu » sont affichés exprès, pour que vous sachiez ce qui manque.'
+        ] },
+      { type: 'duo', img: { src: 'img/app/ecran-salle', alt: 'Aperçu de l\'écran de salle : deux patients, leurs blocs, leurs séries et leurs charges, sur la télévision du cabinet' },
+        h2: 'La salle travaille toute seule',
+        p: 'La séance s\'affiche sur la télévision : le patient sait quoi faire, et votre collaborateur n\'a plus à répéter les consignes à trois personnes en même temps.',
+        preuves: [
+          'La télé n\'a <strong>ni session ni mot de passe</strong> : un secret tiré une fois, révocable.',
+          'Le prénom, les blocs, les charges. <strong>Jamais le diagnostic.</strong>',
+          'L\'écran se partage entre les kinés, et chacun peut retirer une séance, la sienne ou celle d\'un collègue.',
+          'Ouvrez-la à des coachs extérieurs sans compte, par un simple lien d\'invitation.'
+        ] },
+      { type: 'bande', h2: 'Et le préparateur physique, dans tout ça',
+        p: 'Beaucoup de structures font travailler kinés et préparateurs côte à côte. Le dossier passe de l\'un à l\'autre, sans tout ouvrir.',
         preuves: [
           'Le kiné invite, le préparateur accepte, <strong>le patient donne son accord</strong>. Sans les trois, rien ne s\'ouvre.',
           'Le préparateur voit la force, les mobilités, les zones, les programmes et la charge.',
           'Jamais les tests orthopédiques, jamais le diagnostic, jamais les notes cliniques.',
           'Chaque lecture du dossier est inscrite au journal, et le partage se révoque.'
-        ], img: null },
-      { type: 'points', h2: 'Ce que le cabinet met en commun', p: 'Une équipe ne devrait pas recréer dix fois le même protocole.',
-        items: [
-          { h3: 'Trois rôles', p: 'Administrateur principal, administrateurs, collaborateurs. Chacun sait ce qu\'il peut faire.' },
-          { h3: 'Modèles et protocoles', p: 'La bibliothèque du cabinet, rangée en dossiers, partagée à un ou plusieurs cabinets.' },
-          { h3: 'La version du bilan', p: 'Dispositions, playlists de tests, tests maison : tout le monde part de la même page.' },
-          { h3: 'L\'en-tête des courriers', p: 'Le logo et l\'adresse du cabinet, avec la signature et le tampon de chacun.' },
-          { h3: 'Les transferts', p: 'Confier ses patients à un collègue, en sachant ce qui suit le patient et ce qui ne suit pas.' },
-          { h3: 'Les places', p: 'Une place payée par le cabinet, ou un abonnement personnel. Le départ ne casse rien.' }
-        ] },
-      { type: 'duo', inverse: true, img: { src: 'img/app/ecran-salle', alt: 'Aperçu de l\'écran de salle : deux patients, leurs blocs, leurs séries et leurs charges, sur la télévision du cabinet', legende: 'Ce que la télévision affiche : le prénom, les blocs, les charges. Jamais le diagnostic.' }, h2: 'La séance sur la télé de la salle',
-        p: 'Reliez l\'écran une fois. Depuis le builder, la séance du patient s\'affiche en grand, sans son nom complet ni son diagnostic.',
-        preuves: [
-          'La télé n\'a <strong>ni session ni mot de passe</strong> : un secret tiré une fois, révocable.',
-          'Choisissez ce qui part : toute la séance, ou seulement certaines étapes.',
-          'L\'écran se partage entre les kinés, et chacun peut retirer une séance.',
-          'Ouvrez-la à des coachs extérieurs sans compte, par un lien d\'invitation.'
-        ] },
-      { type: 'duo', img: { src: 'img/app/statistiques', alt: 'Statistiques du cabinet : patients au total, actifs, dormants, et répartition par sexe, âge et sport', legende: 'La vue d\'ensemble du cabinet. L\'unité de comptage est le patient, jamais le bilan.' }, h2: 'Ce que votre patientèle raconte',
-        p: 'Quatre indicateurs, des répartitions, et les régions atteintes. De quoi savoir qui vous soignez vraiment, et qui ne revient plus.',
-        preuves: [
-          '<strong>Les dormants</strong> : ceux qu\'on n\'a pas vus depuis 90 jours. L\'indicateur le plus actionnable.',
-          'Sports et diagnostics reconnus par mots-clés : écrivez naturellement, le regroupement suit.',
-          '« Non renseigné » et « non reconnu » sont affichés exprès, pour que vous sachiez ce qui manque.'
         ] }
     ],
     suite: ['programme', 'compte-rendu', 'athlete']
@@ -281,7 +322,17 @@ const THEMES = [
 const ACCUEIL = {
   h1: 'Tout le dossier du sportif,<br>du premier test au retour de terrain',
   chapo: 'Bilan clinique, compte-rendu, programme, charge d\'entraînement et espace athlète. Un seul outil, une seule saisie, pensé par un kinésithérapeute.',
-  heroImg: { src: 'img/app/suivi-corps', alt: 'Onglet Suivi de Rehab4Perf : le corps 3D du patient avec le genou droit coloré, sa fiche de zone, la courbe de douleur et les tests liés avec leurs indices de symétrie', legende: 'Le Suivi : le corps du patient, ses zones datées, et les tests qui vont avec.' },
+  /* Le hero fait défiler quatre écrans réels, avec des boutons pour choisir. */
+  diapos: [
+    { img: 'img/app/suivi-corps', libelle: 'Le corps du patient',
+      alt: 'Onglet Suivi : le corps 3D du patient avec le genou droit coloré, sa fiche de zone, la courbe de douleur et les tests liés avec leurs indices de symétrie' },
+    { img: 'img/app/charge', libelle: 'La charge',
+      alt: 'Bilan de charge : ACWR à 1,05 en zone favorable, charge sur sept jours, monotonie, et courbe des unités arbitraires sur huit semaines' },
+    { img: 'img/app/builder', libelle: 'La séance',
+      alt: 'Construction de séance : blocs, exercices, séries et charges cibles, avec le rappel de la dernière séance et la bibliothèque en vidéo' },
+    { img: 'img/app/cr', libelle: 'Le compte-rendu',
+      alt: 'Générateur de compte-rendu : le formulaire à gauche, la lettre au médecin à droite avec le tableau des tests de force' }
+  ],
   chiffres: [
     { n: '11', l: 'Zones du corps suivies sur le mannequin 3D' },
     { n: '200+', l: 'Exercices filmés dans la bibliothèque' },
@@ -303,6 +354,18 @@ const ACCUEIL = {
       'VMA, zones d\'allure, plan de course et sorties connectées.',
       'Ni tests orthopédiques, ni diagnostic : ce n\'est pas son métier.'
     ] }
+  },
+  securite: {
+    h2: 'Des données de santé, traitées comme telles',
+    chapo: 'Un dossier de patient n\'est pas un fichier client. Ce que nous faisons, et ce que nous ne faisons pas.',
+    items: [
+      { h3: 'Vos données restent en Europe', p: 'La base est hébergée à Francfort, en Allemagne. Les communications passent en HTTPS, chiffrées de bout en bout.' },
+      { h3: 'Aucune intelligence artificielle', p: 'Aucun système d\'IA ne traite les dossiers de vos patients. Ni pour nous, ni pour un tiers, ni pour entraîner quoi que ce soit.' },
+      { h3: 'Le cloisonnement est en base', p: 'Ce n\'est pas l\'écran qui filtre : la base refuse elle-même les lignes qui ne sont pas les vôtres. Un praticien ne voit que ses patients.' },
+      { h3: 'Le lien du patient est révocable', p: 'Chaque patient a son jeton. Vous le sécurisez, le renouvelez ou le révoquez, patient par patient, sans toucher aux autres.' },
+      { h3: 'Le partage est à trois clés', p: 'Un confrère n\'ouvre un dossier que si vous l\'invitez, qu\'il accepte, et que le patient donne son accord. Chaque lecture part au journal.' },
+      { h3: 'Certification HDS en cours', p: 'La migration vers un hébergeur certifié « données de santé » est engagée. Tant qu\'elle n\'est pas achevée, nous l\'écrivons ainsi, sans raccourci.' }
+    ]
   },
   tarifs: {
     h2: 'Un mode, un tarif',

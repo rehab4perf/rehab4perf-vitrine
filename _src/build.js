@@ -73,6 +73,27 @@ const SCRIPT = `<script>
     }, { threshold: 0.12 });
     cibles.forEach(function (el) { io.observe(el); });
   }
+  var choix = document.querySelectorAll('.diapo-choix button');
+  var diapos = document.querySelectorAll('.diapos .diapo');
+  if (choix.length && diapos.length) {
+    var montrer = function (n) {
+      choix.forEach(function (b, i) {
+        b.classList.toggle('actif', i === n);
+        b.setAttribute('aria-pressed', i === n ? 'true' : 'false');
+      });
+      diapos.forEach(function (im, i) {
+        im.classList.toggle('actif', i === n);
+        if (i === n) { im.removeAttribute('aria-hidden'); } else { im.setAttribute('aria-hidden', 'true'); }
+      });
+    };
+    choix.forEach(function (b, i) {
+      b.addEventListener('click', function () { montrer(i); });
+      b.addEventListener('animationend', function (e) {
+        if (e.animationName === 'diapoDefile') { montrer((i + 1) % choix.length); }
+      });
+    });
+  }
+
   /* Le rail d'onglets amène l'onglet courant dans le champ au chargement. */
   var cour = document.querySelector('.rail a[aria-current="page"]');
   if (cour && cour.scrollIntoView) {
@@ -137,7 +158,7 @@ function bloc(b) {
   }
   return `<section class="sec sur-blanc"><div class="wrap">
     <div class="duo${b.inverse ? ' duo-inverse' : ''} reveal">${txt}
-      <div><div class="ecran ecran-doux">${image(b.img.src, b.img.alt)}</div>${b.img.legende ? `<p class="legende">${b.img.legende}</p>` : ''}</div>
+      <div><div class="ecran ecran-doux">${image(b.img.src, b.img.alt)}</div></div>
     </div></div></section>`;
 }
 
@@ -163,7 +184,7 @@ THEMES.forEach(t => {
     <h1 class="t-geant">${t.h1}</h1>
     <p class="chapo">${t.chapo}</p>
     <div class="hero-actions"><a href="${APP}" class="btn btn-plein btn-lg">Essayer gratuitement ${FLECHE}</a><a href="index.html#trame" class="btn btn-ligne btn-lg">Tout le produit</a></div>
-    ${t.heroImg ? `<div class="hero-vue"><div class="ecran">${image(t.heroImg.src, t.heroImg.alt, { large: true, prio: true })}</div>${t.heroImg.legende ? `<p class="legende">${t.heroImg.legende}</p>` : ''}</div>` : ''}
+    ${t.heroImg ? `<div class="hero-vue"><div class="ecran">${image(t.heroImg.src, t.heroImg.alt, { large: true, prio: true })}</div></div>` : ''}
   </div></header>`;
   const corps = hero + t.blocs.map(bloc).join('\n') + suite(t.suite) + FINAL;
   fs.writeFileSync(path.join(RACINE, t.slug + '.html'),
@@ -188,6 +209,11 @@ const modes = `<section class="sec sur-blanc"><div class="wrap">
   <div class="duo" style="grid-template-columns:1fr 1fr;align-items:start">
     ${[A.modes.kine, A.modes.prepa].map(m => `<div class="reveal"><h3 class="t-petit" style="color:var(--blue)">${m.sous}</h3><h3 class="t-moyen" style="margin:2px 0 8px">${m.titre}</h3>${preuves(m.items)}</div>`).join('')}
   </div>
+</div></section>`;
+
+const securite = `<section class="sec sur-navy" id="securite"><div class="wrap">
+  <div class="tete reveal"><h2 class="t-grand">${A.securite.h2}</h2><p class="chapo">${A.securite.chapo}</p></div>
+  <div class="points">${A.securite.items.map(i => `<div class="point reveal"><h3>${i.h3}</h3><p>${i.p}</p></div>`).join('')}</div>
 </div></section>`;
 
 const tels = `<section class="sec"><div class="wrap">
@@ -215,12 +241,15 @@ const accueil = `<header class="hero"><div class="hero-fond"><div class="halo ha
     <h1 class="t-geant">${A.h1}</h1>
     <p class="chapo">${A.chapo}</p>
     <div class="hero-actions"><a href="${APP}" class="btn btn-plein btn-lg">Commencer gratuitement ${FLECHE}</a><a href="#trame" class="btn btn-ligne btn-lg">Voir le produit</a></div>
-    <div class="hero-vue"><div class="ecran">${image(A.heroImg.src, A.heroImg.alt, { large: true, prio: true })}</div><p class="legende">${A.heroImg.legende}</p></div>
+    <div class="hero-vue">
+      <div class="ecran diapos">${A.diapos.map((d, i) => `<img class="diapo${i === 0 ? ' actif' : ''}" src="${d.img}-1280.webp" srcset="${d.img}-1280.webp 1280w, ${d.img}-2560.webp 2560w" sizes="(max-width: 1188px) 100vw, 1140px" width="1280" height="800" alt="${d.alt}" decoding="async"${i === 0 ? ' fetchpriority="high"' : ' fetchpriority="low" aria-hidden="true"'}>`).join('')}</div>
+      <div class="diapo-choix" role="group" aria-label="Écran affiché">${A.diapos.map((d, i) => `<button type="button"${i === 0 ? ' class="actif" aria-pressed="true"' : ' aria-pressed="false"'}>${d.libelle}</button>`).join('')}</div>
+    </div>
   </div></header>
 <section class="sec-serre sur-blanc"><div class="wrap"><div class="chiffres">${
   A.chiffres.map(c => `<div class="reveal"><div class="chiffre">${c.n}</div><div class="chiffre-lbl">${c.l}</div></div>`).join('')
 }</div></div></section>
-${trame}${modes}${tels}${tarifs}${FINAL}`;
+${trame}${modes}${tels}${securite}${tarifs}${FINAL}`;
 
 fs.writeFileSync(path.join(RACINE, 'index.html'), page({
   titre: 'Rehab4Perf · Le dossier du sportif, du bilan clinique au retour de terrain',

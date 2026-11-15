@@ -45,7 +45,7 @@
     </div></section>
 <section class="sec sur-blanc"><div class="wrap"><div class="bloc-seul reveal"><div class="duo-txt"><h2 class="t-moyen">Un lien que vous gardez sous contrôle</h2><p>Le lien ne demande ni compte ni mot de passe. Il reste révocable, patient par patient.</p><ul class="preuves"><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Un <strong>jeton par patient</strong> : sécurisez le lien, renouvelez-le, révoquez-le.</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>Le lien d'une seule séance, pour un remplaçant ou un confrère.</span></li><li><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span>L'athlète peut l'ajouter à son écran d'accueil : il l'ouvre comme une application.</span></li></ul></div></div></div></section><section class="sec"><div class="wrap">
     <div class="tete reveal"><h2 class="t-moyen">Et ensuite</h2></div>
-    <div class="suite"><a href="programme.html" class="reveal"><h3>Programme et agenda</h3><p>Une bibliothèque en vidéo, un builder qui se souvient, des modèles et un agenda qui planifie.</p></a><a href="charge.html" class="reveal"><h3>La charge d'entraînement</h3><p>Des unités arbitraires à l'ACWR, et les sorties qui arrivent seules de Strava ou de la montre.</p></a><a href="cabinet.html" class="reveal"><h3>Cabinet et écran de salle</h3><p>Trois rôles, une bibliothèque commune, des dossiers qui se transfèrent, et la séance affichée sur la télé.</p></a></div>
+    <div class="suite"><a href="programme.html" class="reveal"><h3>Programme et agenda</h3><p>Une bibliothèque en vidéo, un builder qui se souvient, des modèles et un agenda qui planifie.</p></a><a href="charge.html" class="reveal"><h3>La charge d'entraînement</h3><p>Des unités arbitraires à l'ACWR, et les sorties qui arrivent seules de Strava ou de la montre.</p></a><a href="cabinet.html" class="reveal"><h3>Le cabinet</h3><p>Votre façon de travailler, partagée par toute l'équipe : vos tests, vos modèles, votre bilan, votre en-tête.</p></a></div>
   </div></section><section class="final sur-blanc"><div class="wrap-etroit">
   <h2 class="t-grand">Votre prochain bilan peut être le premier</h2>
   <p class="chapo">Créez votre compte gratuitement, sans carte bancaire, et testez sur un dossier réel dès aujourd'hui.</p>
@@ -78,6 +78,27 @@
     }, { threshold: 0.12 });
     cibles.forEach(function (el) { io.observe(el); });
   }
+  var choix = document.querySelectorAll('.diapo-choix button');
+  var diapos = document.querySelectorAll('.diapos .diapo');
+  if (choix.length && diapos.length) {
+    var montrer = function (n) {
+      choix.forEach(function (b, i) {
+        b.classList.toggle('actif', i === n);
+        b.setAttribute('aria-pressed', i === n ? 'true' : 'false');
+      });
+      diapos.forEach(function (im, i) {
+        im.classList.toggle('actif', i === n);
+        if (i === n) { im.removeAttribute('aria-hidden'); } else { im.setAttribute('aria-hidden', 'true'); }
+      });
+    };
+    choix.forEach(function (b, i) {
+      b.addEventListener('click', function () { montrer(i); });
+      b.addEventListener('animationend', function (e) {
+        if (e.animationName === 'diapoDefile') { montrer((i + 1) % choix.length); }
+      });
+    });
+  }
+
   /* Le rail d'onglets amène l'onglet courant dans le champ au chargement. */
   var cour = document.querySelector('.rail a[aria-current="page"]');
   if (cour && cour.scrollIntoView) {
