@@ -364,7 +364,10 @@ const ACCUEIL = {
       { h3: 'Le cloisonnement est en base', p: 'Ce n\'est pas l\'écran qui filtre : la base refuse elle-même les lignes qui ne sont pas les vôtres. Un praticien ne voit que ses patients.' },
       { h3: 'Le lien du patient est révocable', p: 'Chaque patient a son jeton. Vous le sécurisez, le renouvelez ou le révoquez, patient par patient, sans toucher aux autres.' },
       { h3: 'Le partage est à trois clés', p: 'Un confrère n\'ouvre un dossier que si vous l\'invitez, qu\'il accepte, et que le patient donne son accord. Chaque lecture part au journal.' },
-      { h3: 'Certification HDS en cours', p: 'La migration vers un hébergeur certifié « données de santé » est engagée. Tant qu\'elle n\'est pas achevée, nous l\'écrivons ainsi, sans raccourci.' }
+      /* La certification HDS n'est PAS acquise : ne rien en dire tant qu'elle
+         ne l'est pas (allegation reglementee, art. L1111-8 CSP). Le jour où
+         elle l'est, c'est ici qu'elle s'ajoute. */
+      { h3: 'Aucun autre tiers', p: 'En dehors de l\'hébergeur de la base, personne ne reçoit les données de vos patients. Ni régie publicitaire, ni mesure d\'audience.' }
     ]
   },
   tarifs: {
